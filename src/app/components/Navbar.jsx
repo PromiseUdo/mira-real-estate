@@ -123,7 +123,7 @@ const Navbar = (props) => {
           className="p-[2rem] h-[100vh] bg-zee-teal-100 w-[100%] md:w-[30%] "
         >
           {mobileDropdown && (
-            <ul className="flex flex-col">
+            <ul className=" h-full flex flex-col">
               <div className="flex items-center justify-between gap-[1.5rem] pb-[1rem] mb-[2rem] border-zee-gray-400 border-b border-solid ">
                 <div>
                   <Link href="/">
@@ -143,90 +143,97 @@ const Navbar = (props) => {
                 </button>
               </div>
               {/* Links */}
-              <li
-                className="mt-[0.8rem]"
-                onClick={() => setMobileDropdown(false)}
-              >
-                <Link
-                  className="flex w-[100%] h-[40px] pb-[0.5rem] font-medium border-zee-gray-400 border-b border-solid text-white ease-in-out transition-all duration-200 cursor-pointer"
-                  href="#"
-                >
-                  For Rent
-                </Link>
-              </li>
-              <li
-                className="mt-[0.8rem]"
-                onClick={() => setMobileDropdown(false)}
-              >
-                <Link
-                  className="flex w-[100%] h-[40px] pb-[0.5rem] font-medium border-zee-gray-400 border-b border-solid text-white ease-in-out transition-all duration-200 cursor-pointer"
-                  href="#"
-                >
-                  For Sale
-                </Link>
-              </li>
-              <li
-                className="mt-[0.8rem]"
-                onClick={() => setMobileDropdown(false)}
-              >
-                <Link
-                  className="flex w-[100%] h-[40px] pb-[0.5rem] font-medium border-zee-gray-400 border-b border-solid text-white ease-in-out transition-all duration-200 cursor-pointer"
-                  href="#"
-                >
-                  Agent Finder
-                </Link>
-              </li>
-              <li
-                className="mt-[0.8rem]"
-                onClick={() => setMobileDropdown(false)}
-              >
-                <Link
-                  className="flex w-[100%] h-[40px] pb-[0.5rem] font-medium border-zee-gray-400 border-b border-solid text-white ease-in-out transition-all duration-200 cursor-pointer"
-                  href="#"
-                >
-                  Manage Property
-                </Link>
-              </li>
-              <li
-                className="mt-[0.8rem]"
-                onClick={() => setMobileDropdown(false)}
-              >
-                <Link
-                  className="flex w-[100%] h-[40px] pb-[0.5rem] font-medium border-zee-gray-400 border-b border-solid text-white ease-in-out transition-all duration-200 cursor-pointer"
-                  href="#"
-                >
-                  Advertise
-                </Link>
-              </li>
-              <li
-                className="mt-[0.8rem]"
-                onClick={() => setMobileDropdown(false)}
-              >
-                <Link
-                  className="flex w-[100%] h-[40px] pb-[0.5rem] font-medium border-zee-gray-400 border-b border-solid text-white ease-in-out transition-all duration-200 cursor-pointer"
-                  href="#"
-                >
-                  Help
-                </Link>
-              </li>
-              <li
-                className="mt-[0.8rem]"
-                onClick={() => setMobileDropdown(false)}
-              >
-                <Link
-                  className="flex w-[100%] h-[40px] pb-[0.5rem] font-medium border-zee-gray-400 border-b border-solid text-white ease-in-out transition-all duration-200 cursor-pointer"
-                  href="#"
-                >
-                  <Image
-                    className="cursor-pointer"
-                    src="/defaultImage.png"
-                    alt="default profile image"
-                    objectFit="contain"
-                    width={30}
-                    height={30}
-                  />
-                </Link>
-              </li>
+              <div className="flex flex-col justify-between h-full ">
+                <div>
+                  <li
+                    className="mt-[0.8rem]"
+                    onClick={() => setMobileDropdown(false)}
+                  >
+                    <Link
+                      className="flex w-[100%] h-[40px] pb-[0.5rem] font-medium border-zee-gray-400 border-b border-solid text-white ease-in-out transition-all duration-200 cursor-pointer"
+                      href="#"
+                    >
+                      For Rent
+                    </Link>
+                  </li>
+                  <li
+                    className="mt-[0.8rem]"
+                    onClick={() => setMobileDropdown(false)}
+                  >
+                    <Link
+                      className="flex w-[100%] h-[40px] pb-[0.5rem] font-medium border-zee-gray-400 border-b border-solid text-white ease-in-out transition-all duration-200 cursor-pointer"
+                      href="#"
+                    >
+                      For Sale
+                    </Link>
+                  </li>
+                  <li
+                    className="mt-[0.8rem]"
+                    onClick={() => setMobileDropdown(false)}
+                  >
+                    <Link
+                      className="flex w-[100%] h-[40px] pb-[0.5rem] font-medium border-zee-gray-400 border-b border-solid text-white ease-in-out transition-all duration-200 cursor-pointer"
+                      href="#"
+                    >
+                      Agent Finder
+                    </Link>
+                  </li>
+                  <li
+                    className="mt-[0.8rem]"
+                    onClick={() => setMobileDropdown(false)}
+                  >
+                    <Link
+                      className="flex w-[100%] h-[40px] pb-[0.5rem] font-medium border-zee-gray-400 border-b border-solid text-white ease-in-out transition-all duration-200 cursor-pointer"
+                      href="#"
+                    >
+                      Manage Property
+                    </Link>
+                  </li>
+                  <li
+                    className="mt-[0.8rem]"
+                    onClick={() => setMobileDropdown(false)}
+                  >
+                    <Link
+                      className="flex w-[100%] h-[40px] pb-[0.5rem] font-medium border-zee-gray-400 border-b border-solid text-white ease-in-out transition-all duration-200 cursor-pointer"
+                      href="#"
+                    >
+                      Advertise
+                    </Link>
+                  </li>
+                  <li
+                    className="mt-[0.8rem]"
+                    onClick={() => setMobileDropdown(false)}
+                  >
+                    <Link
+                      className="flex w-[100%] h-[40px] pb-[0.5rem] font-medium border-zee-gray-400 border-b border-solid text-white ease-in-out transition-all duration-200 cursor-pointer"
+                      href="#"
+                    >
+                      Help
+                    </Link>
+                  </li>
+                </div>
+
+                <div>
+                  <li
+                    className="mb-[2rem]"
+                    onClick={() => setMobileDropdown(false)}
+                  >
+                    <Link
+                      className="flex w-[100%] h-[40px] pb-[0.5rem] font-medium  text-white ease-in-out transition-all duration-200 cursor-pointer"
+                      href="#"
+                    >
+                      <Image
+                        className="cursor-pointer"
+                        src="/defaultImage.png"
+                        alt="default profile image"
+                        objectFit="contain"
+                        width={30}
+                        height={30}
+                      />
+                    </Link>
+                  </li>
+                </div>
+              </div>
             </ul>
           )}
         </nav>
