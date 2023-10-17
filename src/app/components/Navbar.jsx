@@ -120,7 +120,7 @@ const Navbar = (props) => {
       >
         <nav
           ref={mobileNav}
-          className="p-[2rem] h-[100vh] bg-zee-teal-80 w-[100%] md:w-[30%] "
+          className="p-[2rem] h-[100vh] bg-zee-teal-100 w-[100%] md:w-[30%] "
         >
           {mobileDropdown && (
             <ul className="flex flex-col">
@@ -136,7 +136,7 @@ const Navbar = (props) => {
                 </div>
                 {/* Close Button */}
                 <button
-                  className="flex items-center justify-center w-[40px] h-[40px] rounded-[50%] text-xl bg-zee-gray-700 text-white"
+                  className="flex items-center justify-center w-[40px] h-[40px] rounded-[50%] text-xl bg-zee-teal-60 text-white"
                   onClick={() => setMobileDropdown(false)}
                 >
                   <AiOutlineClose className="text-white" />
