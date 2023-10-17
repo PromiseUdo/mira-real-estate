@@ -1,0 +1,12 @@
+.navLink {
+  background: linear-gradient(red, red) bottom / 0 0.2em no-repeat;
+  transition: 0.8s background-size;
+  background-position: left bottom;
+  padding-bottom: 0.3rem;
+  &:hover {
+    background-size: 100% 0.2em;
+  }
+}
+.mobileNav {
+  background: rgba(153, 217, 223, 0.5);
+}
