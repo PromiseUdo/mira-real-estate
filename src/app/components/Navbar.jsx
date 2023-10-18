@@ -215,7 +215,7 @@ const Navbar = (props) => {
 
                 <div>
                   <li
-                    className="mb-[2rem]"
+                    className="mb-[4rem]"
                     onClick={() => setMobileDropdown(false)}
                   >
                     <Link
