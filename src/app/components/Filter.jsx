@@ -1,10 +1,6 @@
 "use client";
 import React from "react";
 import { Tab } from "@headlessui/react";
-import LocationSelector from "./LocationSelector";
-import PropertyTypeSelector from "./PropertyTypeSelector";
-import PriceRangeSelector from "./PriceRangeSelector";
-import ForSelector from "./ForSelector";
 import FilterOptions from "./FilterOptions";
 
 const categories = ["Rent", "Buy", "Shorlets"];
@@ -13,10 +9,10 @@ function classNames(...classes) {
 }
 const Filter = () => {
   return (
-    <div className="flex flex-col items-center gap-3  absolute top-[50%] translate-y-[-50%] left-0 right-0  m-auto w-[90%] lg:w-[60%] max-w-d px-2 sm:px-0 ">
+    <div className="flex flex-col items-center gap-3  absolute top-[50%] translate-y-[-50%] left-0 right-0  m-auto w-[95%] md:w-[80%] lg:w-[60%] max-w-d px-2 sm:px-0 ">
       <h2
-        style={{ textShadow: "1px 1px 2px #000" }}
-        className="text-center text-white	"
+        // style={{ textShadow: "1px 1px 2px #000" }}
+        className="text-center text-white text-[30px] md:text-[36px] lg:text-[40px]	"
       >
         Apartments. Offices. Lands. Shorlets.
       </h2>
