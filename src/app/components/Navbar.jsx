@@ -143,7 +143,7 @@ const Navbar = (props) => {
                 </button>
               </div>
               {/* Links */}
-              <div className="flex flex-col justify-between h-full ">
+              <div className="flex flex-col h-full ">
                 <div>
                   <li
                     className="mt-[0.8rem]"
@@ -213,23 +213,23 @@ const Navbar = (props) => {
                   </li>
                 </div>
 
-                <div>
-                  <li
-                    className="mb-[4rem]"
-                    onClick={() => setMobileDropdown(false)}
-                  >
+                <div className="mt-[5rem]">
+                  <li onClick={() => setMobileDropdown(false)}>
                     <Link
                       className="flex w-[100%] h-[40px] pb-[0.5rem] font-medium  text-white ease-in-out transition-all duration-200 cursor-pointer"
                       href="#"
                     >
-                      <Image
-                        className="cursor-pointer"
+                      <img
+                        className="cursor-pointer  object-cover "
                         src="/defaultImage.png"
                         alt="default profile image"
-                        objectFit="contain"
-                        width={30}
-                        height={30}
                       />
+
+                      {/* <img
+                        src={"/defaultImage.png"}
+                        alt="User Representation"
+                        className="w-[100px] object-cover h-[100px] lg:w-[128px] lg:h-[128px] absolute rounded-full border border-white sm:left-[46px] lg:bottom-[-64px] left-[calc(50%_-_50px)] bottom-[-50px]"
+                      /> */}
                     </Link>
                   </li>
                 </div>
