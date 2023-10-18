@@ -136,7 +136,7 @@ const Navbar = (props) => {
                 </div>
                 {/* Close Button */}
                 <button
-                  className="flex items-center justify-center w-[40px] h-[40px] rounded-[50%] text-xl bg-zee-teal-60 text-white"
+                  className="flex items-center justify-center w-[40px] h-[40px] rounded-[50%] text-xl bg-zee-teal-80 text-white"
                   onClick={() => setMobileDropdown(false)}
                 >
                   <AiOutlineClose className="text-white" />
