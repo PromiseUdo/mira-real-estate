@@ -11,7 +11,7 @@ const Filter = () => {
   return (
     <div className="flex flex-col items-center gap-3  absolute top-[40%] md:top-[50%] translate-y-[-50%] left-0 right-0  m-auto w-[90%] md:w-[80%] lg:w-[50%] max-w-d px-2 sm:px-0 ">
       <h2
-        // style={{ textShadow: "1px 1px 2px #000" }}
+        style={{ textShadow: "1px 1px 2px #000" }}
         className="text-center text-white text-[30px] md:text-[36px] lg:text-[40px]	"
       >
         Apartments. Offices. Lands. Shorlets.
