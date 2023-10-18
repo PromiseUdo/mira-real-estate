@@ -129,7 +129,7 @@ const Navbar = (props) => {
                   <Link href="/">
                     <img
                       className="object-cover bg-center w-[60px] h-[60px]"
-                      src="/zeelogo.png"
+                      src="/zeelogo-white.png"
                       alt="logo"
                     />
                   </Link>
@@ -224,12 +224,6 @@ const Navbar = (props) => {
                         src="/defaultImage.png"
                         alt="default profile image"
                       />
-
-                      {/* <img
-                        src={"/defaultImage.png"}
-                        alt="User Representation"
-                        className="w-[100px] object-cover h-[100px] lg:w-[128px] lg:h-[128px] absolute rounded-full border border-white sm:left-[46px] lg:bottom-[-64px] left-[calc(50%_-_50px)] bottom-[-50px]"
-                      /> */}
                     </Link>
                   </li>
                 </div>
