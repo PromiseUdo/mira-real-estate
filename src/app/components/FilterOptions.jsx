@@ -17,20 +17,20 @@ const FilterOptions = () => {
         <MdLocationOn className="text-white" />
       </div>
       {/* <LocationSelector /> */}
-      <div className="flex flex-wrap justify-center items-center gap-2">
-        <div className="flex flex-col justify-center">
+      <div className="flex w-full flex-wrap justify-center items-center gap-2">
+        <div className="flex flex-1  flex-col justify-center">
           <p className="text-white">Type</p>
           <PropertyTypeSelector />
         </div>
-        <div className="flex flex-col justify-center">
+        <div className="flex flex-1 flex-col justify-center">
           <p className="text-white">Bedroom</p>
           <BedroomSelector />
         </div>
-        <div className="flex flex-col justify-center">
+        <div className="flex flex-1 flex-col justify-center">
           <p className="text-white">Min Price</p>
           <MinPriceSelector />
         </div>
-        <div className="flex flex-col justify-center">
+        <div className="flex flex-1 flex-col justify-center">
           <p className="text-white">Max Price</p>
           <MaxPriceSelector />
         </div>
