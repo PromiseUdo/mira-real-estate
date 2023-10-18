@@ -14,7 +14,7 @@ const Hero = () => {
       <div className="bg-black/40 absolute top-0 left-0 w-full h-screen" />
       {/* 430 x 836 */}
       <div className="absolute top-0 w-full h-full flex flex-col justify-center ">
-        {/* <Filter /> */}
+        <Filter />
       </div>
     </section>
   );
