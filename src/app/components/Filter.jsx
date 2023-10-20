@@ -17,7 +17,7 @@ const Filter = () => {
         Apartments. Offices. Lands. Shorlets.
       </h2>
       <Tab.Group>
-        <Tab.List className="ring-white ring-opacity-60 ring-offset-2 ring-offset-blue-400 focus:outline-none ring-2 w-[100%] z-20 flex space-x-1 rounded-lg bg-teal-700/50 p-1">
+        <Tab.List className=" ring-opacity-60 ring-offset-2  ring-2 w-[100%] z-20 flex space-x-1 rounded-lg bg-teal-700/50 p-1">
           {categories.map((category, idx) => (
             <Tab
               key={idx}
@@ -41,9 +41,10 @@ const Filter = () => {
               key={idx}
               className={classNames(
                 "flex items-center justify-center z-20 rounded-lg bg-teal-700/50 p-3",
-                "ring-white ring-opacity-60 ring-offset-2 ring-offset-blue-400 focus:outline-none ring-2"
+                " ring-opacity-60 ring-offset-2  ring-2"
               )}
             >
+              {/* "focus:ring-white ring-opacity-60 ring-offset-2 focus:ring-offset-blue-400 focus:outline-none ring-2" */}
               <FilterOptions />
             </Tab.Panel>
           ))}
