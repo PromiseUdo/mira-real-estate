@@ -15,7 +15,7 @@ const PropertyCard = () => {
   return (
     <div
       className={clsx(
-        "relative flex flex-col  justify-start h-[18rem] w-[250px] rounded-lg border border-1 border-zee-border group  hover:border-zee-teal-100 bg-white overflow-hidden p-[0.5rem]",
+        "relative flex flex-col  justify-start h-[20rem] w-[250px] rounded-lg border border-1 border-zee-border group  hover:border-zee-teal-100 bg-white overflow-hidden p-[0.5rem]",
         styles.container
       )}
     >
