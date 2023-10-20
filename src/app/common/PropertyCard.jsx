@@ -1,4 +1,5 @@
-import React from "react";
+"use client";
+import React, { useEffect, useState } from "react";
 import home1 from "../../assets/hero-image.jpg";
 import { FiChevronRight, FiChevronLeft } from "react-icons/fi";
 import {
@@ -8,10 +9,22 @@ import {
   PiToiletLight,
 } from "react-icons/pi";
 import { TfiLocationPin } from "react-icons/tfi";
-// import { FaChevronLeft } from "react-icons/fa";
 import styles from "../(styles)/PropertyCard.module.scss";
 import { clsx } from "clsx";
 const PropertyCard = () => {
+  const [count, setCount] = useState(0);
+  const [index, setIndex] = useState();
+  const propImages = ["/hero-image.jpg", "/bathroom.webp", "/kitchen.jpg"];
+
+  const handleNextImageClick = () => {
+    setCount((prev) => prev + 1);
+  };
+
+  const handlePrevImageClick = () => {
+    setCount((prev) => prev - 1);
+  };
+
+  console.log(count);
   return (
     <div
       className={clsx(
@@ -20,9 +33,12 @@ const PropertyCard = () => {
       )}
     >
       <div
-        className="relative overflow-hidden h-[8rem] w-[full] bg-center rounded-md"
+        className={clsx(
+          "relative !bg-contain !bg-center overflow-hidden h-[8rem] w-[full] rounded-md",
+          styles.imagesContainer
+        )}
         style={{
-          background: `url("/hero-image.jpg")`,
+          background: `url(${propImages[count]})`,
           backgroundSize: "contain",
           backgroundPosition: "center",
           height: "8rem",
@@ -37,15 +53,21 @@ const PropertyCard = () => {
             )}
           >
             <FiChevronLeft
+              onClick={handlePrevImageClick}
               size={45}
               color="#fff"
               style={{ margin: 0, padding: 0 }}
               className="!p-0 !m-0 cursor-pointer"
             />
-            <FiChevronRight size={45} color="#fff" className="cursor-pointer" />
+            <FiChevronRight
+              onClick={handleNextImageClick}
+              size={45}
+              color="#fff"
+              className="cursor-pointer"
+            />
           </div>
           <div className="self-end bg-black/60 text-white mr-4 mt-1 py-[0.1rem] rounded-sm px-[0.5rem]">
-            <span>1 of 20</span>
+            <span>{`${count + 1} of ${propImages.length}`}</span>
           </div>
         </div>
       </div>
