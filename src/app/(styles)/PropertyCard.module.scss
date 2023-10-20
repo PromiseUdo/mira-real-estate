@@ -1,0 +1,11 @@
+// "bg-red-600 flex w-full  p-0 justify-between   "
+
+.overlay {
+  transition: all ease-in;
+}
+
+.container {
+  &:hover .overlay {
+    visibility: visible;
+  }
+}

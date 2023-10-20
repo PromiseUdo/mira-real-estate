@@ -43,7 +43,8 @@ const LocationSelector = () => {
         <div className="flex items-center px-2 sticky top-0 bg-white w-48">
           <AiOutlineSearch size={18} className="text-gray-700" />
           <input
-            type="text"
+            type="address"
+            // name="state"
             value={inputValue}
             onChange={(e) => setInputValue(e.target.value.toLowerCase())}
             placeholder="Enter country name"
