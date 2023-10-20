@@ -1,5 +1,4 @@
-import PropertyCard from "../common/PropertyCard";
-import Section from "../common/Section";
+import FeaturedProperties from "../components/FeaturedProperties";
 // import DummyContent from "../components/DummyContent";
 // import Filters from "../components/Filter";
 import Hero from "../components/Hero";
@@ -13,13 +12,7 @@ export default function Home() {
 
       <main className="main">
         <div>
-          <Section
-            id="featured"
-            title="Featured Properties"
-            subtitle="Based on your location"
-          >
-            <PropertyCard />
-          </Section>
+          <FeaturedProperties />
           {/* <DummyContent /> */}
         </div>
       </main>

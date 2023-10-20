@@ -1,6 +1,5 @@
 "use client";
-import React, { useEffect, useState } from "react";
-import home1 from "../../assets/hero-image.jpg";
+import React, { useState } from "react";
 import { FiChevronRight, FiChevronLeft } from "react-icons/fi";
 import {
   PiBathtubLight,
@@ -11,10 +10,16 @@ import {
 import { TfiLocationPin } from "react-icons/tfi";
 import styles from "../(styles)/PropertyCard.module.scss";
 import { clsx } from "clsx";
-const PropertyCard = () => {
+import { clamp } from "@/helpers/helpers";
+const PropertyCard = ({ position, index, dx = 0 }) => {
   const [currentIndex, setCurrentIndex] = useState(0);
   const propImages = ["/hero-image.jpg", "/bathroom.webp", "/kitchen.jpg"];
 
+  const styleMap = {
+    start: `${clamp(16 - dx, 16, 400)}px`,
+    center: `${clamp(index * 90 - 16 - dx, 16, 400)}px`,
+    end: `${index * 90 - 52 - dx}px`,
+  };
   const handleNextImageClick = () => {
     if (currentIndex === propImages.length - 1) {
       setCurrentIndex(0);
@@ -31,7 +36,6 @@ const PropertyCard = () => {
     }
   };
 
-  // console.log(count);
   return (
     <div
       className={clsx(
