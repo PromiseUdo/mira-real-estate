@@ -52,9 +52,12 @@ const PropertyCard = () => {
       <div className="card-content mt-2">
         <h5>
           ₦400,000
-          <span className="text-zee-gray-600 text-sm "> p.a</span>
+          <span className="text-zee-shades-gray-2.5 text-sm "> p.a</span>
         </h5>
-        <h5 className="text-sm text-zee-shades-gray-2.5 ">House for rent</h5>
+        <p className=" text-sm text-zee-gray-900 font-normal">
+          23 Units Available
+        </p>
+        <p className="text-sm text-zee-shades-gray-2.5 ">House for rent</p>
 
         <div className="flex items-center">
           <TfiLocationPin />
