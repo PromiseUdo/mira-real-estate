@@ -68,7 +68,7 @@ const BedroomGuide = () => {
   // };
 
   return (
-    <Section id="city_guide" title="Find Properties By Bedrooms" subtitle="">
+    <Section id="bedroom_guide" title="Find Properties By Bedrooms" subtitle="">
       <div className="mt-[1rem] flex flex-col px-1  lg:px-5">
         <div
           ref={containerRef}
