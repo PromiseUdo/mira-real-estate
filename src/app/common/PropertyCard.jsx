@@ -123,7 +123,7 @@ const PropertyCard = ({ position, index, dx = 0 }) => {
           </div>
         </div>
         <button className="py-1 px-6 bg-zee-teal-100 hover:bg-zee-teal-80 text-white w-full rounded-md">
-          view details
+          see details
         </button>
       </div>
     </div>

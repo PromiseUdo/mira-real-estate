@@ -110,9 +110,12 @@ const FeaturedProperties = () => {
           </div>
         </div>
         <div className="mt-10 flex items-center justify-center gap-2 self-center">
-          <Link href="/" className=" flex items-center gap-2">
-            <BsArrowDown color="#285f74" className="font-medium" />{" "}
-            <span className="text-zee-dark-teal-100 hover:text-zee-dark-teal-80 font-medium">
+          <Link
+            href="/"
+            className=" border border-zee-teal-100 border-1 px-6 py-2 rounded-md flex items-center gap-2 group hover:text-white hover:bg-zee-teal-100"
+          >
+            <BsArrowDown className="font-medium  hover:text-zee-teal-100" />{" "}
+            <span className="text-zee-dark-teal-100 font-medium group-hover:text-white">
               See More Properties
             </span>
           </Link>
