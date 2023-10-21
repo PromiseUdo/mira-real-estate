@@ -7,14 +7,14 @@ const Section = ({ children, id, className, title, subtitle }) => {
       id={id}
       className={clsx(
         className,
-        "w-full, relative pt-[2rem] pb-[5rem] mt-[1rem]  "
+        "w-full, relative pt-[1rem] pb-[3rem]  mt-[1rem] "
       )}
     >
       <div className="">
-        <h2 className="text-[1.1rem] font-medium mb-[0.3rem] text-zee-shades-black">
+        <h2 className="text-[1.2rem] font-medium mb-[0.3rem] text-zee-shades-black">
           <span>{title}</span>
         </h2>
-        <h3 className="text-[0.9rem] mb-[0.5rem] font-normal  text-zee-shades-gray-3">
+        <h3 className="text-[0.9rem]  font-normal  text-zee-shades-gray-3">
           {subtitle}
         </h3>
       </div>

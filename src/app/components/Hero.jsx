@@ -5,7 +5,9 @@ import clsx from "clsx";
 import Filter from "./Filter";
 const Hero = () => {
   return (
-    <section className={clsx(styles.container, " relative w-full h-screen")}>
+    <section
+      className={clsx(styles.container, "mb-[1rem] relative w-full h-screen")}
+    >
       <img
         className=" top-0 left-0 w-full h-screen object-center object-cover"
         src="/hero-image4.jpg"

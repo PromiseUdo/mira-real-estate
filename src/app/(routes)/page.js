@@ -1,3 +1,4 @@
+import CityGuide from "../components/CityGuide";
 import FeaturedProperties from "../components/FeaturedProperties";
 // import DummyContent from "../components/DummyContent";
 // import Filters from "../components/Filter";
@@ -13,7 +14,7 @@ export default function Home() {
       <main className="main">
         <div>
           <FeaturedProperties />
-          {/* <DummyContent /> */}
+          <CityGuide />
         </div>
       </main>
     </div>
