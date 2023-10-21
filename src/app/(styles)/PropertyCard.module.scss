@@ -26,6 +26,16 @@
   }
 }
 
+.propertyCardContainer {
+  &:hover .overlay {
+    visibility: visible;
+  }
+
+  @media screen and (max-width: 588px) {
+    width: 100%;
+  }
+}
+
 .imagesContainer {
   background-size: contain;
   background-position: center;
