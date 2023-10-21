@@ -54,38 +54,38 @@ const CityGuide = () => {
   const debouncePosition = useDebounce(scrollPosition, 50);
   const containerRef = useRef(null);
 
-  const handleScroll = (scrollLeft) => {
-    setScrollPosition(scrollLeft);
-  };
+  // const handleScroll = (scrollLeft) => {
+  //   setScrollPosition(scrollLeft);
+  // };
 
-  const scrollLeft = () => {
-    const container = containerRef.current;
-    if (container) {
-      container.scrollLeft -= 500;
-      handleScroll(container.scrollLeft);
-    }
-  };
+  // const scrollLeft = () => {
+  //   const container = containerRef.current;
+  //   if (container) {
+  //     container.scrollLeft -= 500;
+  //     handleScroll(container.scrollLeft);
+  //   }
+  // };
 
-  const scrollRight = () => {
-    const container = containerRef.current;
-    if (container) {
-      container.scrollLeft += 500;
-      handleScroll(container.scrollLeft);
-    }
-  };
+  // const scrollRight = () => {
+  //   const container = containerRef.current;
+  //   if (container) {
+  //     container.scrollLeft += 500;
+  //     handleScroll(container.scrollLeft);
+  //   }
+  // };
 
   return (
     <Section id="city_guide" title="Find Properties To Rent In" subtitle="">
       <div className="mt-[1rem] flex flex-col px-1  lg:px-5">
         <div
           ref={containerRef}
-          onScroll={(e) => {
-            setScrollPosition(e.currentTarget.scrollLeft);
-          }}
-          style={{ scrollBehavior: "smooth" }}
+          // onScroll={(e) => {
+          //   setScrollPosition(e.currentTarget.scrollLeft);
+          // }}
+          // style={{ scrollBehavior: "smooth" }}
           className="flex  flex-1 max-w-full items-start justify-between gap-6 md:gap-2 "
         >
-          <div className="flex flex-1 justify-center  items-start h-full z-10 gap-4">
+          <div className="flex flex-1 flex-wrap justify-center  items-start h-full z-10 gap-4">
             {featuredCities.map((city, idx) => (
               <CityCard
                 key={idx}
