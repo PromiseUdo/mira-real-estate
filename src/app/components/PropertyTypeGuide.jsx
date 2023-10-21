@@ -70,7 +70,7 @@ const PropertyTypeGuide = () => {
   return (
     <Section
       id="property_type_guide"
-      title="Find Properties To Rent In"
+      title="Find Properties By Type"
       subtitle=""
     >
       <div className="mt-[1rem] flex flex-col px-1  lg:px-5">

@@ -8,6 +8,22 @@
   &:hover .overlay {
     visibility: visible;
   }
+
+  @media screen and (max-width: 868px) {
+    width: 23rem;
+  }
+  @media screen and (max-width: 824px) {
+    width: 22rem;
+  }
+  @media screen and (max-width: 792px) {
+    width: 20rem;
+  }
+  @media screen and (max-width: 724px) {
+    width: 16rem;
+  }
+  @media screen and (max-width: 588px) {
+    width: 30rem;
+  }
 }
 
 .imagesContainer {
