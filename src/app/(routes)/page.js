@@ -5,6 +5,7 @@ import FeaturedProperties from "../components/FeaturedProperties";
 // import Filters from "../components/Filter";
 import Hero from "../components/Hero";
 import Navbar from "../components/Navbar";
+import NearCollegeGuide from "../components/NearCollegeGuide";
 import PropertyTypeGuide from "../components/PropertyTypeGuide";
 
 export default function Home() {
@@ -19,6 +20,7 @@ export default function Home() {
           <CityGuide />
           <BedroomGuide />
           <PropertyTypeGuide />
+          <NearCollegeGuide />
         </div>
       </main>
     </div>
