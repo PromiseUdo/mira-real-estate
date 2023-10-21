@@ -56,6 +56,9 @@ const PropertyCard = ({ position, index, dx = 0 }) => {
         }}
       >
         <div className="h-full  flex flex-col items-center justify-center  ">
+          <div className="self-end bg-black/60 text-white mr-4 mt-1 py-[0.1rem]  px-[0.5rem] border border-1 border-zee-border rounded-sm">
+            <span className="text-xs font-light ">{`Available in 210 days`}</span>
+          </div>
           <div
             className={clsx(
               "flex w-full invisible p-0 justify-between   ",

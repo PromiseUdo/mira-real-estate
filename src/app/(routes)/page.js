@@ -1,3 +1,4 @@
+import BedroomGuide from "../components/BedroomGuide";
 import CityGuide from "../components/CityGuide";
 import FeaturedProperties from "../components/FeaturedProperties";
 // import DummyContent from "../components/DummyContent";
@@ -15,6 +16,7 @@ export default function Home() {
         <div>
           <FeaturedProperties />
           <CityGuide />
+          <BedroomGuide />
         </div>
       </main>
     </div>
