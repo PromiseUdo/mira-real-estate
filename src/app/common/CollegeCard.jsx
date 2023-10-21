@@ -1,12 +1,13 @@
 import clsx from "clsx";
 import React from "react";
 import { FaGraduationCap } from "react-icons/fa6";
+import styles from "../(styles)/CollegeCard.module.scss";
 const CollegeCard = ({ bgColor, title }) => {
   return (
     <div
       className={clsx(
         "cursor-pointer relative container  p-4 h-[6rem] rounded-md overflow-hidden  w-[12rem]",
-        style.collegeContainer
+        styles.collegeContainer
       )}
       style={{
         background: bgColor,
