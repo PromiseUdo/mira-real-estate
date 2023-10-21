@@ -39,7 +39,7 @@ const PropertyCard = ({ position, index, dx = 0 }) => {
   return (
     <div
       className={clsx(
-        "snap-start relative flex flex-col  justify-start h-[20rem] w-[16rem] rounded-lg border border-1 border-zee-border group  hover:border-zee-teal-100 bg-white overflow-hidden p-[0.5rem]",
+        "snap-start relative flex flex-col  justify-start h-[20rem] w-[17rem] md:w-[16rem] rounded-lg border border-1 border-zee-border group  hover:border-zee-teal-100 bg-white overflow-hidden p-[0.5rem]",
         styles.propertyCardContainer
       )}
     >

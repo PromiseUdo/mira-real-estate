@@ -34,7 +34,7 @@ const PropertyTypeCard = ({ imgUrl, title, desc, country }) => {
   return (
     <div
       className={clsx(
-        "cursor-pointer relative flex flex-col  justify-start h-[20rem] w-[250px] rounded-lg border border-1 border-zee-border group  hover:border-zee-teal-100 bg-white overflow-hidden p-[0.5rem]",
+        "cursor-pointer relative flex flex-col  justify-start h-[20rem] w-[16rem] rounded-lg border border-1 border-zee-border group  hover:border-zee-teal-100 bg-white overflow-hidden p-[0.5rem]",
         styles.container
       )}
     >
