@@ -20,7 +20,9 @@ export default function RootLayout({ children }) {
           rel="stylesheet"
         />
       </head>
-      <body>{children}</body>
+      <body className=" overflow-y-auto scrollbar  overflow-x-visible    scrollbar-thumb-zee-dark-teal-80 scrollbar-track-zee-gray-200">
+        {children}
+      </body>
     </html>
   );
 }

@@ -7,18 +7,15 @@ import PropertyCard from "../common/PropertyCard";
 import Link from "next/link";
 import { BsArrowDown } from "react-icons/bs";
 import CityCard from "../common/CityCard";
+import { MdKeyboardArrowDown } from "react-icons/md";
 
-const cityImagess = [
-  "/lagos.jpg",
-  "/abuja.jpg",
-  "/port_harcourt.jpg",
-  "/uyo.jpg",
-  "/kano.jpg",
-];
-
+const southCities = ["Uyo", "Yenagoa", "Calabar", "Benin"];
+const eastCities = ["Enugu", "Aba", "Abakaliki", "Owerri"];
+const westCities = ["Ikoyi", "Festac", "Abeokuta", "Illorin"];
+const northCities = ["Buari", "Kaduna", "Jos", "Zaria"];
 const featuredCities = [
   {
-    title: "Lagos",
+    title: "Lekki",
     img: "/lagos.jpg",
     desc: "A vibrant city with a very large population at the helm of commercial, entertainment and reacreational activities in Nigeria.",
     country: "Nigeria",
@@ -36,8 +33,8 @@ const featuredCities = [
     country: "Nigeria",
   },
   {
-    title: "Uyo",
-    img: "/uyo.jpg",
+    title: "Kano",
+    img: "/kano.jpeg",
     desc: "A vibrant city with a very large population at the helm of commercial and entertainment activities in Nigeria.",
     country: "Nigeria",
   },
@@ -52,8 +49,12 @@ const featuredCities = [
 const CityGuide = () => {
   const [scrollPosition, setScrollPosition] = useState(0);
   const debouncePosition = useDebounce(scrollPosition, 50);
+  const [westChevron, setWestChevron] = useState(false);
+  const [southChevron, setSouthChevron] = useState(false);
+  const [eastChevron, setEastChevron] = useState(false);
+  const [northChevron, setNorthChevron] = useState(false);
   const containerRef = useRef(null);
-
+  const westArrow = useRef();
   // const handleScroll = (scrollLeft) => {
   //   setScrollPosition(scrollLeft);
   // };
@@ -76,7 +77,7 @@ const CityGuide = () => {
 
   return (
     <Section id="city_guide" title="Find Properties To Rent In" subtitle="">
-      <div className="mt-[1rem] flex flex-col px-1  lg:px-5">
+      <div className="mt-[1rem] flex items-center flex-col px-1  lg:px-5">
         <div
           ref={containerRef}
           // onScroll={(e) => {
@@ -95,6 +96,119 @@ const CityGuide = () => {
                 country={city.country}
               />
             ))}
+          </div>
+        </div>
+        <div
+          id="more_cities"
+          className="w-full flex max-[980px]:flex-col mt-6   gap-20 max-[980px]:gap-0 justify-between"
+        >
+          <div className="max-[980px]:border-b max-[980px]:py-3 border-1 border-black">
+            <div
+              onClick={() => setWestChevron(!westChevron)}
+              className="flex items-center gap-1 max-[980px]:justify-between  cursor-pointer"
+            >
+              <h5 className="text-sm">More From The West</h5>
+              <MdKeyboardArrowDown
+                className={`transition-all ease-in duration-100 ${
+                  westChevron ? "rotate-180" : ""
+                }`}
+              />
+            </div>
+            <div
+              className={`${
+                westChevron ? "flex" : "hidden"
+              } transition-all duration-100 ease-in`}
+            >
+              <ul className="max-[980px]:ml-3">
+                {westCities.map((city, idx) => (
+                  <li
+                    key={idx}
+                    className="decoration-gray-400	 hover:underline cursor-pointer font-light text-sm"
+                  >{`Apartments in ${city}`}</li>
+                ))}
+              </ul>
+            </div>
+          </div>
+          <div className="max-[980px]:border-b max-[980px]:py-3 border-1 border-black">
+            <div
+              onClick={() => setEastChevron(!eastChevron)}
+              className="flex items-center gap-1 max-[980px]:justify-between cursor-pointer"
+            >
+              <h5 className="text-sm">More From The East</h5>
+              <MdKeyboardArrowDown
+                className={`transition-all ease-in duration-100 ${
+                  eastChevron ? "rotate-180" : ""
+                }`}
+              />
+            </div>
+            <div
+              className={`${
+                eastChevron ? "flex" : "hidden"
+              } transition-all duration-100 ease-in`}
+            >
+              <ul>
+                {eastCities.map((city, idx) => (
+                  <li
+                    key={idx}
+                    className="decoration-gray-400 hover:underline cursor-pointer font-light text-sm"
+                  >{`Apartments in ${city}`}</li>
+                ))}
+              </ul>
+            </div>
+          </div>
+          <div className="max-[980px]:border-b max-[980px]:py-3 border-1 border-black">
+            <div
+              onClick={() => setSouthChevron(!southChevron)}
+              className="flex items-center gap-1 max-[980px]:justify-between cursor-pointer"
+            >
+              <h5 className="text-sm">More From The South</h5>
+              <MdKeyboardArrowDown
+                className={`transition-all ease-in duration-100 ${
+                  southChevron ? "rotate-180" : ""
+                }`}
+              />
+            </div>
+            <div
+              className={`${
+                southChevron ? "flex" : "hidden"
+              } transition-all duration-100 ease-in`}
+            >
+              <ul>
+                {southCities.map((city, idx) => (
+                  <li
+                    key={idx}
+                    className="decoration-gray-400 hover:underline cursor-pointer font-light text-sm"
+                  >{`Apartments in ${city}`}</li>
+                ))}
+              </ul>
+            </div>
+          </div>
+          <div className=" max-[980px]:py-3 ">
+            <div
+              onClick={() => setNorthChevron(!northChevron)}
+              className="flex items-center gap-1 max-[980px]:justify-between cursor-pointer"
+            >
+              <h5 className="text-sm">More From The North</h5>
+              <MdKeyboardArrowDown
+                className={`transition-all ease-in duration-100 ${
+                  northChevron ? "rotate-180" : ""
+                }`}
+              />
+            </div>
+            <div
+              className={`${
+                northChevron ? "flex" : "hidden"
+              } transition-all duration-100 ease-in`}
+            >
+              <ul>
+                {northCities.map((city, idx) => (
+                  <li
+                    key={idx}
+                    className="decoration-gray-400 hover:underline cursor-pointer  font-light text-sm"
+                  >{`Apartments in ${city}`}</li>
+                ))}
+              </ul>
+            </div>
           </div>
         </div>
       </div>
