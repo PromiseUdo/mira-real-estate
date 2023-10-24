@@ -10,7 +10,7 @@ const NewsletterSignup = () => {
             className="w-[300px] h-[300px] rounded-[100%] object-cover"
           />
         </div>
-        <div>
+        <div className="flex flex-col items-center md:flex-row ">
           <h5>Get Notified</h5>
           <p>Enter your email to get latest information on new listings </p>
           <div className="flex items-center gap-2">
