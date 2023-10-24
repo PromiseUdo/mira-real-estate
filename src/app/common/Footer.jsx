@@ -58,7 +58,7 @@ const Footer = () => {
   return (
     <div className=" py-4 md:py-16 px-8 bg-zee-gray-900 w-full">
       <div className="inner flex flex-col-reverse md:flex-row  px-0 py-2 md:py-4 w-full  text-zee-gray-100 gap-2 md:gap-0">
-        <div className="company justify-self-center mt-5 md:mt-0   flex self-center border-t border-zee-shades-gray-3 border-1 w-full  md:bg-transparent md:self-start  md:w-auto flex-col  gap-2 md:gap-4 pt-2 md:pt-0">
+        <div className="company justify-self-center mt-5 md:mt-0   flex self-center border-t border-zee-shades-gray-4 border-1 w-full  md:bg-transparent md:self-start  md:w-auto flex-col  gap-2 md:gap-4 pt-2 md:pt-0">
           <Link href="/" className="">
             <img
               className="mx-auto md:ml-0 object-cover bg-center w-[60px] h-[60px]"
