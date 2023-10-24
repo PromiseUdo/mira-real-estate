@@ -91,7 +91,7 @@ const Footer = () => {
           </div>
         </div>
 
-        <div className="flex  flex-col md:flex-row justify-center gap-9 w-full">
+        <div className="flex  flex-col md:flex-row justify-center gap-5 md:gap-9 w-full">
           <div>
             <div className="flex items-center justify-between">
               <h5 className="text-sm font-medium">Advertisers</h5>
