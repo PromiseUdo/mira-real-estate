@@ -93,9 +93,12 @@ const Footer = () => {
 
         <div className="flex  flex-col md:flex-row justify-center gap-7 md:gap-9 w-full">
           <div>
-            <div className="flex items-center justify-between">
+            <div
+              onClick={() => setOpenAdvertisers(!openAdvertisers)}
+              className="flex items-center justify-between"
+            >
               <h5 className="text-sm font-medium">Advertisers</h5>
-              <div onClick={() => setOpenAdvertisers(!openAdvertisers)}>
+              <div>
                 {!openAdvertisers ? (
                   <HiMiniPlus color="#e2e7e9" className="md:hidden" />
                 ) : (
@@ -123,9 +126,12 @@ const Footer = () => {
           </div>
 
           <div>
-            <div className="flex items-center justify-between">
+            <div
+              onClick={() => setOpenPopularStates(!openpopularStates)}
+              className="flex items-center justify-between"
+            >
               <h5 className="text-sm font-medium">Popular States</h5>
-              <div onClick={() => setOpenPopularStates(!openpopularStates)}>
+              <div>
                 {!openpopularStates ? (
                   <HiMiniPlus color="#e2e7e9" className="md:hidden" />
                 ) : (
@@ -153,13 +159,14 @@ const Footer = () => {
           </div>
 
           <div>
-            <div className="flex items-center justify-between">
+            <div
+              onClick={() =>
+                setOpenPopularShortletCities(!openPopularShortletCities)
+              }
+              className="flex items-center justify-between"
+            >
               <h5 className="text-sm font-medium">Popular Shortlet Cities</h5>
-              <div
-                onClick={() =>
-                  setOpenPopularShortletCities(!openPopularShortletCities)
-                }
-              >
+              <div>
                 {!openPopularShortletCities ? (
                   <HiMiniPlus color="#e2e7e9" className="md:hidden" />
                 ) : (
@@ -187,9 +194,12 @@ const Footer = () => {
           </div>
 
           <div>
-            <div className="flex items-center justify-between">
+            <div
+              onClick={() => setOpenRentalManager(!openRentalManager)}
+              className="flex items-center justify-between"
+            >
               <h5 className="text-sm font-medium">Rental Manager</h5>
-              <div onClick={() => setOpenRentalManager(!openRentalManager)}>
+              <div>
                 {!openRentalManager ? (
                   <HiMiniPlus color="#e2e7e9" className="md:hidden" />
                 ) : (
@@ -217,9 +227,12 @@ const Footer = () => {
           </div>
 
           <div>
-            <div className="flex items-center justify-between">
+            <div
+              onClick={() => setOpenAboutUs(!openAboutUs)}
+              className="flex items-center justify-between"
+            >
               <h5 className="text-sm font-medium">About Us</h5>
-              <div onClick={() => setOpenAboutUs(!openAboutUs)}>
+              <div>
                 {!openAboutUs ? (
                   <HiMiniPlus color="#e2e7e9" className="md:hidden" />
                 ) : (
