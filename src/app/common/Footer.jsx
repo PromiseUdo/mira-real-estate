@@ -136,11 +136,14 @@ const Footer = () => {
             <ul
               className={clsx(
                 `${openpopularStates ? "block" : "hidden"}`,
-                "md:block"
+                "md:block ml-3 md:ml-0"
               )}
             >
               {popularStates.map((text, idx) => (
-                <li className="font-light text-sm " key={idx}>
+                <li
+                  className="border-t border-b border-1 border-zee-shades-gray-4 py-1 font-light text-sm "
+                  key={idx}
+                >
                   <Link className="hover:underline" href="/">
                     {text}
                   </Link>
@@ -167,11 +170,14 @@ const Footer = () => {
             <ul
               className={clsx(
                 `${openPopularShortletCities ? "block" : "hidden"}`,
-                "md:block"
+                "md:block ml-3 md:ml-0"
               )}
             >
               {popularShortlets.map((text, idx) => (
-                <li className="font-light text-sm " key={idx}>
+                <li
+                  className="border-t border-b border-1 border-zee-shades-gray-4 py-1 font-light text-sm "
+                  key={idx}
+                >
                   <Link className="hover:underline" href="/">
                     {text}
                   </Link>
@@ -194,11 +200,14 @@ const Footer = () => {
             <ul
               className={clsx(
                 `${openRentalManager ? "block" : "hidden"}`,
-                "md:block"
+                "md:block ml-3 md:ml-0"
               )}
             >
               {rentalManager.map((text, idx) => (
-                <li className="font-light text-sm " key={idx}>
+                <li
+                  className="border-t border-b border-1 border-zee-shades-gray-4 py-1 font-light text-sm "
+                  key={idx}
+                >
                   <Link className="hover:underline" href="/">
                     {text}
                   </Link>
@@ -221,11 +230,14 @@ const Footer = () => {
             <ul
               className={clsx(
                 `${openAboutUs ? "block" : "hidden"}`,
-                "md:block"
+                "md:block ml-3 md:ml-0"
               )}
             >
               {aboutUs.map((text, idx) => (
-                <li className="font-light text-sm " key={idx}>
+                <li
+                  className="border-t border-b border-1 border-zee-shades-gray-4 py-1 font-light text-sm "
+                  key={idx}
+                >
                   <Link className="hover:underline" href="/">
                     {text}
                   </Link>
