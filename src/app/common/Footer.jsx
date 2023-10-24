@@ -111,7 +111,7 @@ const Footer = () => {
             >
               {advertise.map((text, idx) => (
                 <li
-                  className="border-t border-b border-1 border-zee-shades-gray-4 py-1 font-light text-sm "
+                  className="border-t border-b border-1 first-of-type:border-t-0 last-of-type:border-b-0 border-zee-shades-gray-4 py-1 font-light text-sm "
                   key={idx}
                 >
                   <Link className="hover:underline" href="/">
@@ -141,7 +141,7 @@ const Footer = () => {
             >
               {popularStates.map((text, idx) => (
                 <li
-                  className="border-t border-b border-1 border-zee-shades-gray-4 py-1 font-light text-sm "
+                  className="border-t border-b first-of-type:border-t-0 last-of-type:border-b-0 border-1 border-zee-shades-gray-4 py-1 font-light text-sm "
                   key={idx}
                 >
                   <Link className="hover:underline" href="/">
@@ -175,7 +175,7 @@ const Footer = () => {
             >
               {popularShortlets.map((text, idx) => (
                 <li
-                  className="border-t border-b border-1 border-zee-shades-gray-4 py-1 font-light text-sm "
+                  className="border-t border-b first-of-type:border-t-0 last-of-type:border-b-0 border-1 border-zee-shades-gray-4 py-1 font-light text-sm "
                   key={idx}
                 >
                   <Link className="hover:underline" href="/">
@@ -205,7 +205,7 @@ const Footer = () => {
             >
               {rentalManager.map((text, idx) => (
                 <li
-                  className="border-t border-b border-1 border-zee-shades-gray-4 py-1 font-light text-sm "
+                  className="border-t border-b first-of-type:border-t-0 last-of-type:border-b-0  border-1 border-zee-shades-gray-4 py-1 font-light text-sm "
                   key={idx}
                 >
                   <Link className="hover:underline" href="/">
@@ -235,7 +235,7 @@ const Footer = () => {
             >
               {aboutUs.map((text, idx) => (
                 <li
-                  className="border-t border-b border-1 border-zee-shades-gray-4 py-1 font-light text-sm "
+                  className="border-t border-b first-of-type:border-t-0 last-of-type:border-b-0 border-1 border-zee-shades-gray-4 py-1 font-light text-sm "
                   key={idx}
                 >
                   <Link className="hover:underline" href="/">
