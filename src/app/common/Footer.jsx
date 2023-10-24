@@ -106,11 +106,14 @@ const Footer = () => {
             <ul
               className={clsx(
                 `${openAdvertisers ? "block" : "hidden"}`,
-                "md:block"
+                "md:block ml-3 md:ml-0"
               )}
             >
               {advertise.map((text, idx) => (
-                <li className="font-light text-sm " key={idx}>
+                <li
+                  className="border-t border-b border-1 border-zee-shades-gray-4 py-1 font-light text-sm "
+                  key={idx}
+                >
                   <Link className="hover:underline" href="/">
                     {text}
                   </Link>
