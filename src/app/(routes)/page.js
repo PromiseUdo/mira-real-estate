@@ -1,3 +1,4 @@
+import Footer from "../common/Footer";
 import BedroomGuide from "../components/BedroomGuide";
 import CityGuide from "../components/CityGuide";
 import FeaturedProperties from "../components/FeaturedProperties";
@@ -6,6 +7,7 @@ import FeaturedProperties from "../components/FeaturedProperties";
 import Hero from "../components/Hero";
 import Navbar from "../components/Navbar";
 import NearCollegeGuide from "../components/NearCollegeGuide";
+import NewsletterSignup from "../components/NewsletterSignup";
 import PropertyTypeGuide from "../components/PropertyTypeGuide";
 
 export default function Home() {
@@ -21,6 +23,8 @@ export default function Home() {
           <BedroomGuide />
           <PropertyTypeGuide />
           <NearCollegeGuide />
+          <NewsletterSignup />
+          <Footer />
         </div>
       </main>
     </div>

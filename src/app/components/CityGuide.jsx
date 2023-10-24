@@ -8,6 +8,7 @@ import Link from "next/link";
 import { BsArrowDown } from "react-icons/bs";
 import CityCard from "../common/CityCard";
 import { MdKeyboardArrowDown } from "react-icons/md";
+import { clsx } from "clsx";
 
 const southCities = ["Uyo", "Yenagoa", "Calabar", "Benin"];
 const eastCities = ["Enugu", "Aba", "Abakaliki", "Owerri"];
@@ -100,9 +101,14 @@ const CityGuide = () => {
         </div>
         <div
           id="more_cities"
-          className="w-full flex max-[980px]:flex-col mt-6   gap-20 max-[980px]:gap-0 justify-between"
+          className="w-full flex max-[980px]:flex-col mt-6   gap-20 max-[980px]:gap-0 justify-between lg:px-32 "
         >
-          <div className="max-[980px]:border-b max-[980px]:py-3 border-1 border-black">
+          <div
+            className={clsx(
+              "max-[980px]:border-b max-[980px]:py-3 border-1 border-zee-border",
+              westChevron ? "border-b border-1" : ""
+            )}
+          >
             <div
               onClick={() => setWestChevron(!westChevron)}
               className="flex items-center gap-1 max-[980px]:justify-between  cursor-pointer"
@@ -124,12 +130,17 @@ const CityGuide = () => {
                   <li
                     key={idx}
                     className="decoration-gray-400	 hover:underline cursor-pointer font-light text-sm"
-                  >{`Apartments in ${city}`}</li>
+                  >{`Properties in ${city}`}</li>
                 ))}
               </ul>
             </div>
           </div>
-          <div className="max-[980px]:border-b max-[980px]:py-3 border-1 border-black">
+          <div
+            className={clsx(
+              "max-[980px]:border-b max-[980px]:py-3 border-1 border-zee-border",
+              eastChevron ? "border-b border-1" : ""
+            )}
+          >
             <div
               onClick={() => setEastChevron(!eastChevron)}
               className="flex items-center gap-1 max-[980px]:justify-between cursor-pointer"
@@ -151,12 +162,17 @@ const CityGuide = () => {
                   <li
                     key={idx}
                     className="decoration-gray-400 hover:underline cursor-pointer font-light text-sm"
-                  >{`Apartments in ${city}`}</li>
+                  >{`Properties in ${city}`}</li>
                 ))}
               </ul>
             </div>
           </div>
-          <div className="max-[980px]:border-b max-[980px]:py-3 border-1 border-black">
+          <div
+            className={clsx(
+              "max-[980px]:border-b max-[980px]:py-3 border-1 border-zee-border",
+              southChevron ? "border-b border-1" : ""
+            )}
+          >
             <div
               onClick={() => setSouthChevron(!southChevron)}
               className="flex items-center gap-1 max-[980px]:justify-between cursor-pointer"
@@ -178,12 +194,17 @@ const CityGuide = () => {
                   <li
                     key={idx}
                     className="decoration-gray-400 hover:underline cursor-pointer font-light text-sm"
-                  >{`Apartments in ${city}`}</li>
+                  >{`Properties in ${city}`}</li>
                 ))}
               </ul>
             </div>
           </div>
-          <div className=" max-[980px]:py-3 ">
+          <div
+            className={clsx(
+              " max-[980px]:py-3 ",
+              northChevron ? "border-b border-1 border-zee-border" : ""
+            )}
+          >
             <div
               onClick={() => setNorthChevron(!northChevron)}
               className="flex items-center gap-1 max-[980px]:justify-between cursor-pointer"
@@ -205,7 +226,7 @@ const CityGuide = () => {
                   <li
                     key={idx}
                     className="decoration-gray-400 hover:underline cursor-pointer  font-light text-sm"
-                  >{`Apartments in ${city}`}</li>
+                  >{`Properties in ${city}`}</li>
                 ))}
               </ul>
             </div>
