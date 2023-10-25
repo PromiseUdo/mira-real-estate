@@ -197,7 +197,7 @@ const CityGuide = () => {
                 eastChevron ? "flex" : "hidden"
               } transition-all duration-100 ease-in`}
             >
-              <ul>
+              <ul className="max-[980px]:ml-3">
                 {eastCities.map((city, idx) => (
                   <li
                     key={idx}
@@ -229,7 +229,7 @@ const CityGuide = () => {
                 southChevron ? "flex" : "hidden"
               } transition-all duration-100 ease-in`}
             >
-              <ul>
+              <ul className="max-[980px]:ml-3">
                 {southCities.map((city, idx) => (
                   <li
                     key={idx}
@@ -261,7 +261,7 @@ const CityGuide = () => {
                 northChevron ? "flex" : "hidden"
               } transition-all duration-100 ease-in`}
             >
-              <ul>
+              <ul className="max-[980px]:ml-3">
                 {northCities.map((city, idx) => (
                   <li
                     key={idx}
