@@ -57,7 +57,7 @@ const Footer = () => {
   const [openpopularStates, setOpenPopularStates] = useState(false);
   return (
     <div className=" py-4 lg:py-16 px-8 bg-zee-gray-900 w-full">
-      <div className=" inner flex flex-col-reverse lg:flex-row justify-center  px-0 py-2 md:py-4 md:px-4 w-full  text-zee-gray-100 gap-2 md:gap-0 ">
+      <div className=" inner flex flex-col-reverse lg:flex-row justify-center  px-0 py-2 lg:py-4 md:px-4 w-full  text-zee-gray-100 gap-2 md:gap-0 ">
         <div className="company justify-self-center mt-5 lg:mt-0  flex self-center border-t border-zee-shades-gray-4 border-1 lg:border-none w-full lg:w-[30%] lg:self-start    flex-col  gap-2 lg:gap-4 pt-2 lg:pt-0">
           <Link href="/" className="">
             <img
