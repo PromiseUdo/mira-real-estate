@@ -18,7 +18,7 @@ const NewsletterSignup = () => {
             className="w-[300px] h-[300px] rounded-[100%] object-cover"
           /> */}
         <div className=" ">
-          <h5 className="text-center lg:text-start">Get Notified</h5>
+          <h5 className="text-center md:text-start">Get Notified</h5>
           <p className="text-center md:text-start">
             Enter your email to get latest information on new listings{" "}
           </p>
