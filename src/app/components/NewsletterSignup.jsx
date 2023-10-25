@@ -3,15 +3,24 @@ import { AiOutlineMail } from "react-icons/ai";
 const NewsletterSignup = () => {
   return (
     <div className="px-10 bg-zee-dark-teal-100 text-white px-[2rem] py-[2rem]">
-      <div className="flex justify-center gap-32 items-center">
-        <div id="illustration" className="hidden md:block">
-          <img
+      <div className="flex justify-center gap-28 items-center">
+        <div
+          id="illustration"
+          className="rounded-full hidden lg:block"
+          style={{
+            height: "300px",
+            width: "300px",
+            background: "url('/notification.jpg')",
+            backgroundPosition: "center",
+            backgroundSize: "cover",
+          }}
+        ></div>
+        {/* <img
             src="/notification.jpg"
             className="w-[300px] h-[300px] rounded-[100%] object-cover"
-          />
-        </div>
+          /> */}
         <div className=" ">
-          <h5 className="text-center md:text-start">Get Notified</h5>
+          <h5 className="text-center lg:text-start">Get Notified</h5>
           <p className="text-center md:text-start">
             Enter your email to get latest information on new listings{" "}
           </p>
@@ -24,7 +33,7 @@ const NewsletterSignup = () => {
               />
               <AiOutlineMail className="text-[#fff]" />
             </div>
-            <button className="rounded-lg bg-white px-6 py-3 text-zee-teal-100">
+            <button className="w-full md:w-auto rounded-lg bg-white px-6 py-3 text-zee-teal-100 lg:w0">
               Submit
             </button>
           </div>
