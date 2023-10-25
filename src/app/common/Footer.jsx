@@ -5,11 +5,10 @@ import Link from "next/link";
 import React, { useState } from "react";
 import {
   FaFacebookSquare,
-  FaSquareXTwitter,
   FaInstagramSquare,
-  FaTwitterSquare,
   FaLinkedin,
 } from "react-icons/fa";
+import { FaSquareXTwitter } from "react-icons/fa6";
 import { HiMiniPlus, HiMiniMinus } from "react-icons/hi2";
 const aboutUs = [
   "About Us",
@@ -78,7 +77,7 @@ const Footer = () => {
               <FaFacebookSquare size={30} color="#e2e7e9" />
             </a>
             <a href="/">
-              <FaTwitterSquare size={30} color="#e2e7e9" />
+              <FaSquareXTwitter size={30} color="#e2e7e9" />
             </a>
             <a href="/">
               <FaInstagramSquare size={30} color="#e2e7e9" />
