@@ -17,8 +17,8 @@ const RentCalculator = () => {
                 Not Sure how much you should be paying?
               </h3>
               <p className="text-zee-shades-gray-2.5">
-                Tell us a little about your budget and we'll help you find the
-                right place
+                Tell us a little about your budget and we&apos;ll help you find
+                the right place
               </p>
             </div>
           </div>
