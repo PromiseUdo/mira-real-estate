@@ -69,6 +69,10 @@ const Footer = () => {
           <span className="text-center lg:text-start">
             &copy; 2023 MiraHomes Group, Inc.
           </span>
+          <div className="flex items-center justify-center lg:justify-start gap-2">
+            <img src="google-play-badge.svg" alt="play store badge" />
+            <img src="app-store-badge.svg" alt="play store badge" />
+          </div>
           <div className="flex items-center lg:justify-start justify-center gap-2">
             <a href="/" className="">
               <FaFacebookSquare size={30} color="#e2e7e9" />
