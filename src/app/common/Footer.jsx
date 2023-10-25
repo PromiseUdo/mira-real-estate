@@ -56,20 +56,20 @@ const Footer = () => {
   const [openRentalManager, setOpenRentalManager] = useState(false);
   const [openpopularStates, setOpenPopularStates] = useState(false);
   return (
-    <div className=" py-4 md:py-16 px-8 bg-zee-gray-900 w-full">
-      <div className="inner flex flex-col-reverse md:flex-row  px-0 py-2 md:py-4 w-full  text-zee-gray-100 gap-2 md:gap-0">
-        <div className="company justify-self-center mt-5 md:mt-0   flex self-center border-t border-zee-shades-gray-4 border-1 w-full  md:bg-transparent md:self-start  md:w-auto flex-col  gap-2 md:gap-4 pt-2 md:pt-0">
+    <div className=" py-4 lg:py-16 px-8 bg-zee-gray-900 w-full">
+      <div className=" inner flex flex-col-reverse lg:flex-row justify-center  px-0 py-2 md:py-4 md:px-4 w-full  text-zee-gray-100 gap-2 md:gap-0 ">
+        <div className="company justify-self-center mt-5 lg:mt-0  flex self-center border-t border-zee-shades-gray-4 border-1 lg:border-none w-full lg:w-[30%] lg:self-start    flex-col  gap-2 lg:gap-4 pt-2 lg:pt-0">
           <Link href="/" className="">
             <img
-              className="mx-auto md:ml-0 object-cover bg-center w-[60px] h-[60px]"
+              className="mx-auto lg:ml-0 object-cover bg-center w-[60px] h-[60px]"
               src="/zeelogo-white.png"
               alt="logo"
             />
           </Link>
-          <span className="text-center md:text-start">
+          <span className="text-center lg:text-start">
             &copy; 2023 MiraHomes Group, Inc.
           </span>
-          <div className="flex items-center md:justify-start justify-center gap-2">
+          <div className="flex items-center lg:justify-start justify-center gap-2">
             <a href="/" className="">
               <FaFacebookSquare size={30} color="#e2e7e9" />
             </a>
@@ -83,7 +83,7 @@ const Footer = () => {
               <FaLinkedin size={30} color="#e2e7e9" />
             </a>
           </div>
-          <div className="text-center md:text-start">
+          <div className="text-center lg:text-start">
             <h5 className="text-sm font-medium">Support:</h5>
             <a className="font-light text-sm cursor-pointer hover:underline ">
               support@mirahomes.com
@@ -91,7 +91,7 @@ const Footer = () => {
           </div>
         </div>
 
-        <div className="flex  flex-col md:flex-row justify-center gap-7 md:gap-9 w-full">
+        <div className="flex  flex-col md:flex-row justify-center gap-7 md:gap-9 w-full lg:w-auto">
           <div>
             <div
               onClick={() => setOpenAdvertisers(!openAdvertisers)}
@@ -114,10 +114,10 @@ const Footer = () => {
             >
               {advertise.map((text, idx) => (
                 <li
-                  className="border-t border-b border-1 first-of-type:border-t-0 last-of-type:border-b-0 border-zee-shades-gray-4 py-1 font-light text-sm "
+                  className="border-t border-b border-1 first-of-type:border-t-0 last-of-type:border-b-0 border-zee-shades-gray-4 py-1 font-light text-sm md:border-none md:py-0 "
                   key={idx}
                 >
-                  <Link className="hover:underline" href="/">
+                  <Link className="hover:underline" href="#">
                     {text}
                   </Link>
                 </li>
@@ -147,10 +147,10 @@ const Footer = () => {
             >
               {popularStates.map((text, idx) => (
                 <li
-                  className="border-t border-b first-of-type:border-t-0 last-of-type:border-b-0 border-1 border-zee-shades-gray-4 py-1 font-light text-sm "
+                  className="border-t border-b first-of-type:border-t-0 last-of-type:border-b-0 border-1 border-zee-shades-gray-4 py-1 font-light text-sm md:border-none md:py-0"
                   key={idx}
                 >
-                  <Link className="hover:underline" href="/">
+                  <Link className="hover:underline" href="#">
                     {text}
                   </Link>
                 </li>
@@ -182,10 +182,10 @@ const Footer = () => {
             >
               {popularShortlets.map((text, idx) => (
                 <li
-                  className="border-t border-b first-of-type:border-t-0 last-of-type:border-b-0 border-1 border-zee-shades-gray-4 py-1 font-light text-sm "
+                  className="border-t border-b first-of-type:border-t-0 last-of-type:border-b-0 border-1 border-zee-shades-gray-4 py-1 font-light text-sm md:border-none md:py-0"
                   key={idx}
                 >
-                  <Link className="hover:underline" href="/">
+                  <Link className="hover:underline" href="#">
                     {text}
                   </Link>
                 </li>
@@ -215,10 +215,10 @@ const Footer = () => {
             >
               {rentalManager.map((text, idx) => (
                 <li
-                  className="border-t border-b first-of-type:border-t-0 last-of-type:border-b-0  border-1 border-zee-shades-gray-4 py-1 font-light text-sm "
+                  className="border-t border-b first-of-type:border-t-0 last-of-type:border-b-0  border-1 border-zee-shades-gray-4 py-1 font-light text-sm md:border-none md:py-0"
                   key={idx}
                 >
-                  <Link className="hover:underline" href="/">
+                  <Link className="hover:underline" href="#">
                     {text}
                   </Link>
                 </li>
@@ -248,7 +248,7 @@ const Footer = () => {
             >
               {aboutUs.map((text, idx) => (
                 <li
-                  className="border-t border-b first-of-type:border-t-0 last-of-type:border-b-0 border-1 border-zee-shades-gray-4 py-1 font-light text-sm "
+                  className="border-t border-b first-of-type:border-t-0 last-of-type:border-b-0 border-1 border-zee-shades-gray-4 py-1 font-light text-sm md:border-none md:py-0"
                   key={idx}
                 >
                   <Link className="hover:underline" href="/">
