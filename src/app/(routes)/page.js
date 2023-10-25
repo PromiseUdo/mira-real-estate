@@ -9,6 +9,7 @@ import Navbar from "../components/Navbar";
 import NearCollegeGuide from "../components/NearCollegeGuide";
 import NewsletterSignup from "../components/NewsletterSignup";
 import PropertyTypeGuide from "../components/PropertyTypeGuide";
+import RentCalculator from "../components/RentCalculator";
 
 export default function Home() {
   return (
@@ -20,6 +21,7 @@ export default function Home() {
         <div>
           <FeaturedProperties />
           <CityGuide />
+          <RentCalculator />
           <BedroomGuide />
           <PropertyTypeGuide />
           <NearCollegeGuide />

@@ -55,7 +55,7 @@ const Navbar = (props) => {
           : "bg-transparent"
       )}
     >
-      <div className="flex items-center justify-between  w-full py-0 px-8 lg:px-16 my-0 mx-auto ">
+      <div className="flex items-center justify-between  w-full py-0 px-8 lg:px-20 my-0 mx-auto ">
         <ul className="hidden lg:flex  items-center gap-6 ">
           <li>
             <Link className={clsx(styles.navLink)} href="/for-rent">

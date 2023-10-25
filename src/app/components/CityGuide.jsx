@@ -39,12 +39,12 @@ const featuredCities = [
     desc: "A vibrant city with a very large population at the helm of commercial and entertainment activities in Nigeria.",
     country: "Nigeria",
   },
-  // {
-  //   title: "Kano",
-  //   img: "/kano.jpeg",
-  //   desc: "A vibrant city with a very large population at the helm of commercial and entertainment activities in Nigeria.",
-  //   country: "Nigeria",
-  // },
+  {
+    title: "Uyo",
+    img: "/uyo.jpg",
+    desc: "A vibrant city with a very large population at the helm of commercial and entertainment activities in Nigeria.",
+    country: "Nigeria",
+  },
 ];
 
 const CityGuide = () => {
@@ -56,6 +56,26 @@ const CityGuide = () => {
   const [northChevron, setNorthChevron] = useState(false);
   const containerRef = useRef(null);
   const westArrow = useRef();
+  const handleScroll = (scrollLeft) => {
+    setScrollPosition(scrollLeft);
+  };
+
+  const scrollLeft = () => {
+    const container = containerRef.current;
+    if (container) {
+      container.scrollLeft -= 500;
+      handleScroll(container.scrollLeft);
+    }
+  };
+
+  const scrollRight = () => {
+    const container = containerRef.current;
+    if (container) {
+      container.scrollLeft += 500;
+      handleScroll(container.scrollLeft);
+    }
+  };
+
   // const handleScroll = (scrollLeft) => {
   //   setScrollPosition(scrollLeft);
   // };
@@ -77,17 +97,35 @@ const CityGuide = () => {
   // };
 
   return (
-    <Section id="city_guide" title="Find Properties To Rent In" subtitle="">
-      <div className="mt-[1rem] flex items-center flex-col px-1  lg:px-5">
+    <Section
+      id="city_guide"
+      title="Find Properties To Rent In"
+      subtitle="Popular Cities"
+    >
+      <div className="mt-[1rem]   flex items-center flex-col">
+        <div className="hidden lg:flex self-end cursor-pointer  gap-2 mb-4">
+          <div
+            className="border border-1 border-zee-border  hover:border-zee-border p-2 rounded-full hover:bg-zee-gray-100 transition-all ease-in"
+            onClick={scrollLeft}
+          >
+            <FiChevronLeft />
+          </div>
+          <div
+            className="border cursor-pointer border-1 border-zee-border  hover:border-zee-border p-2 rounded-full hover:bg-zee-gray-100 transition-all ease-in"
+            onClick={scrollRight}
+          >
+            <FiChevronRight />
+          </div>
+        </div>
         <div
           ref={containerRef}
-          // onScroll={(e) => {
-          //   setScrollPosition(e.currentTarget.scrollLeft);
-          // }}
-          // style={{ scrollBehavior: "smooth" }}
-          className="flex  flex-1 max-w-full items-start justify-between gap-6 md:gap-2 "
+          onScroll={(e) => {
+            setScrollPosition(e.currentTarget.scrollLeft);
+          }}
+          style={{ scrollBehavior: "smooth" }}
+          className="flex  flex-1 max-w-full items-start justify-between gap-6 md:gap-2 overflow-x-auto scrollbar scrollbar-h-1 overflow-y-visible  scrollbar-track-rounded-lg scrollbar-thumb-rounded-lg scrollbar-thumb-zee-dark-teal-80 scrollbar-track-zee-gray-200 pb-4"
         >
-          <div className="flex flex-1 flex-wrap justify-center  items-start h-full z-10 gap-4">
+          <div className="flex flex-1  items-start h-full z-10 gap-4">
             {featuredCities.map((city, idx) => (
               <CityCard
                 key={idx}
@@ -99,9 +137,11 @@ const CityGuide = () => {
             ))}
           </div>
         </div>
+
+        {/* cities */}
         <div
           id="more_cities"
-          className="w-full flex max-[980px]:flex-col mt-6   gap-20 max-[980px]:gap-0 justify-between lg:px-32 "
+          className="w-full flex max-[980px]:flex-col mt-6  gap-8  lg:gap-16 max-[980px]:gap-0 justify-center "
         >
           <div
             className={clsx(
@@ -111,7 +151,7 @@ const CityGuide = () => {
           >
             <div
               onClick={() => setWestChevron(!westChevron)}
-              className="flex items-center gap-1 max-[980px]:justify-between  cursor-pointer"
+              className=" flex items-center gap-1 max-[980px]:justify-between  cursor-pointer"
             >
               <h5 className="text-sm">More From The West</h5>
               <MdKeyboardArrowDown
@@ -143,7 +183,7 @@ const CityGuide = () => {
           >
             <div
               onClick={() => setEastChevron(!eastChevron)}
-              className="flex items-center gap-1 max-[980px]:justify-between cursor-pointer"
+              className="  flex  items-center gap-1 max-[980px]:justify-between cursor-pointer"
             >
               <h5 className="text-sm">More From The East</h5>
               <MdKeyboardArrowDown
