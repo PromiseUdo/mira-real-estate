@@ -6,8 +6,7 @@ const CollegeCard = ({ bgColor, title }) => {
   return (
     <div
       className={clsx(
-        "cursor-pointer relative container  p-4 h-[6rem] rounded-md overflow-hidden  w-[12rem]",
-        styles.collegeContainer
+        "cursor-pointer relative container  p-4 h-[6rem] rounded-md overflow-hidden  w-[12rem]"
       )}
       style={{
         background: bgColor,
