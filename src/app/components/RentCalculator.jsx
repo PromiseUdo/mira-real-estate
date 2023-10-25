@@ -13,9 +13,9 @@ const RentCalculator = () => {
               size={50}
             />
             <div className="pr-0 md:pr-10 ">
-              <h3 className="text-zee-gray-900">
+              <p className="text-[24px] md:text-[30px] font-medium text-zee-gray-900">
                 Not Sure how much you should be paying?
-              </h3>
+              </p>
               <p className="text-zee-shades-gray-2.5">
                 Tell us a little about your budget and we&apos;ll help you find
                 the right place
