@@ -37,7 +37,7 @@ const FeaturedProperties = () => {
       title="Featured Properties"
       subtitle="Based on your location"
     >
-      <div className="flex flex-col ">
+      <div className="mt-[1rem] lg:mt-0 flex flex-col ">
         <div className="hidden lg:flex self-end cursor-pointer  gap-2 mb-4">
           <div
             className="border border-1 border-zee-border  hover:border-zee-border p-2 rounded-full hover:bg-zee-gray-100 transition-all ease-in"

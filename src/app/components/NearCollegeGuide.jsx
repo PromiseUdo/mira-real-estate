@@ -110,7 +110,7 @@ const NearCollegeGuide = () => {
       title="Need an apartment near your university or college?"
       subtitle="Search all off-campus apartments for rent"
     >
-      <div className="mt-[1rem] flex flex-col ">
+      <div className="mt-[1rem] lg:mt-0 flex flex-col ">
         <div className="hidden lg:flex self-end cursor-pointer  gap-2 mb-4">
           <div
             className="border border-1 border-zee-border  hover:border-zee-border p-2 rounded-full hover:bg-zee-gray-100 transition-all ease-in"
