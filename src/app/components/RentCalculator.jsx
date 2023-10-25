@@ -13,7 +13,7 @@ const RentCalculator = () => {
               size={50}
             />
             <div className="pr-0 md:pr-10 ">
-              <p className="text-[24px] md:text-[30px] font-medium text-zee-gray-900">
+              <p className="text-[20px] md:text-[26px] font-medium text-zee-gray-900">
                 Not Sure how much you should be paying?
               </p>
               <p className="text-zee-shades-gray-2.5">
