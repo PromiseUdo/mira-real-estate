@@ -7,10 +7,8 @@ import {
   PiBedLight,
   PiToiletLight,
 } from "react-icons/pi";
-import { TfiLocationPin } from "react-icons/tfi";
 import styles from "../(styles)/PropertyCard.module.scss";
 import { clsx } from "clsx";
-import { clamp } from "@/helpers/helpers";
 const BedroomCard = ({ imgUrl, title, desc, country }) => {
   const [currentIndex, setCurrentIndex] = useState(0);
   const propImages = ["/hero-image.jpg", "/bathroom.webp", "/kitchen.jpg"];

@@ -10,11 +10,11 @@ import NearCollegeGuide from "../components/NearCollegeGuide";
 import NewsletterSignup from "../components/NewsletterSignup";
 import PropertyTypeGuide from "../components/PropertyTypeGuide";
 import RentCalculator from "../components/RentCalculator";
+import RentPropertyPrompt from "../components/RentPropertyPrompt";
 
 export default function Home() {
   return (
     <div>
-      <Navbar />
       <Hero />
 
       <main className="main">
@@ -25,6 +25,7 @@ export default function Home() {
           <BedroomGuide />
           <PropertyTypeGuide />
           <NearCollegeGuide />
+          {/* <RentPropertyPrompt /> */}
           <NewsletterSignup />
           <Footer />
         </div>

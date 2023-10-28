@@ -2,7 +2,6 @@
 import React, { useRef, useState } from "react";
 import Section from "../common/Section";
 import { FiChevronRight, FiChevronLeft } from "react-icons/fi";
-import useDebounce from "@/hooks/useDebounce";
 import PropertyCard from "../common/PropertyCard";
 import Link from "next/link";
 import { BsArrowDown } from "react-icons/bs";
@@ -81,7 +80,6 @@ const featuredCities = [
 
 const NearCollegeGuide = () => {
   const [scrollPosition, setScrollPosition] = useState(0);
-  const debouncePosition = useDebounce(scrollPosition, 50);
   const containerRef = useRef(null);
 
   const handleScroll = (scrollLeft) => {

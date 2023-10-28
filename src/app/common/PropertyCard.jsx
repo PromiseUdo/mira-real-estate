@@ -10,16 +10,10 @@ import {
 import { TfiLocationPin } from "react-icons/tfi";
 import styles from "../(styles)/PropertyCard.module.scss";
 import { clsx } from "clsx";
-import { clamp } from "@/helpers/helpers";
 const PropertyCard = ({ position, index, dx = 0 }) => {
   const [currentIndex, setCurrentIndex] = useState(0);
   const propImages = ["/hero-image.jpg", "/bathroom.webp", "/kitchen.jpg"];
 
-  const styleMap = {
-    start: `${clamp(16 - dx, 16, 400)}px`,
-    center: `${clamp(index * 90 - 16 - dx, 16, 400)}px`,
-    end: `${index * 90 - 52 - dx}px`,
-  };
   const handleNextImageClick = () => {
     if (currentIndex === propImages.length - 1) {
       setCurrentIndex(0);
@@ -122,9 +116,12 @@ const PropertyCard = ({ position, index, dx = 0 }) => {
             <span>0</span>
           </div>
         </div>
-        <button className="py-1 px-6 bg-zee-teal-100 hover:bg-zee-teal-80 text-white w-full rounded-md">
+        <a
+          href="/properties/for_sale"
+          className="py-1 px-6 bg-zee-teal-100 hover:bg-zee-teal-80 text-white w-full rounded-md"
+        >
           see details
-        </button>
+        </a>
       </div>
     </div>
   );

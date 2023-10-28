@@ -25,7 +25,7 @@ const NewsletterSignup = () => {
           <div className="flex flex-col md:flex-row items-center gap-2">
             <div className="w-full flex items-center  border py-2 px-4 my-2 rounded-lg">
               <input
-                className=" text-white w-full bg-transparent outline-none"
+                className=" text-white w-full bg-transparent border-none focus:border-none focus:outline-none outline-none focus:ring-0 placeholder:text-zee-border"
                 type="text"
                 placeholder="Your Email Address"
               />

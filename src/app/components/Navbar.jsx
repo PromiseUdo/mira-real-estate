@@ -6,6 +6,7 @@ import React, { useEffect, useRef, useState } from "react";
 import styles from "../(styles)/Navbar.module.scss";
 import { useToggleState } from "../../hooks/useToggleState";
 import { AiOutlineMenu, AiOutlineClose } from "react-icons/ai";
+import LocationFilter from "../(routes)/properties/components/LocationFilter";
 const Navbar = (props) => {
   const [isScrolled, setIsScrolled] = useState(false);
   const mobileNav = useRef(null);
@@ -49,7 +50,7 @@ const Navbar = (props) => {
   return (
     <div
       className={clsx(
-        "w-[100vw] sticky z-20 bg-zee-teal-100 text-white top-0 flex border-b-zee-shades-gray-2  transition-all",
+        "w-[100vw] z-20 bg-zee-teal-100 text-white  flex border-b-zee-shades-gray-2  transition-all",
         isScrolled
           ? "bg-zee-teal-100 text-white  shadow-lg border-b-[1px] "
           : "bg-transparent"
@@ -86,6 +87,8 @@ const Navbar = (props) => {
             alt="logo"
           />
         )}
+
+        <LocationFilter className="block lg:hidden" />
 
         <ul className="hidden lg:flex items-center gap-6 ">
           <li>

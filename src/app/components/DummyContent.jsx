@@ -2,7 +2,7 @@ import React from "react";
 
 const DummyContent = () => {
   return (
-    <div>
+    <div className="min-h-[100%]">
       Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam accusamus
       exercitationem non tempora, minima incidunt, fugit vero nam vel dolorem
       corrupti, neque amet harum repudiandae iure nulla blanditiis debitis
