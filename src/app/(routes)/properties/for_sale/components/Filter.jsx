@@ -12,7 +12,7 @@ const Filter = () => {
   return (
     <div
       className={clsx(
-        " flex sticky bg-yellow-500 z-20 top-0  gap-4 py-2 px-3 border border-l-0 border-r-0 items-center"
+        " flex sticky  z-20 top-0  gap-4 py-2 px-3 border border-l-0 border-r-0 items-center"
       )}
     >
       {/* <div className="hidden lg:block"> */}
