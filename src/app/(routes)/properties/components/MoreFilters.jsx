@@ -289,7 +289,7 @@ const MoreFilters = ({ className }) => {
 
 export default MoreFilters;
 
-const MinSquareFeetSelector = ({
+export const MinSquareFeetSelector = ({
   minSquareFeet,
   setMinSquareFeet,
   minSquareFeetOptions,
@@ -304,7 +304,7 @@ const MinSquareFeetSelector = ({
         className="bg-zee-gray-50 hover:bg-zee-gray-100 border-solid border-zee-border border-[1px] px-5 py-2 rounded w-[100%] flex items-center justify-between cursor-pointer odd:"
       >
         <span className="text-sm ">
-          {minSquareFeet === "No Min" ? (
+          {/* {minSquareFeet === "No Min" ? (
             "No Min"
           ) : (
             <CurrencyFormat
@@ -312,7 +312,8 @@ const MinSquareFeetSelector = ({
               displayType={"text"}
               thousandSeparator={true}
             />
-          )}
+          )} */}
+          No Min
         </span>
         <MdKeyboardArrowDown
           className={`transition-all ease-in duration-100 ${
@@ -374,7 +375,7 @@ const MinSquareFeetSelector = ({
   );
 };
 
-const MaxSquareFeetSelector = ({
+export const MaxSquareFeetSelector = ({
   maxSquareFeet,
   setMaxSquareFeet,
   maxSquareFeetOptions,
@@ -389,7 +390,7 @@ const MaxSquareFeetSelector = ({
         className="bg-zee-gray-50 hover:bg-zee-gray-100 border-solid border-zee-border border-[1px] px-5 py-2 rounded w-[100%] flex items-center justify-between cursor-pointer"
       >
         <span className="text-sm ">
-          {maxSquareFeet === "No Max" ? (
+          {/* {maxSquareFeet === "No Max" ? (
             "No Max"
           ) : (
             <CurrencyFormat
@@ -397,7 +398,8 @@ const MaxSquareFeetSelector = ({
               displayType={"text"}
               thousandSeparator={true}
             />
-          )}
+          )} */}
+          No Max
         </span>
         <MdKeyboardArrowDown
           className={`transition-all ease-in duration-100 ${

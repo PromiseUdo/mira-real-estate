@@ -34,7 +34,7 @@ const PropertyTypeFilter = ({ className }) => {
       </div>
       {/* dropdown menu */}
       {openDropdown && (
-        <div className="rounded border-[1px]  border-zee-border bg-white  absolute top-[50px] left-auto right-auto w-[fit-content] shadow-md">
+        <div className="rounded border-[1px]  border-zee-border bg-white px-2  absolute top-[50px] left-auto right-auto w-[fit-content] shadow-md">
           <div className="bg-zee-gray-50 text-zee-shades-gray-3 font-semibold p-2 select-none text-sm ">
             Type of Property
           </div>
@@ -61,7 +61,7 @@ export const PropertyTypeList = ({
   className,
 }) => {
   return (
-    <div className="px-2 py-1">
+    <div className="py-1">
       <span className="block lg:hidden">Property Type</span>
       {options.map((option, idx) => (
         <div key={idx} className="flex gap-4 my-4 px-6 items-center">
