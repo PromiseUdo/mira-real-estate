@@ -26,7 +26,11 @@ const Filter = () => {
       <MoreFilters className="hidden md:block" />
       {/* </div> */}
 
-      <TbFilterEdit size={40} className="flex md:hidden ml-auto" />
+      <TbFilterEdit
+        size={40}
+        color="#2c3335"
+        className="flex md:hidden ml-auto"
+      />
     </div>
   );
 };
