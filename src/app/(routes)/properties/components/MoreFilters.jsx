@@ -153,128 +153,130 @@ const MoreFilters = ({ className }) => {
       </div>
       {/* dropdown menu */}
       {openDropdown && (
-        <div className="  overflow-y-auto max-h-64 lg:max-h-96  rounded border-[1px]  border-zee-border bg-white  absolute top-[50px]  right-0 w-[400px] shadow-md flex flex-col gap-2  scrollbar scrollbar-w-1   scrollbar-track-rounded-lg scrollbar-thumb-rounded-lg scrollbar-thumb-zee-dark-teal-80 scrollbar-track-zee-gray-200">
-          <div className="bg-zee-gray-50 text-zee-shades-gray-3 font-semibold p-2 select-none text-sm ">
-            More Filters
-          </div>
-          <div className="flex lg:hidden px-2 flex-col py-2 w-full">
-            <BedroomCount />
-          </div>
-          <div className="px-2 flex  lg:hidden flex-col py-2 w-full">
-            <BathroomCount />
-          </div>
+        <div className="max-h-64 lg:max-h-96  rounded border-[1px]  border-zee-border bg-white  absolute top-[50px]  right-0 w-[400px] shadow-md flex flex-col">
+          <div className="overflow-y-auto flex flex-col gap-2  scrollbar scrollbar-w-1   scrollbar-track-rounded-lg scrollbar-thumb-rounded-lg scrollbar-thumb-zee-dark-teal-80 scrollbar-track-zee-gray-200">
+            <div className="bg-zee-gray-50 text-zee-shades-gray-3 font-semibold p-2 select-none text-sm ">
+              More Filters
+            </div>
+            <div className="flex lg:hidden px-2 flex-col py-2 w-full">
+              <BedroomCount />
+            </div>
+            <div className="px-2 flex  lg:hidden flex-col py-2 w-full">
+              <BathroomCount />
+            </div>
 
-          <div className="px-2 flex flex-col py-2 w-full">
-            <span className="select-none font-semibold text-sm ">
-              Square Feet
-            </span>
-            <div className=" justify-between flex items-center gap-4">
-              <div className="flex flex-col flex-1 gap-1">
-                <MinSquareFeetSelector
-                  minSquareFeet={selectedMinSquareFeet}
-                  setMinSquareFeet={setSelectedMinSquareFeet}
-                  minSquareFeetOptions={minSquareFeetOptions}
-                />
-              </div>
-              <div className="relative ">-</div>
-              <div className="flex flex-1 flex-col gap-1">
-                <MaxSquareFeetSelector
-                  maxSquareFeet={selectedMaxSquareFeet}
-                  setMaxSquareFeet={setSelectedMaxSquareFeet}
-                  maxSquareFeetOptions={maxSquareFeetOptions}
-                />
-              </div>
-            </div>
-          </div>
-          {/* row 2 */}
-          <div className="px-2 flex flex-col py-2 w-full">
-            <span className="select-none text-sm font-semibold">
-              Year Built
-            </span>
-            <div className="flex items-center gap-4">
-              <div className="flex flex-col flex-1 gap-1">
-                <input
-                  onChange={(e) => setMinYearBuilt(e.target.value)}
-                  type="text"
-                  value={minYearBuilt}
-                  className="rounded-md  w-full border-zee-border bg-zee-gray-50"
-                  placeholder="No Min"
-                />
-              </div>
-              <div className="relative ">-</div>
-              <div className="flex flex-1 flex-col gap-1">
-                <input
-                  onChange={(e) => setMaxYearBuilt(e.target.value)}
-                  value={maxYearBuilt}
-                  type="text"
-                  className="rounded-md  w-full border-zee-border bg-zee-gray-50"
-                  placeholder="No Max"
-                />
-              </div>
-            </div>
-          </div>
-          <div className="px-2 flex  lg:hidden flex-col py-2 w-full">
-            <PropertyTypeList />
-          </div>
-          {/* row 3 */}
-          <div className="px-2 flex flex-col py-1 w-full">
-            <span className="select-none text-sm font-semibold">
-              Allows Pets
-            </span>
-            <div className="">
-              {petOptions.map((option, idx) => (
-                <div key={idx} className="flex gap-4 my-4 px-6 items-center">
-                  <input
-                    onChange={handlePetOptionsChange}
-                    checked={selectedPetOptions.includes(option)}
-                    name={option}
-                    id="type"
-                    type="checkbox"
-                    className="w-6 h-6 !text-zee-teal-100  rounded-full  hover:ring-zee-teal-100  hover:ring-2 focus:ring-0 "
+            <div className="px-2 flex flex-col py-2 w-full">
+              <span className="select-none font-semibold text-sm ">
+                Square Feet
+              </span>
+              <div className=" justify-between flex items-center gap-4">
+                <div className="flex flex-col flex-1 gap-1">
+                  <MinSquareFeetSelector
+                    minSquareFeet={selectedMinSquareFeet}
+                    setMinSquareFeet={setSelectedMinSquareFeet}
+                    minSquareFeetOptions={minSquareFeetOptions}
                   />
-                  <label
-                    htmlFor="type"
-                    className="select-none whitespace-nowrap"
-                  >
-                    {option}
-                  </label>
                 </div>
-              ))}
+                <div className="relative ">-</div>
+                <div className="flex flex-1 flex-col gap-1">
+                  <MaxSquareFeetSelector
+                    maxSquareFeet={selectedMaxSquareFeet}
+                    setMaxSquareFeet={setSelectedMaxSquareFeet}
+                    maxSquareFeetOptions={maxSquareFeetOptions}
+                  />
+                </div>
+              </div>
             </div>
-          </div>
+            {/* row 2 */}
+            <div className="px-2 flex flex-col py-2 w-full">
+              <span className="select-none text-sm font-semibold">
+                Year Built
+              </span>
+              <div className="flex items-center gap-4">
+                <div className="flex flex-col flex-1 gap-1">
+                  <input
+                    onChange={(e) => setMinYearBuilt(e.target.value)}
+                    type="text"
+                    value={minYearBuilt}
+                    className="rounded-md  w-full border-zee-border bg-zee-gray-50"
+                    placeholder="No Min"
+                  />
+                </div>
+                <div className="relative ">-</div>
+                <div className="flex flex-1 flex-col gap-1">
+                  <input
+                    onChange={(e) => setMaxYearBuilt(e.target.value)}
+                    value={maxYearBuilt}
+                    type="text"
+                    className="rounded-md  w-full border-zee-border bg-zee-gray-50"
+                    placeholder="No Max"
+                  />
+                </div>
+              </div>
+            </div>
+            <div className="px-2 flex  lg:hidden flex-col py-2 w-full">
+              <PropertyTypeList />
+            </div>
+            {/* row 3 */}
+            <div className="px-2 flex flex-col py-1 w-full">
+              <span className="select-none text-sm font-semibold">
+                Allows Pets
+              </span>
+              <div className="">
+                {petOptions.map((option, idx) => (
+                  <div key={idx} className="flex gap-4 my-4 px-6 items-center">
+                    <input
+                      onChange={handlePetOptionsChange}
+                      checked={selectedPetOptions.includes(option)}
+                      name={option}
+                      id="type"
+                      type="checkbox"
+                      className="w-6 h-6 !text-zee-teal-100  rounded-full  hover:ring-zee-teal-100  hover:ring-2 focus:ring-0 "
+                    />
+                    <label
+                      htmlFor="type"
+                      className="select-none whitespace-nowrap"
+                    >
+                      {option}
+                    </label>
+                  </div>
+                ))}
+              </div>
+            </div>
 
-          {/* Row 4 */}
-          <div className="px-2 flex flex-col py-1 w-full">
-            <span className="select-none text-sm font-semibold">
-              Other Amenities
-            </span>
-            <div className="">
-              {amenitiesOptions.map((option, idx) => (
-                <div key={idx} className="flex gap-4 my-4 px-6 items-center">
-                  <input
-                    onChange={handleAmenitiesOptionsChange}
-                    checked={selectedAmenitiesOptions.includes(option)}
-                    name={option}
-                    id="type"
-                    type="checkbox"
-                    className="w-6 h-6 !text-zee-teal-100  rounded-full  hover:ring-zee-teal-100  hover:ring-2 focus:ring-0 "
-                  />
-                  <label
-                    htmlFor="type"
-                    className="select-none whitespace-nowrap"
-                  >
-                    {option}
-                  </label>
-                </div>
-              ))}
+            {/* Row 4 */}
+            <div className="px-2 flex flex-col py-1 w-full">
+              <span className="select-none text-sm font-semibold">
+                Other Amenities
+              </span>
+              <div className="">
+                {amenitiesOptions.map((option, idx) => (
+                  <div key={idx} className="flex gap-4 my-4 px-6 items-center">
+                    <input
+                      onChange={handleAmenitiesOptionsChange}
+                      checked={selectedAmenitiesOptions.includes(option)}
+                      name={option}
+                      id="type"
+                      type="checkbox"
+                      className="w-6 h-6 !text-zee-teal-100  rounded-full  hover:ring-zee-teal-100  hover:ring-2 focus:ring-0 "
+                    />
+                    <label
+                      htmlFor="type"
+                      className="select-none whitespace-nowrap"
+                    >
+                      {option}
+                    </label>
+                  </div>
+                ))}
+              </div>
             </div>
           </div>
-          <div className="mb-4">
-            <div className="px-4 flex py-1 gap-4 w-full">
-              <button className="bg-zee-gray-100 text-[15px] text-zee-shades-black w-full rounded-md mt-4 py-1 font-semibold whitespace-nowrap">
+          <div className=" border-t  mb-2">
+            <div className=" px-4 flex py-1 gap-4 w-full">
+              <button className="bg-zee-gray-100 text-[15px] text-zee-shades-black w-full rounded-md mt-2 py-1 font-semibold whitespace-nowrap">
                 Reset
               </button>
-              <button className="bg-zee-teal-100 text-[15px] text-white w-full rounded-md mt-4 py-1 px-4 font-semibold">
+              <button className="bg-zee-teal-100 text-[15px] text-white w-full rounded-md mt-2 py-1 px-4 font-semibold">
                 Apply
               </button>
             </div>
