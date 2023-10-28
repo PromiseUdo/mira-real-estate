@@ -6,7 +6,7 @@ import PropertyTypeFilter from "../../components/PropertyTypeFilter";
 import MoreFilters from "../../components/MoreFilters";
 import LocationFilter from "../../components/LocationFilter";
 import styles from "./Filter.module.scss";
-import { IoOptionsOutline } from "react-icons/io5";
+import { TbFilterEdit } from "react-icons/tb";
 import clsx from "clsx";
 const Filter = () => {
   return (
@@ -26,7 +26,7 @@ const Filter = () => {
       <MoreFilters className="hidden md:block" />
       {/* </div> */}
 
-      <IoOptionsOutline size={40} className="flex md:hidden ml-auto" />
+      <TbFilterEdit size={40} className="flex md:hidden ml-auto" />
     </div>
   );
 };
