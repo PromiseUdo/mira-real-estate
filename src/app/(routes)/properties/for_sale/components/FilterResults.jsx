@@ -1,5 +1,6 @@
 import React from "react";
 import FilterResultSection from "./FilterResultSection";
+import DummyContent from "../../../../components/DummyContent";
 
 const FilterResults = () => {
   return (
@@ -9,6 +10,7 @@ const FilterResults = () => {
       subtitle="150 results"
     >
       FilterResults
+      <DummyContent />
     </FilterResultSection>
   );
 };

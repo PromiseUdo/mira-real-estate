@@ -12,7 +12,7 @@ const Filter = () => {
   return (
     <div
       className={clsx(
-        " flex sticky  z-20 top-0  gap-4 py-2 px-3 border border-l-0 border-r-0 items-center"
+        " flex sticky bg-white  z-20 top-0  gap-4 py-2 px-3 border border-l-0 border-r-0 items-center"
       )}
     >
       {/* <div className="hidden lg:block"> */}
@@ -28,7 +28,7 @@ const Filter = () => {
 
       <TbFilterEdit
         size={40}
-        color="#2c3335"
+        color="#535c5f"
         className="flex md:hidden ml-auto"
       />
     </div>
