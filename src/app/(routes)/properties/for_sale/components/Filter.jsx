@@ -1,4 +1,6 @@
-import React from "react";
+"use client";
+
+import React, { useState } from "react";
 import TypeFilter from "../../components/TypeFilter";
 import PriceRangeFilter from "../../components/PriceRangeFilter";
 import BedroomFilter from "../../components/BedroomFilter";
@@ -7,8 +9,17 @@ import MoreFilters from "../../components/MoreFilters";
 import LocationFilter from "../../components/LocationFilter";
 import styles from "./Filter.module.scss";
 import { TbFilterEdit } from "react-icons/tb";
+import MobileFilter from "../../components/MobileFilter";
 import clsx from "clsx";
 const Filter = () => {
+  const [openMobileFilter, setOpenMobileFilter] = useState(false);
+  const handleButtonClick = () => {
+    setOpenMobileFilter(true);
+  };
+
+  const handleCloseMobileFilter = () => {
+    setOpenMobileFilter(false);
+  };
   return (
     <div
       className={clsx(
@@ -27,10 +38,12 @@ const Filter = () => {
       {/* </div> */}
 
       <TbFilterEdit
+        onClick={handleButtonClick}
         size={40}
         color="#979797"
         className="flex md:hidden ml-auto"
       />
+      <MobileFilter show={openMobileFilter} onClose={handleCloseMobileFilter} />
     </div>
   );
 };
