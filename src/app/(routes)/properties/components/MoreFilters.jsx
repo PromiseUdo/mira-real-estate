@@ -153,7 +153,7 @@ const MoreFilters = ({ className }) => {
       </div>
       {/* dropdown menu */}
       {openDropdown && (
-        <div className="  overflow-y-auto max-h-72 lg:max-h-96  rounded border-[1px]  border-zee-border bg-white  absolute top-[50px]  right-0 w-[400px] shadow-md flex flex-col gap-2  scrollbar scrollbar-w-1   scrollbar-track-rounded-lg scrollbar-thumb-rounded-lg scrollbar-thumb-zee-dark-teal-80 scrollbar-track-zee-gray-200">
+        <div className="  overflow-y-auto max-h-64 lg:max-h-96  rounded border-[1px]  border-zee-border bg-white  absolute top-[50px]  right-0 w-[400px] shadow-md flex flex-col gap-2  scrollbar scrollbar-w-1   scrollbar-track-rounded-lg scrollbar-thumb-rounded-lg scrollbar-thumb-zee-dark-teal-80 scrollbar-track-zee-gray-200">
           <div className="bg-zee-gray-50 text-zee-shades-gray-3 font-semibold p-2 select-none text-sm ">
             More Filters
           </div>
