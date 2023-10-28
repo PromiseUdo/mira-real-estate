@@ -10,6 +10,7 @@ import LocationFilter from "../../components/LocationFilter";
 import styles from "./Filter.module.scss";
 import { TbFilterEdit } from "react-icons/tb";
 import MobileFilter from "../../components/MobileFilter";
+import Overlay from "../../components/Overlay";
 import clsx from "clsx";
 const Filter = () => {
   const [openMobileFilter, setOpenMobileFilter] = useState(false);
@@ -43,7 +44,9 @@ const Filter = () => {
         color="#979797"
         className="flex md:hidden ml-auto"
       />
-      <MobileFilter show={openMobileFilter} onClose={handleCloseMobileFilter} />
+      <Overlay show={openMobileFilter} onClose={handleCloseMobileFilter}>
+        <MobileFilter />
+      </Overlay>
     </div>
   );
 };

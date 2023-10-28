@@ -126,7 +126,7 @@ const MinPriceSelector = ({ minPrice, setMinPrice, minPriceOptions }) => {
       {/* dropdown menu */}
       {openDropdown && (
         <div
-          className="overflow-y-auto max-h-52 lg:max-h-60 rounded border-[1px] px-2 py-2 border-zee-border bg-white  absolute top-[50px] left-auto right-auto w-[fit-content] shadow-md
+          className="overflow-y-auto max-h-44 lg:max-h-60 rounded border-[1px] px-2 py-2 border-zee-border bg-white  absolute top-[50px] left-auto right-auto w-[fit-content] shadow-md
         
         scrollbar scrollbar-w-1   scrollbar-track-rounded-lg scrollbar-thumb-rounded-lg scrollbar-thumb-zee-dark-teal-80 scrollbar-track-zee-gray-200
         "
