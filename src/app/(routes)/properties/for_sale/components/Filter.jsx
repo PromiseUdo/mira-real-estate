@@ -28,7 +28,7 @@ const Filter = () => {
 
       <TbFilterEdit
         size={40}
-        color="#535c5f"
+        color="#979797"
         className="flex md:hidden ml-auto"
       />
     </div>
