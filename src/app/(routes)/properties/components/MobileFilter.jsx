@@ -4,11 +4,14 @@ import { BathroomCount, BedroomCount } from "./BedroomFilter";
 import { MaxPriceSelector, MinPriceSelector } from "./PriceRangeFilter";
 import { PropertyTypeList } from "./PropertyTypeFilter";
 import { MaxSquareFeetSelector, MinSquareFeetSelector } from "./MoreFilters";
+import YearBuilt from "./YearBuilt";
+import PetOptions from "./PetOptions";
+import OtherAmenities from "./OtherAmenities";
 
 const MobileFilter = () => {
   return (
-    <div className="relative h-full w-full   absolute  flex flex-col items-center justify-start">
-      <div className="px-6  py-4 w-full">
+    <div className="relative  w-full h-full  flex flex-col items-center justify-start overflow-y-scroll   scrollbar     scrollbar-thumb-zee-dark-teal-80 scrollbar-track-zee-gray-200 ">
+      <div className="px-6 h-full py-4 w-full ">
         <div className="mb-4 flex items-center gap-4">
           <MinPriceSelector
           // minPrice={selectedMinPrice}
@@ -58,11 +61,19 @@ const MobileFilter = () => {
           </div>
         </div>
 
-        <div className=" my-4 flex flex-col"></div>
+        <div className=" my-4 flex flex-col">
+          <YearBuilt />
+        </div>
+        <div className=" my-4 flex flex-col">
+          <PetOptions />
+        </div>
+        <div className=" my-4 flex flex-col">
+          <OtherAmenities />
+        </div>
       </div>
 
       {/* Apply Buttons */}
-      <div className="w-full shadow fixed border-t bottom-0 py-2">
+      <div className="z-[99999] bg-white w-full shadow fixed border-t bottom-0 py-2">
         <div className=" px-4 flex py-1 gap-4 w-full">
           <button className="bg-zee-gray-100 text-[15px] text-zee-shades-black w-full rounded-md mt-2 py-1 font-semibold whitespace-nowrap">
             Reset

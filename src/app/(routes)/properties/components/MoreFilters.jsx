@@ -7,9 +7,9 @@ import { currencyFormatter } from "../../../../helpers/helpers";
 import clsx from "clsx";
 import BedroomFilter, { BathroomCount, BedroomCount } from "./BedroomFilter";
 import { PropertyTypeList } from "./PropertyTypeFilter";
-
-const petOptions = ["Allows large dogs", "Allows small dogs", "Allows cats"];
-const amenitiesOptions = ["Must have A/C", "Parking Space", "Must have pool"];
+import PetOptions from "./PetOptions";
+import YearBuilt from "./YearBuilt";
+import OtherAmenities from "./OtherAmenities";
 const MoreFilters = ({ className }) => {
   const [openDropdown, setOpenDropdown] = useState(false);
   const [selectedMinSquareFeet, setSelectedMinSquareFeet] = useState("No Min");
@@ -188,87 +188,20 @@ const MoreFilters = ({ className }) => {
               </div>
             </div>
             {/* row 2 */}
-            <div className="px-2 flex flex-col py-2 w-full">
-              <span className="select-none text-sm font-semibold">
-                Year Built
-              </span>
-              <div className="flex items-center gap-4">
-                <div className="flex flex-col flex-1 gap-1">
-                  <input
-                    onChange={(e) => setMinYearBuilt(e.target.value)}
-                    type="text"
-                    value={minYearBuilt}
-                    className="rounded-md  w-full border-zee-border bg-zee-gray-50"
-                    placeholder="No Min"
-                  />
-                </div>
-                <div className="relative ">-</div>
-                <div className="flex flex-1 flex-col gap-1">
-                  <input
-                    onChange={(e) => setMaxYearBuilt(e.target.value)}
-                    value={maxYearBuilt}
-                    type="text"
-                    className="rounded-md  w-full border-zee-border bg-zee-gray-50"
-                    placeholder="No Max"
-                  />
-                </div>
-              </div>
+            <div className="px-2  py-2 w-full">
+              <YearBuilt />
             </div>
             <div className="px-2 flex  lg:hidden flex-col py-2 w-full">
               <PropertyTypeList />
             </div>
             {/* row 3 */}
-            <div className="px-2 flex flex-col py-1 w-full">
-              <span className="select-none text-sm font-semibold">
-                Allows Pets
-              </span>
-              <div className="">
-                {petOptions.map((option, idx) => (
-                  <div key={idx} className="flex gap-4 my-4 px-6 items-center">
-                    <input
-                      onChange={handlePetOptionsChange}
-                      checked={selectedPetOptions.includes(option)}
-                      name={option}
-                      id="type"
-                      type="checkbox"
-                      className="w-6 h-6 !text-zee-teal-100  rounded-full  hover:ring-zee-teal-100  hover:ring-2 focus:ring-0 "
-                    />
-                    <label
-                      htmlFor="type"
-                      className="select-none whitespace-nowrap"
-                    >
-                      {option}
-                    </label>
-                  </div>
-                ))}
-              </div>
+            <div className="px-2  py-1 w-full">
+              <PetOptions />
             </div>
 
             {/* Row 4 */}
-            <div className="px-2 flex flex-col py-1 w-full">
-              <span className="select-none text-sm font-semibold">
-                Other Amenities
-              </span>
-              <div className="">
-                {amenitiesOptions.map((option, idx) => (
-                  <div key={idx} className="flex gap-4 my-4 px-6 items-center">
-                    <input
-                      onChange={handleAmenitiesOptionsChange}
-                      checked={selectedAmenitiesOptions.includes(option)}
-                      name={option}
-                      id="type"
-                      type="checkbox"
-                      className="w-6 h-6 !text-zee-teal-100  rounded-full  hover:ring-zee-teal-100  hover:ring-2 focus:ring-0 "
-                    />
-                    <label
-                      htmlFor="type"
-                      className="select-none whitespace-nowrap"
-                    >
-                      {option}
-                    </label>
-                  </div>
-                ))}
-              </div>
+            <div className="px-2  py-1 w-full">
+              <OtherAmenities />
             </div>
           </div>
           <div className=" border-t  mb-2">
