@@ -4,8 +4,9 @@ import React, { useEffect, useState } from "react";
 import { MdKeyboardArrowDown } from "react-icons/md";
 import CurrencyFormat from "react-currency-format";
 import { currencyFormatter } from "../../../../helpers/helpers";
+import clsx from "clsx";
 
-const PriceRangeFilter = () => {
+const PriceRangeFilter = ({ className }) => {
   const [openDropdown, setOpenDropdown] = useState(false);
   const [selectedMinPrice, setSelectedMinPrice] = useState("No Min");
   const [selectedMaxPrice, setSelectedMaxPrice] = useState("No Max");
@@ -46,7 +47,7 @@ const PriceRangeFilter = () => {
     }
   }, [selectedMinPrice, selectedMaxPrice]);
   return (
-    <div id="dropdownButton" className="relative ">
+    <div id="dropdownButton" className={clsx("relative ", className)}>
       <div
         onClick={() => setOpenDropdown(!openDropdown)}
         className="hover:bg-zee-gray-50 border-solid border-zee-border border-[1px] px-5 py-2 rounded w-[10rem] flex items-center justify-center gap-1 cursor-pointer"

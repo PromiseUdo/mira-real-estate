@@ -10,7 +10,7 @@ import { PropertyTypeList } from "./PropertyTypeFilter";
 
 const petOptions = ["Allows large dogs", "Allows small dogs", "Allows cats"];
 const amenitiesOptions = ["Must have A/C", "Parking Space", "Must have pool"];
-const MoreFilters = () => {
+const MoreFilters = ({ className }) => {
   const [openDropdown, setOpenDropdown] = useState(false);
   const [selectedMinSquareFeet, setSelectedMinSquareFeet] = useState("No Min");
   const [selectedMaxSquareFeet, setSelectedMaxSquareFeet] = useState("No Max");
@@ -135,7 +135,7 @@ const MoreFilters = () => {
   console.log(minYearBuilt, maxYearBuilt);
 
   return (
-    <div id="dropdownButton" className="relative ">
+    <div id="dropdownButton" className={clsx("relative ", className)}>
       <div
         onClick={() => setOpenDropdown(!openDropdown)}
         className="hover:bg-zee-gray-50 border-solid border-zee-border border-[1px] px-5 py-2 rounded w-[8rem] flex items-center justify-center gap-1 cursor-pointer"

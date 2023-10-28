@@ -88,7 +88,7 @@ const Navbar = (props) => {
           />
         )}
 
-        <LocationFilter className="block lg:hidden" />
+        {/* <LocationFilter className="block lg:hidden" /> */}
 
         <ul className="hidden lg:flex items-center gap-6 ">
           <li>

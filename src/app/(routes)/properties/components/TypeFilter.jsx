@@ -1,14 +1,15 @@
 "use client";
 
+import clsx from "clsx";
 import React, { useState } from "react";
 import { MdKeyboardArrowDown } from "react-icons/md";
 const options = ["For Rent", "For Sale"];
-const TypeFilter = () => {
+const TypeFilter = ({ className }) => {
   const [openDropdown, setOpenDropdown] = useState(false);
   const [propertyType, setPropertyType] = useState("For Rent");
 
   return (
-    <div id="dropdownButton" className="relative ">
+    <div id="dropdownButton" className={clsx("relative ", className)}>
       <div
         onClick={() => setOpenDropdown(!openDropdown)}
         className="hover:bg-zee-gray-100 border-solid border-zee-border border-[1px] px-5 py-2 rounded w-[8rem] flex items-center justify-center gap-1 cursor-pointer"
