@@ -2,10 +2,12 @@
 
 import React, { useState } from "react";
 const amenitiesOptions = [
-  "Must have A/C",
   "Parking Space",
+  "Must have A/C",
+
   "Must have pool",
   "Must be fenced",
+  "Must be furnished",
 ];
 
 const OtherAmenities = () => {
