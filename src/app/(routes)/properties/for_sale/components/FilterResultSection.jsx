@@ -5,7 +5,7 @@ const FilterResultSection = ({ children, id, className, title, subtitle }) => {
   return (
     <section
       id={id}
-      className={clsx(className, "w-full, relative pt-[1rem] pb-[3rem]  px-4 ")}
+      className={clsx(className, "w-full, relative pt-[1rem] pb-[3rem]   ")}
     >
       <div className="">
         <h2 className="text-[1.2rem] font-medium mb-[0.3rem] text-zee-shades-black">

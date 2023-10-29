@@ -56,12 +56,14 @@ const Footer = () => {
   const [openpopularStates, setOpenPopularStates] = useState(false);
   return (
     <div className=" py-4  bg-gray-50 w-full">
-      <div className="inner flex flex-col-reverse justify-center items-center  px-0 py-2  lg:px-4 w-full  text-zee-shades-gray-4 gap-2 md:gap-0 ">
-        <div className="flex items-center justify-center company  mt-5  border-t border-zee-shades-gray-2 border-1   w-full     flex-col  gap-2  pt-2 ">
+      <Disclaimer />
+
+      <div className="inner flex flex-col-reverse justify-center items-center  px-0 py-2 px-4 w-full  text-zee-shades-gray-4 gap-2 md:gap-0 ">
+        <div className="flex items-center justify-center company  mt-5  border-t border-zee-shades-gray-2 border-1   w-full     flex-col  gap-3  pt-2 ">
           <Link href="/" className="">
             <img
               className="mx-auto lg:ml-0 object-cover bg-center w-[60px] h-[60px]"
-              src="/zeelogo-white.png"
+              src="/zeelogo.png"
               alt="logo"
             />
           </Link>
@@ -94,7 +96,7 @@ const Footer = () => {
           </div>
         </div>
 
-        <div className="flex border-t border-zee-shades-gray-2 border-1 pt-4 flex-col lg:flex-row justify-center gap-3 lg:gap-9 w-full lg:w-auto">
+        <div className="flex  flex-col lg:flex-row justify-center gap-3 lg:gap-9 w-full lg:w-auto">
           <div>
             <div
               onClick={() => setOpenAdvertisers(!openAdvertisers)}
@@ -112,7 +114,7 @@ const Footer = () => {
             <ul
               className={clsx(
                 `${openAdvertisers ? "block" : "hidden"}`,
-                "lg:block ml-3 md:ml-0"
+                "lg:block ml-3 lg:ml-0"
               )}
             >
               {advertise.map((text, idx) => (
@@ -145,7 +147,7 @@ const Footer = () => {
             <ul
               className={clsx(
                 `${openpopularStates ? "block" : "hidden"}`,
-                "lg:block ml-3 md:ml-0"
+                "lg:block ml-3 lg:ml-0"
               )}
             >
               {popularStates.map((text, idx) => (
@@ -180,7 +182,7 @@ const Footer = () => {
             <ul
               className={clsx(
                 `${openPopularShortletCities ? "block" : "hidden"}`,
-                "lg:block ml-3 md:ml-0"
+                "lg:block ml-3 lg:ml-0"
               )}
             >
               {popularShortlets.map((text, idx) => (
@@ -213,7 +215,7 @@ const Footer = () => {
             <ul
               className={clsx(
                 `${openRentalManager ? "block" : "hidden"}`,
-                "lg:block ml-3 md:ml-0"
+                "lg:block ml-3 lg:ml-0"
               )}
             >
               {rentalManager.map((text, idx) => (
@@ -246,7 +248,7 @@ const Footer = () => {
             <ul
               className={clsx(
                 `${openAboutUs ? "block" : "hidden"}`,
-                "lg:block ml-3 md:ml-0"
+                "lg:block ml-3 lg:ml-0"
               )}
             >
               {aboutUs.map((text, idx) => (
@@ -268,3 +270,15 @@ const Footer = () => {
 };
 
 export default Footer;
+
+const Disclaimer = () => {
+  return (
+    <div className="px-4 w-full py-4 bg-gray-100 border-b border-1 border-zee-shades-gray-2 mb-4">
+      <p className="text-sm font-light">
+        <span className="font-medium ">Disclaimer:</span> Information about
+        properties are not generated or have neither been fully confirmed by
+        Mira Homes. We are not liable to any misinformation.
+      </p>
+    </div>
+  );
+};
