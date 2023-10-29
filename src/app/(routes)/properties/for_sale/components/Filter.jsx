@@ -40,8 +40,8 @@ const Filter = () => {
 
       <TbFilterEdit
         onClick={handleButtonClick}
-        size={40}
-        color="#979797"
+        size={35}
+        color="#2c3335"
         className="flex md:hidden ml-auto"
       />
       <Overlay show={openMobileFilter} onClose={handleCloseMobileFilter}>
