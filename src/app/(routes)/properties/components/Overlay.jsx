@@ -17,7 +17,7 @@ const Overlay = ({ show, onClose, children }) => {
           </span>
         </div>
         <button
-          className="ml-auto flex items-center justify-center w-[40px] h-[40px] rounded-[50%] text-xl bg-white text-white"
+          className="ml-auto border border-1 flex items-center justify-center w-[40px] h-[40px] rounded-[50%] text-xl bg-white text-white"
           onClick={onClose}
         >
           <AiOutlineClose color="#2c3335" />
