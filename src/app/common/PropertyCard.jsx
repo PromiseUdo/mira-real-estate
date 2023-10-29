@@ -10,6 +10,7 @@ import {
 import { TfiLocationPin } from "react-icons/tfi";
 import styles from "../(styles)/PropertyCard.module.scss";
 import { clsx } from "clsx";
+import Link from "next/link";
 const PropertyCard = ({ position, index, dx = 0 }) => {
   const [currentIndex, setCurrentIndex] = useState(0);
   const propImages = ["/hero-image.jpg", "/bathroom.webp", "/kitchen.jpg"];
@@ -116,12 +117,12 @@ const PropertyCard = ({ position, index, dx = 0 }) => {
             <span>0</span>
           </div>
         </div>
-        <a
+        <Link
           href="/properties/for_sale"
-          className="py-1 px-6 bg-zee-teal-100 hover:bg-zee-teal-80 text-white w-full rounded-md"
+          className="text-sm font-normal uppercase flex items-center justify-center py-1 px-6 bg-zee-teal-100 hover:bg-zee-teal-80 text-white w-[100%] rounded-md"
         >
           see details
-        </a>
+        </Link>
       </div>
     </div>
   );
