@@ -52,7 +52,7 @@ const PropertyCard = ({ position, index, dx = 0 }) => {
       >
         <div className="h-full  flex flex-col items-center justify-center  ">
           <div className="self-end bg-black/60 text-white mr-4 mt-1 py-[0.1rem]  px-[0.5rem] border border-1 border-zee-border rounded-sm">
-            <span className="text-xs font-light ">{`Available in 210 days`}</span>
+            <span className="text-xs font-light select-none">{`Available in 210 days`}</span>
           </div>
           <div
             className={clsx(
@@ -75,7 +75,9 @@ const PropertyCard = ({ position, index, dx = 0 }) => {
             />
           </div>
           <div className="self-end bg-black/60 text-white mr-4 mt-1 py-[0.1rem] rounded-sm px-[0.5rem]">
-            <span>{`${currentIndex + 1} of ${propImages.length}`}</span>
+            <span className="select-none">{`${currentIndex + 1} of ${
+              propImages.length
+            }`}</span>
           </div>
         </div>
       </div>

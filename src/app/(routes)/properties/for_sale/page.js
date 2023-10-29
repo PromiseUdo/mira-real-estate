@@ -8,11 +8,11 @@ const page = () => {
     <div className="relative 	  flex flex-col ">
       <Filter />
       <div className=" h-screen  flex gap-4">
-        <div className="flex-1  overflow-hidden">
+        <div className="flex-1 flex items-center justify-center overflow-hidden">
           <div>Google Maps</div>
           {/* <DummyContent /> */}
         </div>
-        <div className="shadow	shadow-zee-gray-600	bg-gray-50  flex-1 mr-4  overflow-y-scroll   scrollbar    scrollbar-w-1.5    scrollbar-thumb-zee-dark-teal-80 scrollbar-track-zee-gray-200 ">
+        <div className="shadow	shadow-zee-gray-600	bg-gray-50  flex-1 mr-0 md:mr-4  overflow-y-scroll   scrollbar    scrollbar-w-1.5    scrollbar-thumb-zee-dark-teal-80 scrollbar-track-zee-gray-200 ">
           <FilterResults />
         </div>
       </div>
