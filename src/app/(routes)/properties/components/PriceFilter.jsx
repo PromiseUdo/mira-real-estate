@@ -1,23 +1,19 @@
-"use client";
-
-import React, { useEffect, useState } from "react";
-import { MdKeyboardArrowDown } from "react-icons/md";
+import React from "react";
+import { useState, useEffect } from "react";
 import CurrencyFormat from "react-currency-format";
+import { MdKeyboardArrowDown } from "react-icons/md";
 import { currencyFormatter } from "../../../../helpers/helpers";
-import clsx from "clsx";
 
-const PriceRangeFilter = ({ className }) => {
-  const [openDropdown, setOpenDropdown] = useState(false);
-  const [selectedMinPrice, setSelectedMinPrice] = useState("No Min");
-  const [selectedMaxPrice, setSelectedMaxPrice] = useState("No Max");
-  const [buttonCaption, setButtonCaption] = useState("Price");
+const PriceFilter = () => {
   const priceOptions = [
     100000, 200000, 300000, 400000, 500000, 600000, 700000, 800000, 900000,
     1000000, 3000000, 5000000, 10000000,
   ];
   const [minPriceOptions, setMinPriceOptions] = useState(priceOptions);
   const [maxPriceOptions, setMaxPriceOptions] = useState(priceOptions);
-
+  const [selectedMinPrice, setSelectedMinPrice] = useState("No Min");
+  const [selectedMaxPrice, setSelectedMaxPrice] = useState("No Max");
+  const [buttonCaption, setButtonCaption] = useState("Price");
   useEffect(() => {
     if (selectedMinPrice !== "No Min" && selectedMaxPrice === "No Max") {
       setMaxPriceOptions(
@@ -47,53 +43,24 @@ const PriceRangeFilter = ({ className }) => {
     }
   }, [selectedMinPrice, selectedMaxPrice]);
   return (
-    <div id="dropdownButton" className={clsx("relative ", className)}>
-      <div
-        onClick={() => setOpenDropdown(!openDropdown)}
-        className="hover:bg-zee-gray-50 border-solid border-zee-border border-[1px] px-5 py-2 rounded w-[10rem] flex items-center justify-center gap-1 cursor-pointer"
-      >
-        <span className="text-sm select-none whitespace-nowrap">
-          {buttonCaption}
-        </span>
-        <MdKeyboardArrowDown
-          className={`transition-all ease-in duration-100 ${
-            openDropdown ? "rotate-180" : ""
-          }`}
-        />
-      </div>
-      {/* dropdown menu */}
-      {openDropdown && (
-        <div className="rounded border-[1px]  border-zee-border bg-white  absolute top-[50px] left-auto right-auto w-[fit-content] shadow-md">
-          <div className="bg-zee-gray-50 text-zee-shades-gray-3 font-semibold p-2 select-none ">
-            Price Range
-          </div>
-          <div className="px-2 flex flex-col py-2 w-full">
-            <div className="flex items-center gap-4">
-              <MinPriceSelector
-                minPrice={selectedMinPrice}
-                setMinPrice={setSelectedMinPrice}
-                minPriceOptions={minPriceOptions}
-              />
-              <div className="relative top-3">-</div>
+    <div className="flex items-center gap-4">
+      <MinPriceSelector
+        minPrice={selectedMinPrice}
+        setMinPrice={setSelectedMinPrice}
+        minPriceOptions={minPriceOptions}
+      />
+      <div className="relative top-3">-</div>
 
-              <MaxPriceSelector
-                maxPrice={selectedMaxPrice}
-                setMaxPrice={setSelectedMaxPrice}
-                maxPriceOptions={maxPriceOptions}
-              />
-            </div>
-
-            <button className="bg-zee-teal-100 text-[15px] text-white w-full rounded-md mt-4 py-1 font-semibold">
-              Apply
-            </button>
-          </div>
-        </div>
-      )}
+      <MaxPriceSelector
+        maxPrice={selectedMaxPrice}
+        setMaxPrice={setSelectedMaxPrice}
+        maxPriceOptions={maxPriceOptions}
+      />
     </div>
   );
 };
 
-export default PriceRangeFilter;
+export default PriceFilter;
 
 export const MinPriceSelector = ({
   minPrice,
@@ -101,9 +68,6 @@ export const MinPriceSelector = ({
   minPriceOptions,
 }) => {
   const [openDropdown, setOpenDropdown] = useState(false);
-  const [selected, setSelected] = useState(null);
-
-  const handleSelect = (value) => {};
 
   return (
     <div className="flex flex-1 flex-col gap-1">
@@ -126,9 +90,9 @@ export const MinPriceSelector = ({
         {openDropdown && (
           <div
             className="overflow-y-auto max-h-40 lg:max-h-60 rounded border-[1px] px-2 py-2 border-zee-border bg-white  absolute top-[50px] left-auto right-auto w-[fit-content] shadow-md
-        
-        scrollbar scrollbar-w-1   scrollbar-track-rounded-lg scrollbar-thumb-rounded-lg scrollbar-thumb-zee-dark-teal-80 scrollbar-track-zee-gray-200
-        "
+          
+          scrollbar scrollbar-w-1   scrollbar-track-rounded-lg scrollbar-thumb-rounded-lg scrollbar-thumb-zee-dark-teal-80 scrollbar-track-zee-gray-200
+          "
           >
             <div className="flex gap-4 my-4 px-3 items-center">
               <input
@@ -184,7 +148,6 @@ export const MaxPriceSelector = ({
   maxPriceOptions,
 }) => {
   const [openDropdown, setOpenDropdown] = useState(false);
-  const [selected, setSelected] = useState(null);
 
   const handleSelect = (value) => {
     // alert(value);
@@ -211,9 +174,9 @@ export const MaxPriceSelector = ({
         {openDropdown && (
           <div
             className="overflow-y-auto max-h-40 lg:max-h-60 rounded border-[1px] px-2 py-2 border-zee-border bg-white  absolute top-[50px] left-auto right-auto w-[fit-content] shadow-md
-        
-        scrollbar scrollbar-w-1   scrollbar-track-rounded-lg scrollbar-thumb-rounded-lg scrollbar-thumb-zee-dark-teal-80 scrollbar-track-zee-gray-200
-        "
+          
+          scrollbar scrollbar-w-1   scrollbar-track-rounded-lg scrollbar-thumb-rounded-lg scrollbar-thumb-zee-dark-teal-80 scrollbar-track-zee-gray-200
+          "
           >
             <div className="flex gap-4 my-4 px-3 items-center">
               <input

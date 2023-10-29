@@ -1,37 +1,27 @@
 import clsx from "clsx";
 import React from "react";
-import { BathroomCount, BedroomCount } from "./BedroomFilter";
-import { MaxPriceSelector, MinPriceSelector } from "./PriceRangeFilter";
 import { PropertyTypeList } from "./PropertyTypeFilter";
 import { MaxSquareFeetSelector, MinSquareFeetSelector } from "./MoreFilters";
 import YearBuilt from "./YearBuilt";
 import PetOptions from "./PetOptions";
 import OtherAmenities from "./OtherAmenities";
+import PriceFilter from "./PriceFilter";
+import BedroomCountFilter from "./BedroomCountFilter";
+import BathroomCountFilter from "./BathroomCountFilter";
 
 const MobileFilter = () => {
   return (
     <div className="relative  w-full h-full  flex flex-col items-center justify-start  ">
       <div className="px-6 h-[calc(100vh-9rem)] py-4 w-full overflow-y-scroll   scrollbar  scrollbar-w-1.5   scrollbar-track-rounded-lg scrollbar-thumb-rounded-lg    scrollbar-thumb-zee-dark-teal-80 scrollbar-track-zee-gray-200 ">
-        <div className="mb-4 flex items-center gap-4">
-          <MinPriceSelector
-          // minPrice={selectedMinPrice}
-          // setMinPrice={setSelectedMinPrice}
-          // minPriceOptions={minPriceOptions}
-          />
-          <div className="relative top-3">-</div>
-
-          <MaxPriceSelector
-          // maxPrice={selectedMaxPrice}
-          // setMaxPrice={setSelectedMaxPrice}
-          // maxPriceOptions={maxPriceOptions}
-          />
+        <div className="my-4 flex flex-col w-full">
+          <PriceFilter />
         </div>
         <div className="my-4 flex flex-col w-full">
           <div className="flex lg:hidden flex-col py-2 w-full">
-            <BedroomCount />
+            <BedroomCountFilter />
           </div>
           <div className=" flex  lg:hidden flex-col py-2 w-full">
-            <BathroomCount />
+            <BathroomCountFilter />
           </div>
         </div>
         <div className="my-4 ">

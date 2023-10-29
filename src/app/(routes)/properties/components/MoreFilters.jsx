@@ -3,13 +3,14 @@
 import React, { useEffect, useState } from "react";
 import { MdKeyboardArrowDown } from "react-icons/md";
 import CurrencyFormat from "react-currency-format";
-import { currencyFormatter } from "../../../../helpers/helpers";
 import clsx from "clsx";
-import BedroomFilter, { BathroomCount, BedroomCount } from "./BedroomFilter";
+
 import { PropertyTypeList } from "./PropertyTypeFilter";
 import PetOptions from "./PetOptions";
 import YearBuilt from "./YearBuilt";
 import OtherAmenities from "./OtherAmenities";
+import BedroomCountFilter from "./BedroomCountFilter";
+import BathroomCountFilter from "./BathroomCountFilter";
 const MoreFilters = ({ className }) => {
   const [openDropdown, setOpenDropdown] = useState(false);
   const [selectedMinSquareFeet, setSelectedMinSquareFeet] = useState("No Min");
@@ -159,10 +160,10 @@ const MoreFilters = ({ className }) => {
               More Filters
             </div>
             <div className="flex lg:hidden px-2 flex-col py-2 w-full">
-              <BedroomCount />
+              <BedroomCountFilter />
             </div>
             <div className="px-2 flex  lg:hidden flex-col py-2 w-full">
-              <BathroomCount />
+              <BathroomCountFilter />
             </div>
 
             <div className="px-2 flex flex-col py-2 w-full">
