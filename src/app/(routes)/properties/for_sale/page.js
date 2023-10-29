@@ -8,7 +8,7 @@ const page = () => {
     <div className="relative 	  flex flex-col ">
       <Filter />
       <div className=" h-screen  flex gap-4">
-        <div className="flex-1 flex items-center justify-center overflow-hidden">
+        <div className="hidden lg:flex flex-1 items-center justify-center overflow-hidden">
           <div>Google Maps</div>
           {/* <DummyContent /> */}
         </div>
