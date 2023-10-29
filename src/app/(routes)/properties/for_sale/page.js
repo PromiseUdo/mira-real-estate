@@ -16,7 +16,7 @@ const page = () => {
           <FilterResults />
         </div>
       </div>
-      <div className="w-full flex items-center justify-center fixed bottom-5">
+      <div className="lg:hidden w-full flex items-center justify-center fixed bottom-5">
         <button className="bg-zee-teal-20 py-2 px-4 rounded-md flex gap-2 items-center justify-center">
           <BsPinMapFill />
           <span>Map</span>
