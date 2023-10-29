@@ -2,7 +2,7 @@ import React from "react";
 import FilterResultSection from "./FilterResultSection";
 import DummyContent from "../../../../components/DummyContent";
 import PropertyCard from "../../../../common/PropertyCard";
-
+import Footer from "./Footer";
 const FilterResults = () => {
   return (
     <FilterResultSection
@@ -20,6 +20,7 @@ const FilterResults = () => {
         <PropertyCard />
         <PropertyCard />
       </div>
+      <Footer />
     </FilterResultSection>
   );
 };
