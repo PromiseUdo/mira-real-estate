@@ -11,7 +11,7 @@ import OtherAmenities from "./OtherAmenities";
 const MobileFilter = () => {
   return (
     <div className="relative  w-full h-full  flex flex-col items-center justify-start  ">
-      <div className="px-6 h-[calc(100vh-8rem)] py-4 w-full overflow-y-scroll   scrollbar  scrollbar-w-1.5   scrollbar-track-rounded-lg scrollbar-thumb-rounded-lg    scrollbar-thumb-zee-dark-teal-80 scrollbar-track-zee-gray-200 ">
+      <div className="px-6 h-[calc(100vh-9rem)] py-4 w-full overflow-y-scroll   scrollbar  scrollbar-w-1.5   scrollbar-track-rounded-lg scrollbar-thumb-rounded-lg    scrollbar-thumb-zee-dark-teal-80 scrollbar-track-zee-gray-200 ">
         <div className="mb-4 flex items-center gap-4">
           <MinPriceSelector
           // minPrice={selectedMinPrice}
