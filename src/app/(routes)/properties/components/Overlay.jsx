@@ -12,7 +12,7 @@ const Overlay = ({ show, onClose, children }) => {
     >
       <div className="flex shadow items-center  py-4 px-4">
         <div className="place-self-center">
-          <span className="text-zee-shades-gray-4 font-normal text-[1.2rem]">
+          <span className="text-zee-shades-gray-4 font-medium text-[1.2rem]">
             0 Results
           </span>
         </div>
