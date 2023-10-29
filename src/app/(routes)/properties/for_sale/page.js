@@ -17,7 +17,7 @@ const page = () => {
         </div>
       </div>
       <div className="lg:hidden w-full flex items-center justify-center fixed bottom-5">
-        <button className="bg-zee-teal-20 py-2 px-4 rounded-md flex gap-2 items-center justify-center">
+        <button className="!capitalize bg-zee-teal-20 py-2 px-4 rounded-md flex gap-2 items-center justify-center text-base font-normal">
           <BsPinMapFill />
           <span>Map</span>
         </button>
