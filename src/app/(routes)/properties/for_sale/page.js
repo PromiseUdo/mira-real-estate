@@ -1,15 +1,20 @@
 "use client";
 
-import React from "react";
+import React, { useEffect } from "react";
 import Filter from "./components/Filter";
 import DummyContent from "../../../components/DummyContent";
 import { BsPinMapFill, BsListUl } from "react-icons/bs";
 import FilterResults from "../for_sale/components/FilterResults.jsx";
 import { useToggleState } from "../../../../hooks/useToggleState";
 import clsx from "clsx";
-const page = () => {
+import useWindowDimensions from "../../../../hooks/useWindowDimensions";
+const Page = () => {
   const { state: showMap, toggle, close: closeMap } = useToggleState(false);
+  const { height, width } = useWindowDimensions();
 
+  useEffect(() => {
+    if (width >= 1024) closeMap();
+  }, [width]);
   return (
     <div className="relative 	  flex flex-col ">
       <Filter />
@@ -27,8 +32,8 @@ const page = () => {
 
         <div
           className={clsx(
-            "shadow	shadow-zee-gray-600	bg-gray-50  flex-1 mr-0 lg:mr-4  overflow-y-scroll   scrollbar    scrollbar-w-1.5    scrollbar-thumb-zee-dark-teal-80 scrollbar-track-zee-gray-200 ",
-            showMap ? "!hidden" : "!flex"
+            " shadow	shadow-zee-gray-600	bg-gray-50  flex-1 mr-0 lg:mr-4  overflow-y-scroll   scrollbar    scrollbar-w-1.5    scrollbar-thumb-zee-dark-teal-80 scrollbar-track-zee-gray-200 ",
+            showMap ? "hidden" : "!flex"
           )}
         >
           <FilterResults />
@@ -47,4 +52,4 @@ const page = () => {
   );
 };
 
-export default page;
+export default Page;
