@@ -59,7 +59,34 @@ const FeaturedProperties = () => {
           className="flex  flex-1 max-w-full items-start justify-between gap-6 md:gap-2 overflow-x-auto scrollbar scrollbar-h-1 overflow-y-visible  scrollbar-track-rounded-lg scrollbar-thumb-rounded-lg scrollbar-thumb-zee-dark-teal-80 scrollbar-track-zee-gray-200 pb-4"
         >
           <div className="flex flex-1  items-start h-full z-10 gap-4">
-            <PropertyCard className="snap-start" position="start" index={0} />
+            <div className="w-[17rem] md:w-[16rem]">
+              <PropertyCard />
+            </div>
+            <div className="w-[17rem] md:w-[16rem]">
+              <PropertyCard />
+            </div>
+            <div className="w-[17rem] md:w-[16rem]">
+              <PropertyCard />
+            </div>
+            <div className="w-[17rem] md:w-[16rem]">
+              <PropertyCard />
+            </div>
+            <div className="w-[17rem] md:w-[16rem]">
+              <PropertyCard />
+            </div>
+            <div className="w-[17rem] md:w-[16rem]">
+              <PropertyCard />
+            </div>
+            <div className="w-[17rem] md:w-[16rem]">
+              <PropertyCard />
+            </div>
+            <div className="w-[17rem] md:w-[16rem]">
+              <PropertyCard />
+            </div>
+            <div className="w-[17rem] md:w-[16rem]">
+              <PropertyCard />
+            </div>
+            {/* <PropertyCard className="snap-start" position="start" index={0} />
             <PropertyCard className="snap-start" index={1} />
             <PropertyCard className="snap-start" index={2} />
             <PropertyCard className="snap-start" index={3} />
@@ -67,7 +94,7 @@ const FeaturedProperties = () => {
             <PropertyCard className="snap-start" index={5} />
             <PropertyCard className="snap-start" index={5} />
             <PropertyCard className="snap-start" index={5} />
-            <PropertyCard className="snap-start" index={5} />
+            <PropertyCard className="snap-start" index={5} /> */}
           </div>
         </div>
         <div className="mt-10 flex items-center justify-center gap-2 self-center">

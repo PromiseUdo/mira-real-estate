@@ -75,17 +75,21 @@ const Navbar = (props) => {
           </li>
         </ul>
         {!isScrolled ? (
-          <img
-            className="object-cover bg-center w-[60px] h-[60px]"
-            src="/zeelogo-white.png"
-            alt="logo"
-          />
+          <Link href="/">
+            <img
+              className="object-cover bg-center w-[60px] h-[60px]"
+              src="/zeelogo-white.png"
+              alt="logo"
+            />
+          </Link>
         ) : (
-          <img
-            className="object-cover bg-center w-[60px] h-[60px]"
-            src="/zeelogo-white.png"
-            alt="logo"
-          />
+          <Link href="/">
+            <img
+              className="object-cover bg-center w-[60px] h-[60px]"
+              src="/zeelogo-white.png"
+              alt="logo"
+            />
+          </Link>
         )}
 
         {/* <LocationFilter className="block lg:hidden" /> */}

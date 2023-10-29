@@ -10,7 +10,7 @@ const FilterResults = () => {
       title="Properties For Rent"
       subtitle="150 results"
     >
-      <div className="my-4 flex gap-3 flex-wrap">
+      <div className="my-4 w-full flex gap-3 flex-wrap">
         <PropertyCard />
         <PropertyCard />
         <PropertyCard />
