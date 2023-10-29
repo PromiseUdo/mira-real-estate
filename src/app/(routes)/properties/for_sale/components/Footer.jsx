@@ -96,7 +96,7 @@ const Footer = () => {
           </div>
         </div>
 
-        <div className="flex  flex-col lg:flex-row justify-center gap-3 lg:gap-9 w-full lg:w-auto">
+        <div className="flex  flex-col xl:flex-row justify-center gap-3 xl:gap-9 w-full xl:w-auto">
           <div>
             <div
               onClick={() => setOpenAdvertisers(!openAdvertisers)}
@@ -105,16 +105,16 @@ const Footer = () => {
               <h5 className="text-sm font-medium">Advertisers</h5>
               <div>
                 {!openAdvertisers ? (
-                  <HiMiniPlus color="#2c3335" className="lg:hidden" />
+                  <HiMiniPlus color="#2c3335" className="xl:hidden" />
                 ) : (
-                  <HiMiniMinus color="#2c3335" className="lg:hidden" />
+                  <HiMiniMinus color="#2c3335" className="xl:hidden" />
                 )}
               </div>
             </div>
             <ul
               className={clsx(
                 `${openAdvertisers ? "block" : "hidden"}`,
-                "lg:block ml-3 lg:ml-0"
+                "xl:block ml-3 xl:ml-0"
               )}
             >
               {advertise.map((text, idx) => (
@@ -138,16 +138,16 @@ const Footer = () => {
               <h5 className="text-sm font-medium">Popular States</h5>
               <div>
                 {!openpopularStates ? (
-                  <HiMiniPlus color="#2c3335" className="lg:hidden" />
+                  <HiMiniPlus color="#2c3335" className="xl:hidden" />
                 ) : (
-                  <HiMiniMinus color="#2c3335" className="lg:hidden" />
+                  <HiMiniMinus color="#2c3335" className="xl:hidden" />
                 )}
               </div>
             </div>
             <ul
               className={clsx(
                 `${openpopularStates ? "block" : "hidden"}`,
-                "lg:block ml-3 lg:ml-0"
+                "xl:block ml-3 xl:ml-0"
               )}
             >
               {popularStates.map((text, idx) => (
@@ -173,16 +173,16 @@ const Footer = () => {
               <h5 className="text-sm font-medium">Popular Shortlet Cities</h5>
               <div>
                 {!openPopularShortletCities ? (
-                  <HiMiniPlus color="#2c3335" className="lg:hidden" />
+                  <HiMiniPlus color="#2c3335" className="xl:hidden" />
                 ) : (
-                  <HiMiniMinus color="#2c3335" className="lg:hidden" />
+                  <HiMiniMinus color="#2c3335" className="xl:hidden" />
                 )}
               </div>
             </div>
             <ul
               className={clsx(
                 `${openPopularShortletCities ? "block" : "hidden"}`,
-                "lg:block ml-3 lg:ml-0"
+                "xl:block ml-3 xl:ml-0"
               )}
             >
               {popularShortlets.map((text, idx) => (
@@ -206,16 +206,16 @@ const Footer = () => {
               <h5 className="text-sm font-medium">Rental Manager</h5>
               <div>
                 {!openRentalManager ? (
-                  <HiMiniPlus color="#2c3335" className="lg:hidden" />
+                  <HiMiniPlus color="#2c3335" className="xl:hidden" />
                 ) : (
-                  <HiMiniMinus color="#2c3335" className="lg:hidden" />
+                  <HiMiniMinus color="#2c3335" className="xl:hidden" />
                 )}
               </div>
             </div>
             <ul
               className={clsx(
                 `${openRentalManager ? "block" : "hidden"}`,
-                "lg:block ml-3 lg:ml-0"
+                "xl:block ml-3 xl:ml-0"
               )}
             >
               {rentalManager.map((text, idx) => (
@@ -239,16 +239,16 @@ const Footer = () => {
               <h5 className="text-sm font-medium">About Us</h5>
               <div>
                 {!openAboutUs ? (
-                  <HiMiniPlus color="#2c3335" className="lg:hidden" />
+                  <HiMiniPlus color="#2c3335" className="xl:hidden" />
                 ) : (
-                  <HiMiniMinus color="#2c3335" className="lg:hidden" />
+                  <HiMiniMinus color="#2c3335" className="xl:hidden" />
                 )}
               </div>
             </div>
             <ul
               className={clsx(
                 `${openAboutUs ? "block" : "hidden"}`,
-                "lg:block ml-3 lg:ml-0"
+                "xl:block ml-3 xl:ml-0"
               )}
             >
               {aboutUs.map((text, idx) => (

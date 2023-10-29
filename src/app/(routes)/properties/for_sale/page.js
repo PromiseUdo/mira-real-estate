@@ -18,10 +18,10 @@ const Page = () => {
   return (
     <div className="relative 	  flex flex-col ">
       <Filter />
-      <div className="w-full h-screen grid grid-cols-12 gap-4">
+      <div className=" h-screen grid grid-cols-12  gap-2">
         <div
           className={clsx(
-            "col-span-12 lg:col-span-8 items-center justify-center overflow-hidden",
+            "col-span-12 lg:col-span-8 xl:col-span-5 min-[1350px]:col-span-6 items-center justify-center overflow-hidden",
             showMap ? "flex" : "hidden lg:flex"
           )}
         >
@@ -32,11 +32,12 @@ const Page = () => {
 
         <div
           className={clsx(
-            " shadow	shadow-zee-gray-600	bg-gray-50 col-span-12 lg:col-span-4 mr-0 xl:mr-4  overflow-y-scroll   scrollbar    scrollbar-w-1.5    scrollbar-thumb-zee-dark-teal-80 scrollbar-track-zee-gray-200 ",
+            " col-span-12 lg:col-span-4 xl:col-span-7 min-[1350px]:col-span-6 shadow	shadow-zee-gray-600	bg-gray-50 xl:mr-4  overflow-y-scroll   scrollbar    scrollbar-w-1.5    scrollbar-thumb-zee-dark-teal-80 scrollbar-track-zee-gray-200 ",
             showMap ? "hidden" : "!flex"
           )}
         >
           <FilterResults />
+          {/* <DummyContent /> */}
         </div>
       </div>
       <div className="lg:hidden w-full flex items-center justify-center fixed bottom-5">
