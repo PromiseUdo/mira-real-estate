@@ -1,5 +1,10 @@
 import React from "react";
-const amenitiesOptions = ["Must have A/C", "Parking Space", "Must have pool"];
+const amenitiesOptions = [
+  "Must have A/C",
+  "Parking Space",
+  "Must have pool",
+  "Must be fenced",
+];
 
 const OtherAmenities = () => {
   return (
