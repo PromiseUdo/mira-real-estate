@@ -7,7 +7,8 @@ const Overlay = ({ show, onClose, children }) => {
     <div
       className={clsx(
         "fixed top-0 left-0 w-screen h-screen bg-white ",
-        show ? "block" : "hidden"
+        show ? "block" : "hidden",
+        "lg:hidden"
       )}
     >
       <div className="flex shadow items-center  py-4 px-4">
