@@ -1,6 +1,5 @@
 import clsx from "clsx";
 import React from "react";
-import { PropertyTypeList } from "./PropertyTypeFilter";
 import { MaxSquareFeetSelector, MinSquareFeetSelector } from "./MoreFilters";
 import YearBuilt from "./YearBuilt";
 import PetOptions from "./PetOptions";
@@ -8,6 +7,8 @@ import OtherAmenities from "./OtherAmenities";
 import PriceFilter from "./PriceFilter";
 import BedroomCountFilter from "./BedroomCountFilter";
 import BathroomCountFilter from "./BathroomCountFilter";
+import PropertyTypeList from "./PropertyTypeList";
+import SquareFeetFilter from "./SquareFeetFilter";
 
 const MobileFilter = () => {
   return (
@@ -29,26 +30,7 @@ const MobileFilter = () => {
         </div>
 
         <div className=" my-4 flex flex-col">
-          <span className="mb-2 select-none font-medium text-sm ">
-            Square Feet
-          </span>
-          <div className=" justify-between flex items-center gap-4">
-            <div className="flex flex-col flex-1 gap-1">
-              <MinSquareFeetSelector
-              //   minSquareFeet={selectedMinSquareFeet}
-              //   setMinSquareFeet={setSelectedMinSquareFeet}
-              //   minSquareFeetOptions={minSquareFeetOptions}
-              />
-            </div>
-            <div className="relative ">-</div>
-            <div className="flex flex-1 flex-col gap-1">
-              <MaxSquareFeetSelector
-              //   maxSquareFeet={selectedMaxSquareFeet}
-              //   setMaxSquareFeet={setSelectedMaxSquareFeet}
-              //   maxSquareFeetOptions={maxSquareFeetOptions}
-              />
-            </div>
-          </div>
+          <SquareFeetFilter />
         </div>
 
         <div className=" my-4 flex flex-col">
