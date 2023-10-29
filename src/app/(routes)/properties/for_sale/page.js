@@ -7,12 +7,12 @@ const page = () => {
   return (
     <div className="relative 	  flex flex-col ">
       <Filter />
-      <div className=" h-screen bg-green-600 flex gap-4">
+      <div className=" h-screen  flex gap-4">
         <div className="flex-1  overflow-hidden">
           <div>Google Maps</div>
-          <DummyContent />
+          {/* <DummyContent /> */}
         </div>
-        <div className="bg-gray-100 flex-1 mr-4  overflow-y-scroll   scrollbar     scrollbar-thumb-zee-dark-teal-80 scrollbar-track-zee-gray-200 ">
+        <div className="shadow	shadow-zee-gray-600	bg-gray-50  flex-1 mr-4  overflow-y-scroll   scrollbar     scrollbar-thumb-zee-dark-teal-80 scrollbar-track-zee-gray-200 ">
           <FilterResults />
         </div>
       </div>

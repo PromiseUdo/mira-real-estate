@@ -22,7 +22,7 @@ const PropertyTypeFilter = ({ className }) => {
       </div>
       {/* dropdown menu */}
       {openDropdown && (
-        <div className="rounded border-[1px]  border-zee-border bg-white px-2  absolute top-[50px] left-auto right-auto w-[fit-content] shadow-md">
+        <div className="rounded border-[1px]  border-zee-border bg-white  absolute top-[50px] left-auto right-auto w-[fit-content] shadow-md">
           <div className="bg-zee-gray-50 text-zee-shades-gray-3 font-semibold p-2 select-none text-sm ">
             Type of Property
           </div>
