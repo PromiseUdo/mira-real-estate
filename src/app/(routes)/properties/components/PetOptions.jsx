@@ -4,7 +4,7 @@ const petOptions = ["Allows large dogs", "Allows small dogs", "Allows cats"];
 const PetOptions = () => {
   return (
     <div className="flex flex-col w-full">
-      <span className="select-none text-sm font-semibold">Allows Pets</span>
+      <span className="select-none text-sm font-medium">Allows Pets</span>
       <div className="">
         {petOptions.map((option, idx) => (
           <div key={idx} className="flex gap-4 my-4 px-6 items-center">

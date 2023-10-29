@@ -62,7 +62,7 @@ export const PropertyTypeList = ({
 }) => {
   return (
     <div className="py-1">
-      <span className="block lg:hidden font-medium">Property Type</span>
+      <span className="block lg:hidden text-sm font-medium">Property Type</span>
       {options.map((option, idx) => (
         <div key={idx} className="flex gap-4 my-4 px-6 items-center">
           <input

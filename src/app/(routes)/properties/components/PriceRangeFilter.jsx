@@ -107,7 +107,7 @@ export const MinPriceSelector = ({
 
   return (
     <div className="flex flex-1 flex-col gap-1">
-      <span className="select-none  text-sm font-normal">Minimum</span>
+      <span className="select-none  text-sm font-medium">Minimum</span>
       <div id="dropdownButton" className="relative w-full">
         <div
           onClick={() => setOpenDropdown(!openDropdown)}
@@ -192,7 +192,7 @@ export const MaxPriceSelector = ({
 
   return (
     <div className="flex flex-1 flex-col gap-1">
-      <span className="select-none text-sm font-normal">Maximum</span>
+      <span className="select-none text-sm font-medium">Maximum</span>
       <div id="dropdownButton" className="relative w-full ">
         <div
           onClick={() => setOpenDropdown(!openDropdown)}

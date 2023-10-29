@@ -74,7 +74,7 @@ export default BedroomFilter;
 export const BedroomCount = ({ selectedBeds, setSelectedBeds, className }) => {
   return (
     <div className={clsx("flex flex-col gap-1", className)}>
-      <span className="select-none text-sm font-normal">Bedrooms</span>
+      <span className="select-none text-sm font-medium">Bedrooms</span>
       <div className="flex gap-0 items-center">
         <button
           onClick={() => setSelectedBeds("Any")}
@@ -142,7 +142,7 @@ export const BathroomCount = ({
 }) => {
   return (
     <div className={clsx("flex flex-col gap-1", className)}>
-      <span className="select-none text-sm font-normal">Bathrooms</span>
+      <span className="select-none text-sm font-medium">Bathrooms</span>
       <div className="flex gap-0 items-center">
         <button
           onClick={() => setSelectedBaths("Any")}
