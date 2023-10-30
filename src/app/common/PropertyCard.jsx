@@ -11,9 +11,19 @@ import { TfiLocationPin } from "react-icons/tfi";
 import styles from "../(styles)/PropertyCard.module.scss";
 import { clsx } from "clsx";
 import Link from "next/link";
+import PropertyDetailOverlay from "../../app/(routes)/properties/components/PropertyDetailOverlay";
 const PropertyCard = ({ position, index, dx = 0 }) => {
   const [currentIndex, setCurrentIndex] = useState(0);
   const propImages = ["/hero-image.jpg", "/bathroom.webp", "/kitchen.jpg"];
+
+  const [openPropertyDetail, setOpenPropertyDetail] = useState(false);
+  const handleOpenPropertyDetail = () => {
+    setOpenPropertyDetail(true);
+  };
+
+  const handleClosePropertyDetail = () => {
+    setOpenPropertyDetail(false);
+  };
 
   const handleNextImageClick = () => {
     if (currentIndex === propImages.length - 1) {
@@ -30,7 +40,6 @@ const PropertyCard = ({ position, index, dx = 0 }) => {
       setCurrentIndex((prev) => prev - 1);
     }
   };
-
   return (
     <div
       className={clsx(
@@ -119,13 +128,20 @@ const PropertyCard = ({ position, index, dx = 0 }) => {
             <span>0</span>
           </div>
         </div>
-        <Link
-          href="/properties/for_sale"
+        <button
+          onClick={handleOpenPropertyDetail}
+          // href="/properties/for_sale"
           className="text-sm font-normal uppercase flex items-center justify-center py-1 px-6 bg-zee-teal-100 hover:bg-zee-teal-80 text-white w-[100%] rounded-md"
         >
           see details
-        </Link>
+        </button>
       </div>
+      <PropertyDetailOverlay
+        show={openPropertyDetail}
+        onClose={handleClosePropertyDetail}
+      >
+        <p className="text-white">PropertyDetail</p>
+      </PropertyDetailOverlay>
     </div>
   );
 };
