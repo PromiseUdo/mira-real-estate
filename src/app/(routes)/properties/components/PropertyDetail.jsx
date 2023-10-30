@@ -37,7 +37,7 @@ const PropertyDetail = ({ onClose }) => {
       <div
         className={clsx(
           "fixed  w-full top-0  flex  py-2 md:hidden justify-between items-center px-4",
-          hasScrolled ? "bg-white" : "bg-transparent"
+          hasScrolled ? "bg-white shadow-md" : "bg-transparent"
         )}
       >
         <button
