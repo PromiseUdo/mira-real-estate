@@ -4,6 +4,7 @@ import PropertyTypeSelector from "./PropertyTypeSelector";
 import BedroomSelector from "./BedroomSelector";
 import MinPriceSelector from "./MinPriceSelector";
 import MaxPriceSelector from "./MaxPriceSelector";
+import Link from "next/link";
 const FilterOptions = () => {
   return (
     <div className="w-full flex  items-center  flex-col px-2 lg:px-4 py-2">
@@ -34,9 +35,12 @@ const FilterOptions = () => {
         </div>
       </div>
       <div className="w-full flex justify-center mt-4">
-        <button className="rounded-lg bg-zee-teal-100 text-white px-4 py-2">
+        <Link
+          href="/properties/for_sale"
+          className="flex items-center justify-center w-full md:w-auto rounded-lg bg-zee-teal-100 text-white px-4 py-2"
+        >
           Search
-        </button>
+        </Link>
       </div>
     </div>
   );
