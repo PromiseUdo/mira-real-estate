@@ -12,6 +12,7 @@ import styles from "../(styles)/PropertyCard.module.scss";
 import { clsx } from "clsx";
 import Link from "next/link";
 import PropertyDetailOverlay from "../../app/(routes)/properties/components/PropertyDetailOverlay";
+import PropertyDetail from "../../app/(routes)/properties/components/PropertyDetail";
 const PropertyCard = ({ position, index, dx = 0 }) => {
   const [currentIndex, setCurrentIndex] = useState(0);
   const propImages = ["/hero-image.jpg", "/bathroom.webp", "/kitchen.jpg"];
@@ -140,7 +141,7 @@ const PropertyCard = ({ position, index, dx = 0 }) => {
         show={openPropertyDetail}
         onClose={handleClosePropertyDetail}
       >
-        <p className="text-white">PropertyDetail</p>
+        <PropertyDetail />
       </PropertyDetailOverlay>
     </div>
   );

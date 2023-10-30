@@ -1,8 +1,15 @@
+"use client";
+
 import { clsx } from "clsx";
-import React from "react";
+import React, { useEffect } from "react";
 import { AiOutlineClose } from "react-icons/ai";
 
 const PropertyDetailOverlay = ({ show, onClose, children }) => {
+  useEffect(() => {
+    document.body.style.overflow = "hidden";
+    return () => (document.body.style.overflow = "unset");
+  }, []);
+
   return (
     <div
       className={clsx(
@@ -15,16 +22,15 @@ const PropertyDetailOverlay = ({ show, onClose, children }) => {
         }
       }
     >
-      <div className="flex w-full  shadow items-center  py-4 px-8">
+      <div className=" flex w-full gap-3 px-20">
+        <div className="w-full ">{children}</div>
         <button
-          className="ml-auto border border-1 border-white rounded-full flex items-center justify-center w-[30px] h-[30px]  text-xl text-white"
+          className="ml-auto mt-4 bg-zee-shades-gray-4 border border-zee-border flex items-center justify-center w-[40px] h-[40px] rounded-[50%] text-xl bg-transparent text-white"
           onClick={onClose}
         >
-          <AiOutlineClose size={25} color="#fff" />
+          <AiOutlineClose color="#fff" />
         </button>
       </div>
-
-      {children}
     </div>
   );
 };
