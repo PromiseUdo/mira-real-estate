@@ -48,7 +48,7 @@ const PropertyDetail = ({ onClose }) => {
           {hasScrolled && <span className="text-[#00a0ae]">Back</span>}
         </button>
 
-        <div className="options flex items-center gap-4">
+        <div className="options flex items-center gap-5">
           <button className="text-zee-teal-100 capitalize flex items-center gap-1 font-normal">
             <BiShareAlt color="#00a0ae" size={20} />
           </button>
@@ -74,7 +74,7 @@ const PropertyDetail = ({ onClose }) => {
             </Link>
           </div>
 
-          <div className="options flex items-center gap-4">
+          <div className="options flex items-center gap-5">
             <button className="text-zee-teal-100 capitalize flex items-center gap-1 font-normal">
               <BiShareAlt color="#00a0ae" size={20} />
               <span className="text-base font-normal ">Share</span>
