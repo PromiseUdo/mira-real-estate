@@ -31,12 +31,12 @@ const PropertyDetail = ({ onClose }) => {
       // }}
       className="h-screen w-full bg-white grid grid-cols-1
      md:grid-cols-12
-     overflow-y-scroll   scrollbar    scrollbar-w-1.5    scrollbar-thumb-zee-dark-teal-80 scrollbar-track-zee-gray-200
+     overflow-y-scroll md:overflow-y-none   scrollbar    scrollbar-w-1.5    scrollbar-thumb-zee-dark-teal-80 scrollbar-track-zee-gray-200
      "
     >
       <div
         className={clsx(
-          "fixed  w-full top-0  flex  py-2 md:hidden justify-between items-center px-4",
+          "fixed md:sticky  md:col-span-full w-full top-0  flex  py-2 lg:hidden justify-between items-center px-4",
           hasScrolled ? "bg-white shadow-md" : "bg-transparent"
         )}
       >
@@ -64,15 +64,14 @@ const PropertyDetail = ({ onClose }) => {
           backgroundSize: "cover",
           backgroundPosition: "center",
           // height: "100%",
-          width: "100%",
         }}
-        className=" md:mt-0 h-64   md:h-screen col-span-7  bg-gray-100 "
+        className=" md:mt-0 h-64   md:h-screen col-span-5 lg:col-span-7  bg-gray-100 "
       >
         {/* <span className="mt-6">Pictures of Property</span> */}
       </div>
 
-      <div className=" h-screen col-span-5    py-1">
-        <div className="hidden border-b pb-1 border-zee-border md:flex justify-between items-center mx-4">
+      <div className=" h-screen  col-span-7 lg:col-span-5    py-1">
+        <div className="hidden border-b pb-1 border-zee-border lg:flex justify-between items-center mx-4">
           <div className="logo">
             <Link href="/" className="">
               <img
