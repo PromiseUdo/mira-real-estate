@@ -16,11 +16,10 @@ const PropertyDetailOverlay = ({ show, onClose, children }) => {
         "z-[999999] fixed top-0 left-0 w-screen h-screen  bg-black/50",
         show ? "block" : "hidden"
       )}
-      style={
-        {
-          // background: "rgba(153, 217, 223, 0.5)",
-        }
-      }
+      style={{
+        overflow: "hidden",
+        // background: "rgba(153, 217, 223, 0.5)",
+      }}
     >
       <div className=" flex w-full gap-3 px-20">
         <div className="w-full ">{children}</div>

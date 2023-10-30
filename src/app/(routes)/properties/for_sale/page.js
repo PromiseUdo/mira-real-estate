@@ -16,7 +16,12 @@ const Page = () => {
     if (width >= 1024) closeMap();
   }, [width]);
   return (
-    <div className="relative 	  flex flex-col ">
+    <div
+      className="relative !overflow-hidden	 !overscroll-none flex flex-col "
+      style={{
+        overflow: "hidden !important",
+      }}
+    >
       <Filter />
       <div className=" h-screen grid grid-cols-12  gap-2">
         <div
