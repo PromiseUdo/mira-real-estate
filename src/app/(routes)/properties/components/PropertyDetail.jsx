@@ -1,12 +1,31 @@
+"use client";
+
 import Link from "next/link";
-import React from "react";
+import React, { useState, useEffect, useRef } from "react";
 import { BiShareAlt } from "react-icons/bi";
 import { MdReportGmailerrorred, MdKeyboardArrowLeft } from "react-icons/md";
 import DummyContent from "../../../components/DummyContent";
+import clsx from "clsx";
 
 const PropertyDetail = ({ onClose }) => {
+  const container = useRef(null);
+  const [hasScrolled, setHasScrolled] = useState(false);
+
+  const handleScroll = (event) => {
+    if (event.target.scrollTop > 10) {
+      if (!hasScrolled) {
+        setHasScrolled(true);
+      }
+    } else {
+      setHasScrolled(false);
+    }
+  };
+
+  console.log(hasScrolled);
   return (
     <div
+      onScroll={handleScroll}
+      ref={container}
       // style={{
       //   overflow: "hidden !important",
       // }}
@@ -15,9 +34,15 @@ const PropertyDetail = ({ onClose }) => {
      overflow-y-scroll   scrollbar    scrollbar-w-1.5    scrollbar-thumb-zee-dark-teal-80 scrollbar-track-zee-gray-200
      "
     >
-      <div className="sticky  w-full top-0 bg-green-200 flex  py-2 md:hidden justify-between items-center px-4">
-        <button className="logo">
-          <MdKeyboardArrowLeft onClick={onClose} size={20} />
+      <div
+        className={clsx(
+          "fixed  w-full top-0  flex  py-2 md:hidden justify-between items-center px-4",
+          hasScrolled ? "bg-white" : "bg-transparent"
+        )}
+      >
+        <button className="capitalize text-base logo flex items-center gap-1">
+          <MdKeyboardArrowLeft color="#00a0ae" onClick={onClose} size={25} />
+          {hasScrolled && <span className="text-[#00a0ae]">Back</span>}
         </button>
 
         <div className="options flex items-center gap-4">
@@ -30,8 +55,8 @@ const PropertyDetail = ({ onClose }) => {
           </button>
         </div>
       </div>
-      <div className=" h-64   md:h-screen col-span-7  bg-gray-100 ">
-        <span>Pictures of Property</span>
+      <div className=" md:mt-0 h-64   md:h-screen col-span-7  bg-gray-100 ">
+        {/* <span className="mt-6">Pictures of Property</span> */}
       </div>
 
       <div className=" h-screen col-span-5    py-1">
