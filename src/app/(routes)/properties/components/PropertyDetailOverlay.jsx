@@ -21,10 +21,10 @@ const PropertyDetailOverlay = ({ show, onClose, children }) => {
         // background: "rgba(153, 217, 223, 0.5)",
       }}
     >
-      <div className=" flex w-full gap-3 px-20">
+      <div className=" flex w-full gap-3 px-0 md:px-20">
         <div className="w-full ">{children}</div>
         <button
-          className="ml-auto mt-4 bg-zee-shades-gray-4 border border-zee-border flex items-center justify-center w-[40px] h-[40px] rounded-[50%] text-xl bg-transparent text-white"
+          className="hidden md:block ml-auto mt-4 bg-zee-shades-gray-4 border border-zee-border flex items-center justify-center w-[40px] h-[40px] rounded-[50%] text-xl bg-transparent text-white"
           onClick={onClose}
         >
           <AiOutlineClose color="#fff" />
