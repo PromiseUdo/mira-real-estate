@@ -40,8 +40,11 @@ const PropertyDetail = ({ onClose }) => {
           hasScrolled ? "bg-white" : "bg-transparent"
         )}
       >
-        <button className="capitalize text-base logo flex items-center gap-1">
-          <MdKeyboardArrowLeft color="#00a0ae" onClick={onClose} size={25} />
+        <button
+          onClick={onClose}
+          className="capitalize text-base logo flex items-center gap-1"
+        >
+          <MdKeyboardArrowLeft color="#00a0ae" size={25} />
           {hasScrolled && <span className="text-[#00a0ae]">Back</span>}
         </button>
 
