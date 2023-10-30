@@ -13,7 +13,7 @@ const PropertyDetailOverlay = ({ show, onClose, children }) => {
   return (
     <div
       className={clsx(
-        "z-[999999] fixed top-0 left-0 w-screen h-screen  bg-black/50",
+        "z-[999999] fixed bottom-0 left-0 w-screen h-screen md:h-[calc(100vh-3.5rem)] lg:w-screen lg:h-screen  bg-black/50",
         show ? "block" : "hidden"
       )}
       style={{

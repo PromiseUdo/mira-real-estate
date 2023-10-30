@@ -36,7 +36,7 @@ const PropertyDetail = ({ onClose }) => {
     >
       <div
         className={clsx(
-          "fixed md:sticky  md:col-span-full w-full top-0  flex  py-2 lg:hidden justify-between items-center px-4",
+          "fixed md:sticky   md:col-span-full w-full top-0  flex  py-2 lg:hidden justify-between items-center px-4",
           hasScrolled ? "bg-white shadow-md" : "bg-transparent"
         )}
       >
