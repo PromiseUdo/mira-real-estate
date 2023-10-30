@@ -25,7 +25,7 @@ const BedroomCountFilter = ({ className }) => {
             selectedBeds === 1 ? "!border-[2px] border-zee-teal-100" : ""
           )}
         >
-          1
+          1+
         </button>
         <button
           onClick={() => setSelectedBeds(2)}
@@ -34,7 +34,7 @@ const BedroomCountFilter = ({ className }) => {
             selectedBeds === 2 ? "!border-[2px] border-zee-teal-100" : ""
           )}
         >
-          2
+          2+
         </button>
         <button
           onClick={() => setSelectedBeds(3)}
@@ -43,7 +43,7 @@ const BedroomCountFilter = ({ className }) => {
             selectedBeds === 3 ? "!border-[2px] border-zee-teal-100" : " "
           )}
         >
-          3
+          3+
         </button>
         <button
           onClick={() => setSelectedBeds(4)}
@@ -52,7 +52,7 @@ const BedroomCountFilter = ({ className }) => {
             selectedBeds === 4 ? "!border-[2px] border-zee-teal-100" : ""
           )}
         >
-          4
+          4+
         </button>
         <button
           onClick={() => setSelectedBeds("5+")}

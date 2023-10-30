@@ -25,7 +25,7 @@ const BathroomCountFilter = ({ className }) => {
             selectedBaths === 1 ? "!border-[2px] border-zee-teal-100" : ""
           )}
         >
-          1
+          1+
         </button>
         <button
           onClick={() => setSelectedBaths(2)}
@@ -34,7 +34,7 @@ const BathroomCountFilter = ({ className }) => {
             selectedBaths === 2 ? "!border-[2px] border-zee-teal-100" : ""
           )}
         >
-          2
+          2+
         </button>
         <button
           onClick={() => setSelectedBaths(3)}
@@ -43,7 +43,7 @@ const BathroomCountFilter = ({ className }) => {
             selectedBaths === 3 ? "!border-[2px] border-zee-teal-100" : " "
           )}
         >
-          3
+          3+
         </button>
         <button
           onClick={() => setSelectedBaths(4)}
@@ -52,7 +52,7 @@ const BathroomCountFilter = ({ className }) => {
             selectedBaths === 4 ? "!border-[2px] border-zee-teal-100" : ""
           )}
         >
-          4
+          4+
         </button>
         <button
           onClick={() => setSelectedBaths("5+")}
