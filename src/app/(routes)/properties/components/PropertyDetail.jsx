@@ -58,7 +58,16 @@ const PropertyDetail = ({ onClose }) => {
           </button>
         </div>
       </div>
-      <div className=" md:mt-0 h-64   md:h-screen col-span-7  bg-gray-100 ">
+      <div
+        style={{
+          background: `url("/hero-image.jpg")`,
+          backgroundSize: "cover",
+          backgroundPosition: "center",
+          // height: "100%",
+          width: "100%",
+        }}
+        className=" md:mt-0 h-64   md:h-screen col-span-7  bg-gray-100 "
+      >
         {/* <span className="mt-6">Pictures of Property</span> */}
       </div>
 
