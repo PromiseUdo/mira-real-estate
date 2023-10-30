@@ -141,7 +141,7 @@ const PropertyCard = ({ position, index, dx = 0 }) => {
         show={openPropertyDetail}
         onClose={handleClosePropertyDetail}
       >
-        <PropertyDetail />
+        <PropertyDetail onClose={handleClosePropertyDetail} />
       </PropertyDetailOverlay>
     </div>
   );
