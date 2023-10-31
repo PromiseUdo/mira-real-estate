@@ -133,7 +133,7 @@ const PropertyDetail = ({ onClose }) => {
             </button>
           </div>
         </div>
-        <div className="border-t border-b border-zee-border  flex items-center relative mt-4 w-full py-5 ">
+        <div className="border-t border-b border-zee-border  flex items-center relative mt-4 w-full py-3 ">
           <div
             className="absolute left-0  cursor-pointer   px-1  hover:bg-zee-gray-100 transition-all ease-in h-full flex items-center justify-center z-20 bg-white"
             onClick={scrollLeft}
@@ -158,7 +158,7 @@ const PropertyDetail = ({ onClose }) => {
               <li>
                 <Link
                   href="/"
-                  className="select-none whitespace-nowrap hover:text-zee-teal-100"
+                  className="select-none whitespace-nowrap hover:text-zee-teal-100 "
                 >
                   Overview
                 </Link>
@@ -166,7 +166,7 @@ const PropertyDetail = ({ onClose }) => {
               <li>
                 <Link
                   href="/"
-                  className="select-none whitespace-nowrap hover:text-zee-teal-100"
+                  className="select-none whitespace-nowrap hover:text-zee-teal-100 "
                 >
                   Features
                 </Link>
@@ -174,7 +174,7 @@ const PropertyDetail = ({ onClose }) => {
               <li>
                 <Link
                   href="/"
-                  className="select-none whitespace-nowrap hover:text-zee-teal-100"
+                  className="select-none whitespace-nowrap hover:text-zee-teal-100 "
                 >
                   Policies
                 </Link>
@@ -182,7 +182,7 @@ const PropertyDetail = ({ onClose }) => {
               <li>
                 <Link
                   href="/"
-                  className="select-none whitespace-nowrap hover:text-zee-teal-100"
+                  className="select-none whitespace-nowrap hover:text-zee-teal-100 "
                 >
                   Nearby Schools
                 </Link>
