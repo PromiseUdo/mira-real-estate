@@ -39,7 +39,7 @@ const MobileFilter = () => {
         <div className=" my-4 flex flex-col">
           <PetOptions />
         </div>
-        <div className=" my-4 flex flex-col">
+        <div className=" my-4 mb-8 flex flex-col">
           <OtherAmenities />
         </div>
       </div>
