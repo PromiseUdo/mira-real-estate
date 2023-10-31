@@ -6,7 +6,7 @@ const Overlay = ({ show, onClose, children }) => {
   return (
     <div
       className={clsx(
-        "z-[999999] fixed  bottom-0 left-0 w-screen h-[calc(100vh-59px)] bg-white ",
+        "z-[999999] fixed bottom-0 left-0 w-screen h-screen bg-white ",
         show ? "block" : "hidden",
         "lg:hidden"
       )}
