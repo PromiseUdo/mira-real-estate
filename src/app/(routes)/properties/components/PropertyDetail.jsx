@@ -154,7 +154,7 @@ const PropertyDetail = ({ onClose }) => {
             style={{ scrollBehavior: "smooth" }}
             className="relative  w-full mx-8  flex items-center justify-center overflow-x-auto scrollbar-none "
           >
-            <ul className="w-full gap-3 flex justify-between items-center">
+            <ul className="w-full gap-4 flex justify-between items-center">
               <li>
                 <Link
                   href="/"
