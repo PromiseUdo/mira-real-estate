@@ -3,7 +3,7 @@ import React from "react";
 
 const FilterResultSection = ({ children, id, className, title, subtitle }) => {
   return (
-    <section id={id} className={clsx(" w-full  pt-[1rem] pb-[3rem] ")}>
+    <section id={id} className={clsx(" w-full  pt-[1rem]  ")}>
       <div className="px-4">
         <h2 className="text-[1.2rem] font-medium mb-[0.3rem] text-zee-shades-black">
           <span>{title}</span>
