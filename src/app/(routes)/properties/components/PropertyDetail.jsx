@@ -94,7 +94,18 @@ const PropertyDetail = ({ onClose }) => {
           </div>
         </div>
 
-        <span>Property Details</span>
+        <div className="header px-4">
+          <h3>Harmony Estate Realtors</h3>
+          <p>141 East West Road, Port Harcourt</p>
+          <div className="flex items-center gap-4 justify-between">
+            <button className="w-full border-2 border-zee-teal-100 text-zee-teal-100 px-8 py-2 rounded-md">
+              Call Agent
+            </button>
+            <button className="w-full border-2 border-zee-teal-100 bg-zee-teal-100 px-8 py-2 text-white rounded-md">
+              Request a tour
+            </button>
+          </div>
+        </div>
       </div>
     </div>
   );
