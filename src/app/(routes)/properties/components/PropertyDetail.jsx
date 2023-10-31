@@ -125,10 +125,10 @@ const PropertyDetail = ({ onClose }) => {
             141 East West Road, Port Harcourt
           </p>
           <div className="mt-3 flex items-center gap-4 justify-between">
-            <button className="w-full border-2 border-zee-teal-100 text-zee-teal-100 px-8 py-2 rounded-md">
+            <button className="w-full border-2 border-zee-teal-100 text-zee-teal-100 px-6 md:px-8 py-2 rounded-md">
               Call Agent
             </button>
-            <button className="w-full border-2 border-zee-teal-100 bg-zee-teal-100 px-8 py-2 text-white rounded-md">
+            <button className="whitespace-nowrap w-full border-2 border-zee-teal-100 bg-zee-teal-100 px-6 md:px-8 py-2 text-white rounded-md">
               Schedule a tour
             </button>
           </div>
