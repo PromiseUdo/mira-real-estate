@@ -1,4 +1,5 @@
 import "../(styles)/globals.scss";
+import DummyContent from "../components/DummyContent";
 import Navbar from "../components/Navbar";
 export const metadata = {
   title: "Create Next App",
@@ -21,10 +22,12 @@ export default function RootLayout({ children }) {
           rel="stylesheet"
         />
       </head>
-      <body className=" scrollbar  overflow-x-visible    scrollbar-thumb-zee-dark-teal-80 scrollbar-track-zee-gray-200">
-        <Navbar />
-
-        {children}
+      <body className="w-full ">
+        <div className="flex flex-col w-full h-full">
+          <Navbar />
+          {/* <DummyContent /> */}
+          {children}
+        </div>
       </body>
     </html>
   );

@@ -11,25 +11,22 @@ import NewsletterSignup from "../components/NewsletterSignup";
 import PropertyTypeGuide from "../components/PropertyTypeGuide";
 import RentCalculator from "../components/RentCalculator";
 import RentPropertyPrompt from "../components/RentPropertyPrompt";
+import RootLayout from "./layout";
+import CustomLayout from "./layout";
 
 export default function Home() {
   return (
-    <div>
+    <main className="relative w-full">
       <Hero />
 
-      <main className="main">
-        <div>
-          <FeaturedProperties />
-          <CityGuide />
-          <RentCalculator />
-          <BedroomGuide />
-          <PropertyTypeGuide />
-          <NearCollegeGuide />
-          {/* <RentPropertyPrompt /> */}
-          <NewsletterSignup />
-          <Footer />
-        </div>
-      </main>
-    </div>
+      <FeaturedProperties />
+      <CityGuide />
+      <RentCalculator />
+      <BedroomGuide />
+      <PropertyTypeGuide />
+      <NearCollegeGuide />
+      <NewsletterSignup />
+      <Footer />
+    </main>
   );
 }

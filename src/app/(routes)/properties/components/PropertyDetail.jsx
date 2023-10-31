@@ -21,7 +21,6 @@ const PropertyDetail = ({ onClose }) => {
     }
   };
 
-  console.log(hasScrolled);
   return (
     <div
       onScroll={handleScroll}

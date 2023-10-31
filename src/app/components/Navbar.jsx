@@ -50,7 +50,7 @@ const Navbar = (props) => {
   return (
     <div
       className={clsx(
-        "w-[100vw] z-20 bg-zee-teal-100 text-white  flex border-b-zee-shades-gray-2  transition-all",
+        "w-full  bg-zee-teal-100 text-white  flex border-b-zee-shades-gray-2  transition-all",
         isScrolled
           ? "bg-zee-teal-100 text-white  shadow-lg border-b-[1px] "
           : "bg-transparent"
@@ -128,7 +128,7 @@ const Navbar = (props) => {
       {/* mobile nav */}
       <div
         className={clsx(
-          "fixed top-0 left-0 z-[99999] w-[100vw] h-[100vh] transition-transform ease-in-out duration-200",
+          "fixed top-0 left-0 z-[9999] w-[100vw] h-[100vh] transition-transform ease-in-out duration-200",
           showMobileMenu ? undefined : "!translate-x-[-100%]",
           styles.mobileNav
         )}

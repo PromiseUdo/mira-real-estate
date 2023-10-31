@@ -8,6 +8,7 @@ import FilterResults from "../for_sale/components/FilterResults.jsx";
 import { useToggleState } from "../../../../hooks/useToggleState";
 import clsx from "clsx";
 import useWindowDimensions from "../../../../hooks/useWindowDimensions";
+import NoScroll from "./components/NoScroll";
 const Page = () => {
   const { state: showMap, toggle, close: closeMap } = useToggleState(false);
   const { height, width } = useWindowDimensions();
@@ -15,15 +16,13 @@ const Page = () => {
   useEffect(() => {
     if (width >= 1024) closeMap();
   }, [width]);
+
   return (
-    <div
-      className="relative !overflow-hidden	 !overscroll-none flex flex-col "
-      style={{
-        overflow: "hidden !important",
-      }}
-    >
+    <div className=" overflow-hidden h-[calc(100vh-60px)] flex flex-col ">
+      <NoScroll active={true} />
+
       <Filter />
-      <div className=" h-screen grid grid-cols-12  gap-2">
+      <div className=" w-full overflow-hidden  h-full grid grid-cols-12  gap-2">
         <div
           className={clsx(
             "col-span-12 lg:col-span-8 xl:col-span-5 min-[1350px]:col-span-6 items-center justify-center overflow-hidden",
@@ -31,18 +30,16 @@ const Page = () => {
           )}
         >
           <div>Google Maps</div>
-
-          {/* <DummyContent /> */}
         </div>
 
         <div
           className={clsx(
-            " col-span-12 lg:col-span-4 xl:col-span-7 min-[1350px]:col-span-6 shadow	shadow-zee-gray-600	bg-gray-50 xl:mr-4  overflow-y-scroll   scrollbar    scrollbar-w-1.5    scrollbar-thumb-zee-dark-teal-80 scrollbar-track-zee-gray-200 ",
-            showMap ? "hidden" : "!flex"
+            " relative overflow-x-hidden w-full col-span-12 lg:col-span-4 xl:col-span-7 min-[1350px]:col-span-6 shadow	shadow-zee-gray-600	bg-gray-50 overflow-y-auto  ",
+            showMap ? "hidden" : "!block"
           )}
         >
           <FilterResults />
-          {/* <DummyContent /> */}
+          {/* overflow-y-scroll   scrollbar    scrollbar-w-1.5    scrollbar-thumb-zee-dark-teal-80 scrollbar-track-zee-gray-200 */}
         </div>
       </div>
       <div className="lg:hidden w-full flex items-center justify-center fixed bottom-5">

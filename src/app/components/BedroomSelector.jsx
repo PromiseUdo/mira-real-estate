@@ -20,13 +20,13 @@ const BedroomSelector = () => {
   const [selected, setSelected] = useState(propertyType[0]);
   const [open, setOpen] = useState(false);
 
-  useEffect(() => {
-    fetch("https://restcountries.com/v2/all?fields=name")
-      .then((res) => res.json())
-      .then((data) => {
-        setCountries(data);
-      });
-  }, []);
+  // useEffect(() => {
+  //   fetch("https://restcountries.com/v2/all?fields=name")
+  //     .then((res) => res.json())
+  //     .then((data) => {
+  //       setCountries(data);
+  //     });
+  // }, []);
 
   return (
     // w-24

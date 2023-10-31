@@ -67,7 +67,6 @@ const MoreFilters = ({ className }) => {
       );
     }
   }, [minYearBuilt, maxYearBuilt]);
-  console.log(minYearBuilt, maxYearBuilt);
 
   return (
     <div id="dropdownButton" className={clsx("relative ", className)}>

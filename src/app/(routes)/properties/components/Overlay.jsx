@@ -6,7 +6,7 @@ const Overlay = ({ show, onClose, children }) => {
   return (
     <div
       className={clsx(
-        "fixed top-0 left-0 w-screen h-screen bg-white ",
+        "z-[999999] fixed bottom-0 left-0 w-screen h-screen bg-white ",
         show ? "block" : "hidden",
         "lg:hidden"
       )}
@@ -18,7 +18,7 @@ const Overlay = ({ show, onClose, children }) => {
           </span>
         </div>
         <button
-          className="ml-auto border border-1 flex items-center justify-center w-[40px] h-[40px] rounded-[50%] text-xl bg-white text-white"
+          className="ml-auto  flex items-center justify-center w-[40px] h-[40px] rounded-[50%] text-xl bg-white text-white"
           onClick={onClose}
         >
           <AiOutlineClose color="#2c3335" />

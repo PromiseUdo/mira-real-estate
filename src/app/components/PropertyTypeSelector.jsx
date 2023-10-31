@@ -21,13 +21,13 @@ const PropertyTypeSelector = () => {
   const [selected, setSelected] = useState(propertyType[0]);
   const [open, setOpen] = useState(false);
 
-  useEffect(() => {
-    fetch("https://restcountries.com/v2/all?fields=name")
-      .then((res) => res.json())
-      .then((data) => {
-        setCountries(data);
-      });
-  }, []);
+  // useEffect(() => {
+  //   fetch("https://restcountries.com/v2/all?fields=name")
+  //     .then((res) => res.json())
+  //     .then((data) => {
+  //       setCountries(data);
+  //     });
+  // }, []);
 
   return (
     <div className=" w-full  top-16 ">

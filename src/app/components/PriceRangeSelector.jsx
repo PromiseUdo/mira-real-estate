@@ -10,13 +10,13 @@ const PriceRangeSelector = () => {
   const [selected, setSelected] = useState("");
   const [open, setOpen] = useState(false);
 
-  useEffect(() => {
-    fetch("https://restcountries.com/v2/all?fields=name")
-      .then((res) => res.json())
-      .then((data) => {
-        setCountries(data);
-      });
-  }, []);
+  // useEffect(() => {
+  //   fetch("https://restcountries.com/v2/all?fields=name")
+  //     .then((res) => res.json())
+  //     .then((data) => {
+  //       setCountries(data);
+  //     });
+  // }, []);
 
   return (
     <div className="w-72 font-medium  relative scrollbar scrollbar-w-1 scrollbar-track-rounded-lg scrollbar-thumb-rounded-lg scrollbar-thumb-zee-dark-teal-80 scrollbar-track-zee-shades-white">
