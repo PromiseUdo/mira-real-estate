@@ -6,11 +6,34 @@ import { BiShareAlt } from "react-icons/bi";
 import { MdReportGmailerrorred, MdKeyboardArrowLeft } from "react-icons/md";
 import DummyContent from "../../../components/DummyContent";
 import clsx from "clsx";
+import { FiChevronRight, FiChevronLeft } from "react-icons/fi";
 
 const PropertyDetail = ({ onClose }) => {
   const container = useRef(null);
-  const [hasScrolled, setHasScrolled] = useState(false);
+  const [scrollPosition, setScrollPosition] = useState(0);
 
+  const [hasScrolled, setHasScrolled] = useState(false);
+  const containerRef = useRef(null);
+
+  const handleScrollNav = (scrollLeft) => {
+    setScrollPosition(scrollLeft);
+  };
+
+  const scrollLeft = () => {
+    const container = containerRef.current;
+    if (container) {
+      container.scrollLeft -= 500;
+      handleScrollNav(container.scrollLeft);
+    }
+  };
+
+  const scrollRight = () => {
+    const container = containerRef.current;
+    if (container) {
+      container.scrollLeft += 500;
+      handleScrollNav(container.scrollLeft);
+    }
+  };
   const handleScroll = (event) => {
     if (event.target.scrollTop > 10) {
       if (!hasScrolled) {
@@ -110,35 +133,71 @@ const PropertyDetail = ({ onClose }) => {
             </button>
           </div>
         </div>
-        <nav className="mt-4 px-4 py-4 border-t border-b border-zee-border flex items-center justify-center">
-          <ul className="w-full  flex justify-between items-center">
-            <li>
-              <Link href="/" className="hover:text-zee-teal-100">
-                Overview
-              </Link>
-            </li>
-            <li>
-              <Link href="/" className="hover:text-zee-teal-100">
-                Features
-              </Link>
-            </li>
-            <li>
-              <Link href="/" className="hover:text-zee-teal-100">
-                Policies
-              </Link>
-            </li>
-            <li>
-              <Link href="/" className="hover:text-zee-teal-100">
-                Nearby Schools
-              </Link>
-            </li>
-            <li>
-              <Link href="/" className="hover:text-zee-teal-100">
-                Contact
-              </Link>
-            </li>
-          </ul>
-        </nav>
+        <div className="border-t border-b border-zee-border  flex items-center relative mt-4 w-full py-5 ">
+          <div
+            className="absolute left-0  cursor-pointer   px-1  hover:bg-zee-gray-100 transition-all ease-in h-full flex items-center justify-center z-20 bg-white"
+            onClick={scrollLeft}
+          >
+            <FiChevronLeft color="#285f74" />
+          </div>
+          <div
+            className="absolute right-0  cursor-pointer   px-1  hover:bg-zee-gray-100 transition-all ease-in h-full flex items-center justify-center z-20 bg-white"
+            onClick={scrollRight}
+          >
+            <FiChevronRight className="" color="#285f74" />
+          </div>
+          <nav
+            ref={containerRef}
+            onScroll={(e) => {
+              setScrollPosition(e.currentTarget.scrollLeft);
+            }}
+            style={{ scrollBehavior: "smooth" }}
+            className="relative  w-full mx-8  flex items-center justify-center overflow-x-auto scrollbar-none "
+          >
+            <ul className="w-full gap-3 flex justify-between items-center">
+              <li>
+                <Link
+                  href="/"
+                  className="select-none whitespace-nowrap hover:text-zee-teal-100"
+                >
+                  Overview
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="/"
+                  className="select-none whitespace-nowrap hover:text-zee-teal-100"
+                >
+                  Features
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="/"
+                  className="select-none whitespace-nowrap hover:text-zee-teal-100"
+                >
+                  Policies
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="/"
+                  className="select-none whitespace-nowrap hover:text-zee-teal-100"
+                >
+                  Nearby Schools
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="/"
+                  className="select-none whitespace-nowrap hover:text-zee-teal-100"
+                >
+                  Contact
+                </Link>
+              </li>
+            </ul>
+          </nav>
+        </div>
       </div>
     </div>
   );
