@@ -94,18 +94,51 @@ const PropertyDetail = ({ onClose }) => {
           </div>
         </div>
 
-        <div className="header px-4">
-          <h3>Harmony Estate Realtors</h3>
-          <p>141 East West Road, Port Harcourt</p>
-          <div className="flex items-center gap-4 justify-between">
+        <div className="header mt-1 px-4 ">
+          <h3 className="text-zee-shades-gray-4 tracking-tighter">
+            Harmony Estate Realtors
+          </h3>
+          <p className="text-zee-shades-gray-3">
+            141 East West Road, Port Harcourt
+          </p>
+          <div className="mt-3 flex items-center gap-4 justify-between">
             <button className="w-full border-2 border-zee-teal-100 text-zee-teal-100 px-8 py-2 rounded-md">
               Call Agent
             </button>
             <button className="w-full border-2 border-zee-teal-100 bg-zee-teal-100 px-8 py-2 text-white rounded-md">
-              Request a tour
+              Schedule a tour
             </button>
           </div>
         </div>
+        <nav className="mt-4 px-4 py-4 border-t border-b border-zee-border flex items-center justify-center">
+          <ul className="w-full  flex justify-between items-center">
+            <li>
+              <Link href="/" className="hover:text-zee-teal-100">
+                Overview
+              </Link>
+            </li>
+            <li>
+              <Link href="/" className="hover:text-zee-teal-100">
+                Features
+              </Link>
+            </li>
+            <li>
+              <Link href="/" className="hover:text-zee-teal-100">
+                Policies
+              </Link>
+            </li>
+            <li>
+              <Link href="/" className="hover:text-zee-teal-100">
+                Nearby Schools
+              </Link>
+            </li>
+            <li>
+              <Link href="/" className="hover:text-zee-teal-100">
+                Contact
+              </Link>
+            </li>
+          </ul>
+        </nav>
       </div>
     </div>
   );
