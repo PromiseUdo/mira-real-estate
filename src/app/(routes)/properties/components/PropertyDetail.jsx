@@ -157,7 +157,7 @@ const PropertyDetail = ({ onClose }) => {
             <ul className="w-full gap-4 flex justify-between items-center">
               <li>
                 <Link
-                  href="/"
+                  href=""
                   className="select-none whitespace-nowrap hover:text-zee-teal-100 "
                 >
                   Overview
@@ -165,7 +165,7 @@ const PropertyDetail = ({ onClose }) => {
               </li>
               <li>
                 <Link
-                  href="/"
+                  href=""
                   className="select-none whitespace-nowrap hover:text-zee-teal-100 "
                 >
                   Features
@@ -173,7 +173,7 @@ const PropertyDetail = ({ onClose }) => {
               </li>
               <li>
                 <Link
-                  href="/"
+                  href=""
                   className="select-none whitespace-nowrap hover:text-zee-teal-100 "
                 >
                   Policies
@@ -181,7 +181,7 @@ const PropertyDetail = ({ onClose }) => {
               </li>
               <li>
                 <Link
-                  href="/"
+                  href=""
                   className="select-none whitespace-nowrap hover:text-zee-teal-100 "
                 >
                   Nearby Schools
@@ -189,7 +189,7 @@ const PropertyDetail = ({ onClose }) => {
               </li>
               <li>
                 <Link
-                  href="/"
+                  href=""
                   className="select-none whitespace-nowrap hover:text-zee-teal-100"
                 >
                   Contact
