@@ -59,7 +59,7 @@ const Footer = () => {
       <Disclaimer />
 
       <div className="inner flex flex-col-reverse justify-center items-center  px-0 py-2 px-4 w-full  text-zee-shades-gray-4 gap-2 md:gap-0 ">
-        <div className="flex items-center justify-center company  mt-5  border-t border-zee-shades-gray-2 border-1   w-full     flex-col  gap-3  pt-2 ">
+        <div className="flex pb-8 md:pb-0 items-center justify-center company  mt-5  border-t border-zee-shades-gray-2 border-1   w-full     flex-col  gap-3  pt-2 ">
           <Link href="/" className="">
             <img
               className="mx-auto lg:ml-0 object-cover bg-center w-[60px] h-[60px]"
