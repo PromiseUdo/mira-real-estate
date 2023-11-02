@@ -285,6 +285,21 @@ const PropertyDetail = ({ onClose }) => {
                 </li>
               </ul>
             </div>
+            <div className="my-2">
+              <h5>Nearby Schools</h5>
+              <h6>Lease Terms</h6>
+              <ul>
+                <li className="flex items-center">
+                  <span>Smart Kids Internationl School</span>
+                </li>
+                <li className="flex items-center">
+                  <span>Rumuola Polytechnic</span>
+                </li>
+                <li className="flex items-center">
+                  <span>Arise and Shine University</span>
+                </li>
+              </ul>
+            </div>
           </div>
           <Footer />
         </div>
