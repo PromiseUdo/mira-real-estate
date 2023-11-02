@@ -243,7 +243,7 @@ const PropertyDetail = ({ onClose }) => {
 
         {/* Property details */}
         <div
-          className={` overflow-y-auto relative bottom-0 w-full h-[calc(100vh-242px)]`}
+          className={` overflow-y-auto relative bottom-0 w-full h-screen md:h-[calc(100vh-242px)]`}
         >
           <div className="my-4 px-4">
             {/* <DummyContent /> */}

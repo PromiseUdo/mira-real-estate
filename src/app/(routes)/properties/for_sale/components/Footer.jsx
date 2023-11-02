@@ -55,7 +55,7 @@ const Footer = () => {
   const [openRentalManager, setOpenRentalManager] = useState(false);
   const [openpopularStates, setOpenPopularStates] = useState(false);
   return (
-    <div className=" py-4 mb-4 bg-gray-50 w-full">
+    <div className=" py-6 mb-4 bg-gray-50 w-full">
       <Disclaimer />
 
       <div className="inner flex flex-col-reverse justify-center items-center  px-0 py-2 px-4 w-full  text-zee-shades-gray-4 gap-2 md:gap-0 ">
