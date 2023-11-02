@@ -15,6 +15,18 @@ const PropertyDetail = ({ onClose }) => {
   const [hasScrolled, setHasScrolled] = useState(false);
   const containerRef = useRef(null);
 
+  const [navHeight, setNavHeight] = useState(0);
+  const [introHeight, setIntroHeight] = useState(0);
+  const navRef = useRef(null);
+  const introRef = useRef(null);
+
+  useEffect(() => {
+    setNavHeight(navRef.current.clientHeight);
+  });
+  useEffect(() => {
+    setIntroHeight(introRef.current.clientHeight);
+  });
+
   const handleScrollNav = (scrollLeft) => {
     setScrollPosition(scrollLeft);
   };
@@ -53,7 +65,7 @@ const PropertyDetail = ({ onClose }) => {
       // }}
       className="h-screen w-full bg-white grid grid-cols-1
      md:grid-cols-12
-     overflow-y-scroll md:overflow-y-none   scrollbar    scrollbar-w-1.5    scrollbar-thumb-zee-dark-teal-80 scrollbar-track-zee-gray-200
+     overflow-y-scroll   md:overflow-y-hidden  scrollbar    scrollbar-w-1.5    scrollbar-thumb-zee-dark-teal-80 scrollbar-track-zee-gray-200
      "
     >
       <div
@@ -87,12 +99,16 @@ const PropertyDetail = ({ onClose }) => {
           backgroundPosition: "center",
           // height: "100%",
         }}
-        className=" md:mt-0 h-64   md:h-screen col-span-5 lg:col-span-7  bg-gray-100 "
+        className="overflow-y-auto md:h-screen md:mt-0 h-64  col-span-5 lg:col-span-7  bg-gray-100 "
       >
+        {/* <DummyContent /> */}
         {/* <span className="mt-6">Pictures of Property</span> */}
       </div>
 
-      <div className=" h-screen  col-span-7 lg:col-span-5    py-1">
+      <div
+        ref={introRef}
+        className=" h-screen  col-span-7 lg:col-span-5    py-1"
+      >
         <div className="hidden border-b pb-1 border-zee-border lg:flex justify-between items-center mx-4">
           <div className="logo">
             <Link href="/" className="">
@@ -125,7 +141,7 @@ const PropertyDetail = ({ onClose }) => {
             141 East West Road, Port Harcourt
           </p>
           <div className="mt-3 flex items-center gap-4 justify-between">
-            <button className="w-full border-2 border-zee-teal-100 text-zee-teal-100 px-6 md:px-8 py-2 rounded-md">
+            <button className="w-full border-2 border-zee-teal-100 text-zee-teal-100 px-6 md:px-8 py-2 rounded-md whitespace-nowrap">
               Call Agent
             </button>
             <button className="whitespace-nowrap w-full border-2 border-zee-teal-100 bg-zee-teal-100 px-6 md:px-8 py-2 text-white rounded-md">
@@ -133,7 +149,10 @@ const PropertyDetail = ({ onClose }) => {
             </button>
           </div>
         </div>
-        <div className="border-t border-b border-zee-border  flex items-center relative mt-4 w-full py-3 ">
+        <div
+          ref={navRef}
+          className="border-t border-b border-zee-border  flex items-center relative mt-4 w-full py-3 "
+        >
           <div
             className="absolute left-0  cursor-pointer   px-1  hover:bg-zee-gray-100 transition-all ease-in h-full flex items-center justify-center z-20 bg-white"
             onClick={scrollLeft}
@@ -198,8 +217,16 @@ const PropertyDetail = ({ onClose }) => {
             </ul>
           </nav>
         </div>
+
+        {/* Property details */}
+        <div
+          className={`overflow-y-auto relative bottom-0 w-full h-[calc(100vh-242px)]`}
+        >
+          {/* <DummyContent /> */}
+        </div>
       </div>
     </div>
+    // h-[calc(100vh-241.391px)]
   );
 };
 
