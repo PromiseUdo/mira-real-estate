@@ -4,7 +4,11 @@ import Link from "next/link";
 import React, { useState, useEffect, useRef } from "react";
 import { BiShareAlt } from "react-icons/bi";
 import { MdReportGmailerrorred, MdKeyboardArrowLeft } from "react-icons/md";
+import { HiBadgeCheck } from "react-icons/hi";
 import DummyContent from "../../../components/DummyContent";
+import { MdOutlineLandscape } from "react-icons/md";
+import { LiaSnowflake } from "react-icons/lia";
+import { MdOutlineFence } from "react-icons/md";
 import clsx from "clsx";
 import { FiChevronRight, FiChevronLeft } from "react-icons/fi";
 
@@ -150,8 +154,9 @@ const PropertyDetail = ({ onClose }) => {
         </div>
 
         <div className="header mt-1 px-4 ">
-          <h3 className="text-zee-shades-gray-4 tracking-tighter">
-            Harmony Estate Realtors
+          <h3 className="flex items-center text-zee-shades-gray-4 tracking-tighter">
+            <HiBadgeCheck color="green" />
+            <span> Harmony Estate Realtors</span>
           </h3>
           <p className="text-zee-shades-gray-3">
             141 East West Road, Port Harcourt
@@ -238,9 +243,52 @@ const PropertyDetail = ({ onClose }) => {
 
         {/* Property details */}
         <div
-          className={`overflow-y-auto relative bottom-0 w-full h-[calc(100vh-242px)]`}
+          className={`px-4 my-4 overflow-y-auto relative bottom-0 w-full h-[calc(100vh-262px)]`}
         >
           {/* <DummyContent /> */}
+          <div className="my-2">
+            <h5>Property Overview</h5>
+            <p>
+              This is 1 bedroom flat apartment situated at a nice neighbourhood.
+              The apartment boots of security, good electricity and clean water
+              . The landlord is very friendly and does not care if you have 20
+              girlfriends and 19 dogs.
+            </p>
+          </div>
+          <div className="my-2">
+            <h5>Features</h5>
+            <ul>
+              <li className="flex items-center">
+                <MdOutlineFence />
+                <span>Has fence and gate</span>
+              </li>
+              <li className="flex items-center">
+                <LiaSnowflake />
+                <span>Has Air Conditioning</span>
+              </li>
+              <li className="flex items-center">
+                <MdOutlineLandscape />
+                <span>534 sqkm</span>
+              </li>
+            </ul>
+          </div>
+          <div className="my-2">
+            <h5>Policies</h5>
+            <ul>
+              <li className="flex items-center">
+                <MdOutlineFence />
+                <span>Has fence and gate</span>
+              </li>
+              <li className="flex items-center">
+                <LiaSnowflake />
+                <span>Has Air Conditioning</span>
+              </li>
+              <li className="flex items-center">
+                <MdOutlineLandscape />
+                <span>534 sqkm</span>
+              </li>
+            </ul>
+          </div>
         </div>
       </div>
     </div>
