@@ -11,7 +11,8 @@ import { FiChevronRight, FiChevronLeft } from "react-icons/fi";
 const PropertyDetail = ({ onClose }) => {
   const container = useRef(null);
   const [scrollPosition, setScrollPosition] = useState(0);
-
+  const leftArrow = useRef(null);
+  const rightArrow = useRef(null);
   const [hasScrolled, setHasScrolled] = useState(false);
   const containerRef = useRef(null);
 
@@ -29,21 +30,36 @@ const PropertyDetail = ({ onClose }) => {
 
   const handleScrollNav = (scrollLeft) => {
     setScrollPosition(scrollLeft);
+    // console.log(leftArrow);
   };
 
   const scrollLeft = () => {
+    rightArrow.current.style.display = "flex";
+
     const container = containerRef.current;
+    let newScrollLeft = 0;
     if (container) {
-      container.scrollLeft -= 500;
+      newScrollLeft = container.scrollLeft -= 500;
       handleScrollNav(container.scrollLeft);
+    }
+
+    if (newScrollLeft <= 32) {
+      leftArrow.current.style.display = "none";
     }
   };
 
   const scrollRight = () => {
     const container = containerRef.current;
+    leftArrow.current.style.display = "flex";
+
+    let newScrollLeft4Right = 0;
     if (container) {
-      container.scrollLeft += 500;
+      newScrollLeft4Right = container.scrollLeft += 500;
       handleScrollNav(container.scrollLeft);
+    }
+
+    if (newScrollLeft4Right - container.scrollLeft === 500) {
+      rightArrow.current.style.display = "none";
     }
   };
   const handleScroll = (event) => {
@@ -154,12 +170,14 @@ const PropertyDetail = ({ onClose }) => {
           className="border-t border-b border-zee-border  flex items-center relative mt-4 w-full py-3 "
         >
           <div
+            ref={leftArrow}
             className="absolute left-0  cursor-pointer   px-1  hover:bg-zee-gray-100 transition-all ease-in h-full flex items-center justify-center z-20 bg-white"
             onClick={scrollLeft}
           >
             <FiChevronLeft color="#285f74" />
           </div>
           <div
+            ref={rightArrow}
             className="absolute right-0  cursor-pointer   px-1  hover:bg-zee-gray-100 transition-all ease-in h-full flex items-center justify-center z-20 bg-white"
             onClick={scrollRight}
           >
