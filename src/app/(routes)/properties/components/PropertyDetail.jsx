@@ -11,7 +11,7 @@ import { LiaSnowflake } from "react-icons/lia";
 import { MdOutlineFence } from "react-icons/md";
 import clsx from "clsx";
 import { FiChevronRight, FiChevronLeft } from "react-icons/fi";
-
+import Footer from "../for_sale/components/Footer";
 const PropertyDetail = ({ onClose }) => {
   const container = useRef(null);
   const [scrollPosition, setScrollPosition] = useState(0);
@@ -127,7 +127,7 @@ const PropertyDetail = ({ onClose }) => {
 
       <div
         ref={introRef}
-        className=" h-screen  col-span-7 lg:col-span-5    py-1"
+        className=" h-screen  col-span-7 lg:col-span-5    pt-1"
       >
         <div className="hidden border-b pb-1 border-zee-border lg:flex justify-between items-center mx-4">
           <div className="logo">
@@ -243,52 +243,50 @@ const PropertyDetail = ({ onClose }) => {
 
         {/* Property details */}
         <div
-          className={`px-4 my-4 overflow-y-auto relative bottom-0 w-full h-[calc(100vh-262px)]`}
+          className={` overflow-y-auto relative bottom-0 w-full h-[calc(100vh-242px)]`}
         >
-          {/* <DummyContent /> */}
-          <div className="my-2">
-            <h5>Property Overview</h5>
-            <p>
-              This is 1 bedroom flat apartment situated at a nice neighbourhood.
-              The apartment boots of security, good electricity and clean water
-              . The landlord is very friendly and does not care if you have 20
-              girlfriends and 19 dogs.
-            </p>
+          <div className="my-4 px-4">
+            {/* <DummyContent /> */}
+            <div className="my-2">
+              <h5>Property Overview</h5>
+              <p>
+                This is 1 bedroom flat apartment situated at a nice
+                neighbourhood. The apartment boots of security, good electricity
+                and clean water . The landlord is very friendly and does not
+                care if you have 20 girlfriends and 19 dogs.
+              </p>
+            </div>
+            <div className="my-2">
+              <h5>Features</h5>
+              <ul>
+                <li className="flex items-center">
+                  <MdOutlineFence />
+                  <span>Has fence and gate</span>
+                </li>
+                <li className="flex items-center">
+                  <LiaSnowflake />
+                  <span>Has Air Conditioning</span>
+                </li>
+                <li className="flex items-center">
+                  <MdOutlineLandscape />
+                  <span>534 sqkm</span>
+                </li>
+              </ul>
+            </div>
+            <div className="my-2">
+              <h5>Policies</h5>
+              <h6>Lease Terms</h6>
+              <ul>
+                <li className="flex items-center">
+                  <span>1 Year Full Payment</span>
+                </li>
+                <li className="flex items-center">
+                  <span>10% Maintenance Fee</span>
+                </li>
+              </ul>
+            </div>
           </div>
-          <div className="my-2">
-            <h5>Features</h5>
-            <ul>
-              <li className="flex items-center">
-                <MdOutlineFence />
-                <span>Has fence and gate</span>
-              </li>
-              <li className="flex items-center">
-                <LiaSnowflake />
-                <span>Has Air Conditioning</span>
-              </li>
-              <li className="flex items-center">
-                <MdOutlineLandscape />
-                <span>534 sqkm</span>
-              </li>
-            </ul>
-          </div>
-          <div className="my-2">
-            <h5>Policies</h5>
-            <ul>
-              <li className="flex items-center">
-                <MdOutlineFence />
-                <span>Has fence and gate</span>
-              </li>
-              <li className="flex items-center">
-                <LiaSnowflake />
-                <span>Has Air Conditioning</span>
-              </li>
-              <li className="flex items-center">
-                <MdOutlineLandscape />
-                <span>534 sqkm</span>
-              </li>
-            </ul>
-          </div>
+          <Footer />
         </div>
       </div>
     </div>
