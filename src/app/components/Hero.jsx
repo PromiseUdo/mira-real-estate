@@ -11,7 +11,7 @@ const Hero = () => {
         src="/hero-image4.jpg"
         alt="hero image"
       />
-      <div className="bg-black/60 absolute top-0 left-0 w-full h-screen" />
+      <div className="bg-black/70 absolute top-0 left-0 w-full h-screen" />
       {/* 430 x 836 */}
       <div className="absolute top-0 w-full h-full flex flex-col justify-center ">
         <Filter />
