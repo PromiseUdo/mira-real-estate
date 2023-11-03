@@ -4,6 +4,7 @@ import Link from "next/link";
 import React, { useState, useEffect, useRef } from "react";
 import { BiShareAlt } from "react-icons/bi";
 import { MdReportGmailerrorred, MdKeyboardArrowLeft } from "react-icons/md";
+import { GiCheckMark } from "react-icons/gi";
 import { HiBadgeCheck } from "react-icons/hi";
 import DummyContent from "../../../components/DummyContent";
 import { MdOutlineLandscape } from "react-icons/md";
@@ -24,6 +25,13 @@ const PropertyDetail = ({ onClose }) => {
   const [introHeight, setIntroHeight] = useState(0);
   const navRef = useRef(null);
   const introRef = useRef(null);
+
+  const scrollToSection = (sectionId) => {
+    const section = document.getElementById(sectionId);
+    if (section) {
+      section.scrollIntoView({ behavior: "smooth" });
+    }
+  };
 
   useEffect(() => {
     setNavHeight(navRef.current.clientHeight);
@@ -198,44 +206,45 @@ const PropertyDetail = ({ onClose }) => {
           >
             <ul className="w-full gap-4 flex justify-between items-center">
               <li>
-                <Link
-                  href=""
+                <button
+                  onClick={() => scrollToSection("overview")}
                   className="select-none whitespace-nowrap hover:text-zee-teal-100 "
                 >
                   Overview
-                </Link>
+                </button>
               </li>
               <li>
-                <Link
-                  href=""
+                <button
+                  onClick={() => scrollToSection("features")}
                   className="select-none whitespace-nowrap hover:text-zee-teal-100 "
                 >
                   Features
-                </Link>
+                </button>
               </li>
               <li>
-                <Link
+                <button
+                  onClick={() => scrollToSection("policies")}
                   href=""
                   className="select-none whitespace-nowrap hover:text-zee-teal-100 "
                 >
                   Policies
-                </Link>
+                </button>
               </li>
               <li>
-                <Link
-                  href=""
+                <button
+                  onClick={() => scrollToSection("nearbyschools")}
                   className="select-none whitespace-nowrap hover:text-zee-teal-100 "
                 >
                   Nearby Schools
-                </Link>
+                </button>
               </li>
               <li>
-                <Link
-                  href=""
+                <button
+                  onClick={() => scrollToSection("contact")}
                   className="select-none whitespace-nowrap hover:text-zee-teal-100"
                 >
                   Contact
-                </Link>
+                </button>
               </li>
             </ul>
           </nav>
@@ -243,11 +252,12 @@ const PropertyDetail = ({ onClose }) => {
 
         {/* Property details */}
         <div
+          style={{ scrollBehavior: "smooth" }}
           className={` overflow-y-auto relative bottom-0 w-full h-screen md:h-[calc(100vh-242px)]`}
         >
           <div className="my-4 px-4">
             {/* <DummyContent /> */}
-            <div className="my-2">
+            <div id="overview" className="my-2">
               <h5>Property Overview</h5>
               <p>
                 This is 1 bedroom flat apartment situated at a nice
@@ -256,46 +266,45 @@ const PropertyDetail = ({ onClose }) => {
                 care if you have 20 girlfriends and 19 dogs.
               </p>
             </div>
-            <div className="my-2">
+            <div id="features" className="my-2">
               <h5>Features</h5>
-              <ul>
-                <li className="flex items-center">
+              <ul className="">
+                <li className="gap-2 flex items-center">
                   <MdOutlineFence />
                   <span>Has fence and gate</span>
                 </li>
-                <li className="flex items-center">
+                <li className="gap-2 flex items-center">
                   <LiaSnowflake />
                   <span>Has Air Conditioning</span>
                 </li>
-                <li className="flex items-center">
+                <li className="gap-2 flex items-center">
                   <MdOutlineLandscape />
                   <span>534 sqkm</span>
                 </li>
               </ul>
             </div>
-            <div className="my-2">
+            <div id="policies" className="my-2">
               <h5>Policies</h5>
               <h6>Lease Terms</h6>
-              <ul>
-                <li className="flex items-center">
+              <ul className="list-disc list-outside pl-5">
+                <li>
                   <span>1 Year Full Payment</span>
                 </li>
-                <li className="flex items-center">
+                <li>
                   <span>10% Maintenance Fee</span>
                 </li>
               </ul>
             </div>
-            <div className="my-2">
+            <div id="nearbyschools" className="my-2">
               <h5>Nearby Schools</h5>
-              <h6>Lease Terms</h6>
-              <ul>
-                <li className="flex items-center">
+              <ul className="list-disc list-outside pl-5">
+                <li>
                   <span>Smart Kids Internationl School</span>
                 </li>
-                <li className="flex items-center">
+                <li>
                   <span>Rumuola Polytechnic</span>
                 </li>
-                <li className="flex items-center">
+                <li>
                   <span>Arise and Shine University</span>
                 </li>
               </ul>
