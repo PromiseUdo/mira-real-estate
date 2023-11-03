@@ -50,7 +50,7 @@ const Navbar = (props) => {
   return (
     <div
       className={clsx(
-        "w-full  bg-zee-teal-100 text-white  flex border-b-zee-shades-gray-2  transition-all",
+        "w-full fixed bg-zee-teal-100 text-white  flex border-b-zee-shades-gray-2  transition-all",
         isScrolled
           ? "bg-zee-teal-100 text-white  shadow-lg border-b-[1px] "
           : "bg-transparent"
