@@ -13,14 +13,18 @@ import { MdOutlineFence } from "react-icons/md";
 import clsx from "clsx";
 import { FiChevronRight, FiChevronLeft } from "react-icons/fi";
 import Footer from "../for_sale/components/Footer";
+import useWindowDimensions from "../../../../hooks/useWindowDimensions";
 const PropertyDetail = ({ onClose }) => {
+  const { height, width } = useWindowDimensions();
+
   const container = useRef(null);
   const [scrollPosition, setScrollPosition] = useState(0);
   const leftArrow = useRef(null);
   const rightArrow = useRef(null);
   const [hasScrolled, setHasScrolled] = useState(false);
   const containerRef = useRef(null);
-
+  const elementARef = useRef(null);
+  const elementBRef = useRef(null);
   const [navHeight, setNavHeight] = useState(0);
   const [introHeight, setIntroHeight] = useState(0);
   const navRef = useRef(null);
@@ -28,10 +32,28 @@ const PropertyDetail = ({ onClose }) => {
 
   const scrollToSection = (sectionId) => {
     const section = document.getElementById(sectionId);
+    const elementAPosition = containerRef.current.getBoundingClientRect();
+    console.log(elementAPosition);
+
     if (section) {
       section.scrollIntoView({ behavior: "smooth" });
+      section.classList.add(`top-[${300}]px`);
+      // section.target.style.top = `${elementAPosition.y}px`;
     }
+    console.log(section);
   };
+
+  // useEffect(() => {
+  //   // Get the position of Element A
+  //   const elementAPosition = containerRef.current.getBoundingClientRect();
+
+  //   // Use the Y position of Element A to set the top value for Element B
+
+  //   console.log(elementAPosition);
+  //   // if (elementBRef.current) {
+  //   //   elementBRef.current.style.top = `${elementAPosition.bottom}px`;
+  //   // }
+  // }, [height, width]);
 
   useEffect(() => {
     setNavHeight(navRef.current.clientHeight);
@@ -98,7 +120,7 @@ const PropertyDetail = ({ onClose }) => {
     >
       <div
         className={clsx(
-          "fixed md:sticky   md:col-span-full w-full top-0  flex  py-2 lg:hidden justify-between items-center px-4",
+          "z-20 fixed md:sticky   md:col-span-full w-full top-0  flex  py-2 lg:hidden justify-between items-center px-4",
           hasScrolled ? "bg-white shadow-md" : "bg-transparent"
         )}
       >
@@ -180,7 +202,7 @@ const PropertyDetail = ({ onClose }) => {
         </div>
         <div
           ref={navRef}
-          className="border-t border-b border-zee-border  flex items-center relative mt-4 w-full py-3 "
+          className="sticky z-20 bg-white top-[44.8px] border-t border-b border-zee-border  flex items-center  mt-4 w-full py-3 "
         >
           <div
             ref={leftArrow}
@@ -253,11 +275,11 @@ const PropertyDetail = ({ onClose }) => {
         {/* Property details */}
         <div
           style={{ scrollBehavior: "smooth" }}
-          className={` overflow-y-auto relative bottom-0 w-full h-screen md:h-[calc(100vh-242px)]`}
+          className={` overflow-y-auto  relative bottom-0 w-full h-screen md:h-[calc(100vh-242px)]`}
         >
           <div className="my-4 px-4">
             {/* <DummyContent /> */}
-            <div id="overview" className="my-2">
+            <div id="overview" className=" my-2">
               <h5>Property Overview</h5>
               <p>
                 This is 1 bedroom flat apartment situated at a nice
@@ -266,7 +288,7 @@ const PropertyDetail = ({ onClose }) => {
                 care if you have 20 girlfriends and 19 dogs.
               </p>
             </div>
-            <div id="features" className="my-2">
+            <div id="features" className=" my-2">
               <h5>Features</h5>
               <ul className="">
                 <li className="gap-2 flex items-center">
@@ -283,7 +305,7 @@ const PropertyDetail = ({ onClose }) => {
                 </li>
               </ul>
             </div>
-            <div id="policies" className="my-2">
+            <div id="policies" className=" my-2">
               <h5>Policies</h5>
               <h6>Lease Terms</h6>
               <ul className="list-disc list-outside pl-5">
@@ -295,7 +317,7 @@ const PropertyDetail = ({ onClose }) => {
                 </li>
               </ul>
             </div>
-            <div id="nearbyschools" className="my-2">
+            <div id="nearbyschools" className=" my-2">
               <h5>Nearby Schools</h5>
               <ul className="list-disc list-outside pl-5">
                 <li>
