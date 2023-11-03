@@ -276,9 +276,9 @@ const PropertyDetail = ({ onClose }) => {
           style={{ scrollBehavior: "smooth" }}
           className={` overflow-y-scroll  pb-48  md:pb-0 relative bottom-0 w-full h-screen md:h-[calc(100vh-242px)]`}
         >
-          <div className="my-4 px-4">
+          <div className="flex flex-col gap-3 my-4 px-4">
             {/* <DummyContent /> */}
-            <div id="overview" className=" my-2">
+            <div id="overview" className=" ">
               <h5>Property Overview</h5>
               <p>
                 This is 1 bedroom flat apartment situated at a nice
@@ -287,7 +287,7 @@ const PropertyDetail = ({ onClose }) => {
                 care if you have 20 girlfriends and 19 dogs.
               </p>
             </div>
-            <div id="features" className=" my-2">
+            <div id="features" className=" ">
               <h5>Features</h5>
               <ul className="">
                 <li className="gap-2 flex items-center">
@@ -304,7 +304,7 @@ const PropertyDetail = ({ onClose }) => {
                 </li>
               </ul>
             </div>
-            <div id="policies" className=" my-2">
+            <div id="policies" className=" ">
               <h5>Policies</h5>
               <h6>Lease Terms</h6>
               <ul className="list-disc list-outside pl-5">
@@ -316,7 +316,7 @@ const PropertyDetail = ({ onClose }) => {
                 </li>
               </ul>
             </div>
-            <div id="nearbyschools" className=" my-2">
+            <div id="nearbyschools" className=" ">
               <h5>Nearby Schools</h5>
               <ul className="list-disc list-outside pl-5">
                 <li>
@@ -329,6 +329,39 @@ const PropertyDetail = ({ onClose }) => {
                   <span>Arise and Shine University</span>
                 </li>
               </ul>
+            </div>
+            <div id="nearbyschools" className="">
+              <h5>Contact</h5>
+              <h6>Request a visit</h6>
+              <form className="flex flex-col gap-1 mt-3">
+                <div className="flex flex-col gap-1">
+                  <label className="text-sm">First & last name</label>
+                  <input
+                    className="rounded-md border-zee-border  "
+                    type="text"
+                    placeholder="First & last name"
+                  />
+                </div>
+                <div className="flex flex-col gap-1">
+                  <label className="text-sm">Phone</label>
+                  <input
+                    className="rounded-md border-zee-border  "
+                    type="text"
+                    placeholder="Phone"
+                  />
+                </div>
+                <div className="flex flex-col gap-1">
+                  <label className="text-sm">Message</label>
+                  <textarea
+                    className="rounded-md border-zee-border resize-none "
+                    value="I would like to schedule a visit"
+                    placeholder="Send a schedule message"
+                  ></textarea>
+                </div>
+                <button className="mt-3 bg-zee-teal-100 text-white outline-none flex items-center justify-center w-full rounded-md py-2 ">
+                  Send visit request
+                </button>
+              </form>
             </div>
           </div>
           <Footer />
