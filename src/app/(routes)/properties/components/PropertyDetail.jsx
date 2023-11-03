@@ -32,15 +32,14 @@ const PropertyDetail = ({ onClose }) => {
 
   const scrollToSection = (sectionId) => {
     const section = document.getElementById(sectionId);
-    const elementAPosition = containerRef.current.getBoundingClientRect();
-    console.log(elementAPosition);
+    // const elementAPosition = containerRef.current.getBoundingClientRect();
+    console.log(section);
 
     if (section) {
       section.scrollIntoView({ behavior: "smooth" });
-      section.classList.add(`top-[${300}]px`);
+      // section.classList.add(`top-[${300}]px`);
       // section.target.style.top = `${elementAPosition.y}px`;
     }
-    console.log(section);
   };
 
   // useEffect(() => {
@@ -113,9 +112,9 @@ const PropertyDetail = ({ onClose }) => {
       // style={{
       //   overflow: "hidden !important",
       // }}
-      className="h-screen w-full bg-white grid grid-cols-1
+      className="h-full w-full bg-white grid grid-cols-1
      md:grid-cols-12
-     overflow-y-scroll   md:overflow-y-hidden  scrollbar    scrollbar-w-1.5    scrollbar-thumb-zee-dark-teal-80 scrollbar-track-zee-gray-200
+     overflow-y-auto  scrollbar    scrollbar-w-1.5    scrollbar-thumb-zee-dark-teal-80 scrollbar-track-zee-gray-200
      "
     >
       <div
@@ -244,13 +243,13 @@ const PropertyDetail = ({ onClose }) => {
                 </button>
               </li>
               <li>
-                <button
+                <Link
                   onClick={() => scrollToSection("policies")}
                   href=""
                   className="select-none whitespace-nowrap hover:text-zee-teal-100 "
                 >
                   Policies
-                </button>
+                </Link>
               </li>
               <li>
                 <button
@@ -275,7 +274,7 @@ const PropertyDetail = ({ onClose }) => {
         {/* Property details */}
         <div
           style={{ scrollBehavior: "smooth" }}
-          className={` overflow-y-auto  relative bottom-0 w-full h-screen md:h-[calc(100vh-242px)]`}
+          className={` overflow-y-scroll  pb-48  md:pb-0 relative bottom-0 w-full h-screen md:h-[calc(100vh-242px)]`}
         >
           <div className="my-4 px-4">
             {/* <DummyContent /> */}
