@@ -93,7 +93,7 @@ const PropertyDetail = ({ onClose }) => {
       // }}
       className="h-screen w-full bg-white grid grid-cols-1
      md:grid-cols-12
-     overflow-y-hidden  scrollbar    scrollbar-w-1.5    scrollbar-thumb-zee-dark-teal-80 scrollbar-track-zee-gray-200
+     overflow-y-scroll   md:overflow-y-hidden  scrollbar    scrollbar-w-1.5    scrollbar-thumb-zee-dark-teal-80 scrollbar-track-zee-gray-200
      "
     >
       <div
