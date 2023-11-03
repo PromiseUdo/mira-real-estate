@@ -229,9 +229,9 @@ const PropertyDetail = ({ onClose }) => {
 
       <div
         ref={introRef}
-        className="overflow-y-scroll lg:overflow-y-hidden h-screen  col-span-7 lg:col-span-5    pt-1"
+        className=" h-screen col-span-7 lg:col-span-5    pt-1"
       >
-        <div className=" hidden border-b pb-1 border-zee-border lg:flex justify-between items-center mx-4">
+        <div className="hidden border-b pb-1 border-zee-border lg:flex justify-between items-center mx-4">
           <div className="logo">
             <Link href="/" className="">
               <img
