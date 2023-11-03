@@ -16,7 +16,12 @@ import Footer from "../for_sale/components/Footer";
 import useWindowDimensions from "../../../../hooks/useWindowDimensions";
 const PropertyDetail = ({ onClose }) => {
   const { height, width } = useWindowDimensions();
-  const propImages = ["/hero-image.jpg", "/bathroom.webp", "/kitchen.jpg"];
+  const propImages = [
+    "/hero-image.jpg",
+    "/bathroom.webp",
+    "/kitchen.jpg",
+    "/kitchen.jpg",
+  ];
 
   const container = useRef(null);
   const [scrollPosition, setScrollPosition] = useState(0);
@@ -165,18 +170,16 @@ const PropertyDetail = ({ onClose }) => {
         //   backgroundPosition: "center",
         //   // height: "100%",
         // }}
-        className="md:grid  md:grid-cols-2 overflow-y-auto md:h-screen md:mt-0 h-64  col-span-5 lg:col-span-7  bg-gray-100 "
+        className="grid md:grid-cols-1 lg:grid-cols-2  overflow-y-scroll md:h-screen md:mt-0 h-64  col-span-5 lg:col-span-7  bg-gray-100 "
       >
         {propImages.map((image, idx) => (
           <div
-            className="hidden md:block md:first:col-span-2"
+            className="hidden md:block md:first:col-span-2 h-80 w-full"
             key={idx}
             style={{
               background: `url(${image})`,
               backgroundSize: "cover",
               backgroundPosition: "center",
-              height: "100%",
-              width: "100%",
             }}
           ></div>
         ))}
