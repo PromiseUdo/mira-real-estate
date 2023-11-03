@@ -16,6 +16,7 @@ import Footer from "../for_sale/components/Footer";
 import useWindowDimensions from "../../../../hooks/useWindowDimensions";
 const PropertyDetail = ({ onClose }) => {
   const { height, width } = useWindowDimensions();
+  const propImages = ["/hero-image.jpg", "/bathroom.webp", "/kitchen.jpg"];
 
   const container = useRef(null);
   const [scrollPosition, setScrollPosition] = useState(0);
@@ -29,6 +30,7 @@ const PropertyDetail = ({ onClose }) => {
   const [introHeight, setIntroHeight] = useState(0);
   const navRef = useRef(null);
   const introRef = useRef(null);
+  const [currentIndex, setCurrentIndex] = useState(0);
 
   const scrollToSection = (sectionId) => {
     const section = document.getElementById(sectionId);
@@ -105,6 +107,21 @@ const PropertyDetail = ({ onClose }) => {
     }
   };
 
+  const handleNextImageClick = () => {
+    if (currentIndex === propImages.length - 1) {
+      setCurrentIndex(0);
+    } else {
+      setCurrentIndex((prev) => prev + 1);
+    }
+  };
+
+  const handlePrevImageClick = () => {
+    if (currentIndex === 0) {
+      setCurrentIndex(propImages.length - 1);
+    } else {
+      setCurrentIndex((prev) => prev - 1);
+    }
+  };
   return (
     <div
       onScroll={handleScroll}
@@ -142,14 +159,67 @@ const PropertyDetail = ({ onClose }) => {
         </div>
       </div>
       <div
-        style={{
-          background: `url("/hero-image.jpg")`,
-          backgroundSize: "cover",
-          backgroundPosition: "center",
-          // height: "100%",
-        }}
-        className="overflow-y-auto md:h-screen md:mt-0 h-64  col-span-5 lg:col-span-7  bg-gray-100 "
+        // style={{
+        //   background: `url("/hero-image.jpg")`,
+        //   backgroundSize: "cover",
+        //   backgroundPosition: "center",
+        //   // height: "100%",
+        // }}
+        className="md:grid  md:grid-cols-2 overflow-y-auto md:h-screen md:mt-0 h-64  col-span-5 lg:col-span-7  bg-gray-100 "
       >
+        {propImages.map((image, idx) => (
+          <div
+            className="hidden md:block md:first:col-span-2"
+            key={idx}
+            style={{
+              background: `url(${image})`,
+              backgroundSize: "cover",
+              backgroundPosition: "center",
+              height: "100%",
+              width: "100%",
+            }}
+          ></div>
+        ))}
+
+        <div
+          className={clsx(
+            "relative !bg-cover !bg-center overflow-hidden h-full w-full block md:hidden "
+          )}
+          style={{
+            background: `url(${propImages[currentIndex]})`,
+            // backgroundSize: "contain",
+            // backgroundPosition: "center",
+            height: "100%",
+            width: "100%",
+          }}
+        >
+          <div className="h-full w-full  flex flex-col items-center justify-center relative ">
+            <div
+              className={clsx(
+                "z-[30] flex w-full p-0 justify-between transition-all ease-in  "
+              )}
+            >
+              <FiChevronLeft
+                onClick={handlePrevImageClick}
+                size={45}
+                color="#fff"
+                style={{ margin: 0, padding: 0 }}
+                className="!p-0 !m-0 cursor-pointer"
+              />
+              <FiChevronRight
+                onClick={handleNextImageClick}
+                size={45}
+                color="#fff"
+                className="cursor-pointer"
+              />
+            </div>
+            <div className="self-end absolute bottom-5	 bg-black/60 text-white mr-4 mt-1 py-[0.1rem] rounded-sm px-[0.5rem]">
+              <span className="select-none">{`${currentIndex + 1} of ${
+                propImages.length
+              }`}</span>
+            </div>
+          </div>
+        </div>
         {/* <DummyContent /> */}
         {/* <span className="mt-6">Pictures of Property</span> */}
       </div>
@@ -195,7 +265,7 @@ const PropertyDetail = ({ onClose }) => {
               Call Agent
             </button>
             <button className="whitespace-nowrap w-full border-2 border-zee-teal-100 bg-zee-teal-100 px-6 md:px-8 py-2 text-white rounded-md">
-              Schedule a tour
+              Schedule a visit
             </button>
           </div>
         </div>
